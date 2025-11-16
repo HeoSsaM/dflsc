@@ -1,0 +1,443 @@
+@charset "utf-8";
+
+@import url(reset.css);
+@import url(common.css);
+
+:root {
+    /* layout */
+    --flex: flex;
+    --just-sb: space-between;
+    --align-center: center;
+    --sec-space-pc: 96px;
+    --sec-space-mo: 60px;
+
+    /* 컬러 */
+    --gmarket: 'GMarketSans';
+    --color-bg: #f1f2f6;
+    --color-surface: #ffffff;
+    --color-primary: #1b3c98;
+    --color-primary-soft: #7d79c9;
+    --color-accent: #403c98;
+    --color-text-main: #111322;
+    --color-text-sub: #5e6488;
+    --color-line: #dde1f3;
+
+    /* 메인 타이틀 (히어로)  
+     모바일 22px → PC 40px 사이 자동 반응 */
+    --fz-title-xl: clamp(22px, 4vw + 1rem, 42px);
+
+    /* 섹션 타이틀  
+     모바일 20px → PC 32px */
+    --fz-title-lg: clamp(20px, 2.5vw + 0.5rem, 32px);
+
+    /* 중간 제목 (h3 같은 레벨)  
+     모바일 17px → PC 22px */
+    --fz-title-md: clamp(17px, 1.4vw + 0.5rem, 22px);
+
+    /* 본문 글자  
+     모바일 14px → PC 16px */
+    --fz-body: clamp(14px, 1vw + 0.2rem, 16px);
+
+    /* 캡션(작은 글씨)
+     모바일 12px → PC 14px */
+    --fz-caption: clamp(12px, 0.6vw + 0.2rem, 14px);
+}
+
+
+header .btnMobile {
+    display: none;
+}
+
+/* mainVisual */
+#mainVisual .inner {
+    overflow: hidden;
+    height: 280px;
+    position: relative;
+    padding: 0 40px;
+    /* background: url(../img/hspt/bg_main.png) no-repeat center / cover; */
+    display: var(--flex);
+    justify-content: center;
+    align-items: var(--align-center);
+    border-radius: 25px;
+}
+
+#mainVisual video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+#mainVisual .mainTitle h1 {
+    font-family: initial;
+    font-size: 36px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+#mainVisual .mainTitle p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* 말하기특징 */
+#sec-overview {
+    padding-top: 0;
+}
+
+#sec-overview ul {
+    display: flex;
+    justify-content: var(--just-sb);
+    gap: 25px;
+}
+
+#sec-overview li {
+    width: calc(100%/3);
+    border-radius: 15px;
+    border: 1px solid var(--color-accent);
+    padding: 40px 30px;
+}
+
+#sec-overview li p {
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #000;
+}
+
+#sec-overview li p::before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #5e6488;
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+
+#sec-overview li:first-child p::before {
+    display: none;
+}
+
+#sec-overview li h3 {
+    color: var(--color-accent);
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+
+#sec-overview li .text {
+    line-height: 1.5;
+    font-size: 17px;
+}
+
+#sec-overview li.bg-color {
+    background: url(../img/hspt/list-bg.png) no-repeat center/cover;
+    color: #fff;
+}
+
+#sec-overview li.bg-color h3 {
+    color: #fff;
+}
+
+#sec-overview li.bg-color .text {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+#sec-overview li.bg-color p::before {
+    background: #fff;
+}
+
+/* 평가프로세스 */
+#sec-process {
+    background: var(--color-bg);
+    text-align: center;
+}
+
+#sec-process h2 {
+    text-align: center;
+    font-weight: 500;
+    font-size: var(--fz-title-lg);
+}
+
+#sec-process .mainText {
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+#sec-process .mainText strong {
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
+.step-process {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-bottom: 55px;
+}
+
+.step-process li {
+    position: relative;
+    border-radius: 15px;
+    border: 1px solid var(--color-primary-soft);
+    padding: 40px 25px;
+    text-align: center;
+}
+
+.step-process li::before {
+    position: absolute;
+    top: -28px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #fff;
+    color: #000;
+    border: 2px solid var(--color-primary-soft);
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    font-weight: 600;
+    content: "1";
+}
+
+.step-process li h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.step-process li .text {
+    font-weight: 500;
+    color: #000
+}
+
+.step-process li:nth-child(odd) {
+    background: var(--color-primary-soft);
+}
+
+.step-process li:nth-child(even) {
+    background: var(--color-surface);
+}
+
+.step-process li:nth-child(odd) h3 {
+    color: #fff
+}
+
+.step-process li:nth-child(odd) .text {
+    color: #fff
+}
+
+.step-process li:nth-child(even) h3 {
+    color: var(--color-primary-soft)
+}
+
+.step-process li:nth-child(even) .text {
+    color: #000
+}
+
+.step-process li:nth-child(2)::before {
+    content: '2';
+}
+
+.step-process li:nth-child(3)::before {
+    content: '3';
+}
+
+.step-process li:nth-child(4)::before {
+    content: '4';
+}
+
+/* 7개의 언어영역 */
+#sec-lanarea {
+    text-align: center;
+}
+
+#sec-lanarea .mainText {
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+#sec-lanarea .mainText strong {
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
+.test-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px 30px;
+    margin-bottom: 60px;
+}
+
+.test-group li {
+    width: 250px;
+    height: 140px;
+    border-radius: 12px;
+    background: linear-gradient(180deg, #7d79c7, #5d58b2);
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: #fff;
+    text-align: center;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+
+/* 상단 흰색 타이틀 박스 */
+.test-group li span {
+    width: 100%;
+    background: #ffffff;
+    padding: 10px;
+    color: #000;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 17px;
+}
+
+/* 하단 서브 텍스트 */
+.test-group li .text {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+/* 맞춤형 평가 */
+#sec-custom {
+    text-align: center;
+}
+#sec-custom .inner {padding-top: 0;}
+#sec-custom h2 {
+    font-size: var(--fz-title-xl);
+}
+#sec-custom .mainText {
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.custom-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px 25px;
+    margin-bottom: 80px;
+}
+
+.custom-list li {
+    padding: 15px;
+    border: 1px solid #7d79c9;
+    border-radius: 25px;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.custom-list li:nth-child(odd) {
+    background: linear-gradient(45deg, var(--color-primary-soft), var(--color-accent));
+    color: #fff;
+}
+
+.point {
+    position: relative;
+    font-size: 24px;
+    font-weight: 600;
+    background: var(--color-accent);
+    color: #fff;
+    display: inline-block;
+    padding: 20px 40px;
+    box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.2);
+    margin-bottom: 100px;
+}
+
+.point::before,
+.point::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 100%;
+    background: var(--color-primary-soft);
+}
+
+.point::after {
+    left: auto;
+    right: 0;
+}
+
+.tbl-list {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.tbl-list th,
+.tbl-list td {
+    border-bottom: 1px solid #efefef;
+    padding: 15px;
+    font-size: 17px;
+}
+
+.tbl-list th {
+    background: #d5d3f8;
+    font-weight: 600;
+}
+
+.tbl-list td {
+    background: #e6e6e6;
+}
+
+.tbl-list .novice th {
+    background: #b8b6e2;
+}
+
+.tbl-list .intermediate th {
+    background: #a8a5d6;
+}
+
+.tbl-list .advance th {
+    background: #8d89c4;
+}
+
+.tbl-list .superior th {
+    background: #726eac;
+}
+
+.tbl-list .novice td {
+    background: #f7f7f7;
+}
+
+.tbl-list .intermediate td {
+    background: #e6e6e6;
+}
+
+.tbl-list .advance td {
+    background: #f7f7f7;
+}
+
+.tbl-list .superior td {
+    background: #e6e6e6;
+}

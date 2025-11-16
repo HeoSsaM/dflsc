@@ -1,0 +1,250 @@
+@charset "utf-8";
+
+:root {
+    /* layout */
+    --flex: flex;
+    --just-sb: space-between;
+    --align-center: center;
+    --sec-space-pc: 96px;
+    --sec-space-mo: 60px;
+
+    /* 컬러 */
+    --gmarket: 'GMarketSans';
+    --color-bg: #f1f2f6;
+    --color-surface: #ffffff;
+    --color-primary: #1b3c98;
+    --color-primary-soft: #7464ff;
+    --color-accent: #ff7bb3;
+    --color-text-main: #111322;
+    --color-text-sub: #5e6488;
+    --color-line: #dde1f3;
+
+    /* 메인 타이틀 (히어로)  
+     모바일 22px → PC 40px 사이 자동 반응 */
+    --fz-title-xl: clamp(22px, 4vw + 1rem, 42px);
+
+    /* 섹션 타이틀  
+     모바일 20px → PC 32px */
+    --fz-title-lg: clamp(20px, 2.5vw + 0.5rem, 32px);
+
+    /* 중간 제목 (h3 같은 레벨)  
+     모바일 17px → PC 22px */
+    --fz-title-md: clamp(17px, 1.4vw + 0.5rem, 22px);
+
+    /* 본문 글자  
+     모바일 14px → PC 16px */
+    --fz-body: clamp(14px, 1vw + 0.2rem, 16px);
+
+    /* 캡션(작은 글씨)
+     모바일 12px → PC 14px */
+    --fz-caption: clamp(12px, 0.6vw + 0.2rem, 14px);
+}
+
+@font-face {
+    font-family: 'GMarketSans';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GMarketSans';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GMarketSans';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: 700;
+    font-display: swap;
+}
+
+body {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.85)
+}
+
+img {
+    max-width: 100%;
+}
+
+.btn {
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 200px;
+    height: 46px;
+    font-size: 17px;
+    font-weight: 500;
+    transition: all .25s ease;
+    background: #000;
+    color: #fff
+}
+.btn:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px !important
+}
+.btn.style1 {
+    background: #061f7b;
+}
+
+.btn.style2 {
+    background: #592a8a;
+}
+
+.mainText,
+.mainText p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+}
+h2 {
+    font-family: var(--gmarket);
+    font-size: var(--fz-title-lg);
+    font-weight: 500;
+    color: var(--color-text-main);
+    margin-bottom: 40px;
+}
+h3 {
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+#wrap {
+    overflow: hidden;
+}
+
+.inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: var(--sec-space-pc) 0;
+}
+
+
+/* header */
+header .inner {
+    display: var(--flex);
+    justify-content: var(--just-sb);
+    padding: 25px 0;
+    gap: 100px;
+}
+
+header .logo a {
+    display: block;
+    width: 240px;
+    height: 40px;
+    background: url(../img/common/logo.png) no-repeat center/contain;
+}
+
+header nav {
+    display: var(--flex);
+    justify-content: var(--just-sb);
+    gap: 30px;
+    align-items: var(--align-center);
+}
+
+header nav ul {
+    display: var(--flex);
+    justify-content: var(--just-sb);
+    align-items: var(--align-center);
+    gap: 40px;
+}
+
+header nav ul li a {
+    display: block;
+    padding: 10px;
+    font-weight: 500;
+    color: #000;
+    font-weight: 18px;
+}
+
+header nav ul li a:hover {
+    color: var(--color-primary)
+}
+
+header .btnMobile {
+    display: block;
+    width: 30px;
+}
+
+/* footer */
+.footer {    
+    background: #111;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 15px;
+}
+.footer .inner {
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .f_company {
+    width: 60%;
+}
+
+.footer .f_company h1 {
+    margin-bottom: 15px;
+}
+
+.footer .f_company .f_slogan {
+    margin-bottom: 5px;
+}
+
+.footer .f_company .f_desc {
+    margin-bottom: 20px;
+}
+
+.footer .f_company .com_ceo {
+    margin-bottom: 10px;
+}
+
+.footer .f_company .com_info {
+    margin-top: 10px;
+}
+
+.footer .f_company .com_call {
+    margin-top: 10px;
+}
+
+.footer .f_company .com_call>span {
+    margin-right: 10px;
+}
+
+.footer .f_company .com_call>span+span {
+    margin-left: 10px;
+}
+
+.footer .f_company .copyright {
+    margin-top: 10px;
+}
+
+.footer .f_title {
+    color: #eee;
+    margin-bottom: 25px;
+}
+
+.footer .f_nav li:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer .f_contact .f_text {
+    font-size: 18px;
+    font-size: 500;
+    color: #fff;
+}
+
+.footer .f_contact i {
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-right: 12px;
+    vertical-align: 5px;
+}
+
+.footer .f_contact img {
+    width: 34px;
+}
+
