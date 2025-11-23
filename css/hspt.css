@@ -8,7 +8,7 @@
     --flex: flex;
     --just-sb: space-between;
     --align-center: center;
-    --sec-space-pc: 96px;
+    --sec-space-pc: 80px;
     --sec-space-mo: 60px;
 
     /* 컬러 */
@@ -51,7 +51,7 @@ header .btnMobile {
 /* mainVisual */
 #mainVisual .inner {
     overflow: hidden;
-    height: 280px;
+    height: 250px;
     position: relative;
     padding: 0 40px;
     /* background: url(../img/hspt/bg_main.png) no-repeat center / cover; */
@@ -71,7 +71,7 @@ header .btnMobile {
 
 #mainVisual .mainTitle h1 {
     font-family: initial;
-    font-size: 36px;
+    font-size: var(--fz-title-xl);
     font-weight: 600;
     color: #fff;
     margin-bottom: 35px;

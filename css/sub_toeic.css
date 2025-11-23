@@ -1,0 +1,310 @@
+@charset "utf-8";
+@import url(reset.css);
+@import url(common.css);
+
+:root {
+    /* layout */
+    --flex: flex;
+    --just-sb: space-between;
+    --align-center: center;
+    --sec-space-pc: 80px;
+    --sec-space-mo: 60px;
+
+    /* 컬러 */
+    --gmarket: 'GMarketSans';
+    --color-bg: #f1f2f6;
+    --color-surface: #ffffff;
+    --color-primary: #1b3c98;
+    --color-primary-soft: #7d79c9;
+    --color-accent: #403c98;
+    --color-text-main: #111322;
+    --color-text-sub: #5e6488;
+    --color-line: #dde1f3;
+
+    /* 메인 타이틀 (히어로)  
+     모바일 22px → PC 40px 사이 자동 반응 */
+    --fz-title-xl: clamp(22px, 4vw + 1rem, 42px);
+
+    /* 섹션 타이틀  
+     모바일 20px → PC 32px */
+    --fz-title-lg: clamp(20px, 2.5vw + 0.5rem, 32px);
+
+    /* 중간 제목 (h3 같은 레벨)  
+     모바일 17px → PC 22px */
+    --fz-title-md: clamp(17px, 1.4vw + 0.5rem, 22px);
+
+    /* 본문 글자  
+     모바일 14px → PC 16px */
+    --fz-body: clamp(14px, 1vw + 0.2rem, 16px);
+
+    /* 캡션(작은 글씨)
+     모바일 12px → PC 14px */
+    --fz-caption: clamp(12px, 0.6vw + 0.2rem, 14px);
+}
+
+
+header .btnMobile {
+    display: none;
+}
+
+/* mainVisual */
+#mainVisual .inner {
+    overflow: hidden;
+    height: 250px;
+    position: relative;
+    padding: 0 40px;
+    background-image: linear-gradient(rgba(72, 85, 172, 0.658), rgba(13, 24, 98, 0.459));
+    display: var(--flex);
+    justify-content: center;
+    align-items: var(--align-center);
+    border-radius: 25px;
+}
+
+#mainVisual video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+#mainVisual .mainTitle h1 {
+    font-family: initial;
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+#mainVisual .mainTitle h1 span {
+    display: block;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 500;
+}
+
+#mainVisual .mainTitle p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* opic overview */
+#sec-toeic-overview h2 {
+    position: relative;
+    font-weight: 700;
+    text-align: center;
+}
+
+#sec-toeic-overview h2 span {
+    text-transform: uppercase;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 300;
+}
+
+#sec-toeic-overview h2::after {
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 45px;
+    height: 2px;
+    background: #403c98;
+    content: '';
+}
+
+.toeic-intro {
+    width: 70%;
+    margin: 0 auto 25px;
+    padding-top: 20px;
+}
+
+.opic-intro li {
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+.btn-area {
+    text-align: center;
+    padding: 20px 0;
+}
+.btn-area button:hover {
+    background: #000;
+}
+.btn-area button + button {
+    background: #444;
+}
+/* 시험의 특징 */
+#sec-toeic-test {
+    background: #f1f2f6;
+}
+#sec-toeic-test h2 {
+    text-align: center;
+}
+#sec-toeic-test .exam-feature {
+    margin-bottom: 80px;
+}
+#sec-toeic-test dl {
+    margin-bottom: 30px;
+}
+
+#sec-toeic-test dl div {
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+}
+
+#sec-toeic-test dt {
+    background: linear-gradient(45deg, #564a99, #44418d);
+    display: inline-block;
+    border-radius: 40px 0 40px 0;
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 15px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+#sec-toeic-test dd {
+    width: 100%;
+    background: #fff;
+    padding: 15px;
+    height: 80px;
+    border-radius: 0 0 20px 0;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    line-height: 1.6;
+    font-size: 17px;
+}
+
+.toeic-exam-info .config {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.toeic-exam-info .toeic-exam {
+    border: 1px solid rgba(205, 192, 227, 0.8);
+}
+
+.toeic-exam-info th,
+.toeic-exam-info td {
+    border: 1px solid rgba(205, 192, 227, 0.8);
+    padding: 10px;
+}
+
+.toeic-exam thead {
+    background: #6c6a9c;
+    color: #fff;
+}
+
+.toeic-exam thead th {
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.toeic-exam tbody td li {
+    position: relative;
+    padding: 5px 5px 5px 15px;
+}
+
+.toeic-exam tbody td li::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #6c6a9c;
+    content: '';
+}
+
+.toeic-exam .title {
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+}
+
+.toeic-exam .tc {
+    text-align: center;
+}
+
+.toeic-exam tfoot {
+    background: #6c6a9c;
+    color: #fff;
+    text-align: center;
+}
+
+.toeic-exam-info .level table {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.toeic-exam-info .level thead {
+    background: #6c6a9c;
+}
+
+.toeic-exam-info .level thead th {
+    font-weight: 500;
+    color: #fff;
+    font-size: 17px;
+}
+
+.toeic-exam-info .level tbody td {
+    text-align: center;
+}
+
+/* 모의테스트 */
+#toeic-test h3 {
+    font-family: var(--gmarket);
+    font-weight: 500;
+    font-size: var(--fz-title-lg);
+    text-align: center;
+}
+#toeic-test .inner > div {
+    margin-bottom: 60px;
+}
+.test-guide table {
+    margin: 0 auto;
+}
+.test-fee table {
+    max-width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+.test-fee .bg button {
+    padding: 8px 20px;
+    background: #000;
+    color: #fff;
+    border-radius: 10px;
+}
+.test-refer {
+    max-width: 70%;
+    margin: 0 auto;
+}
+.test-refer ol li {
+    list-style: decimal;
+    padding: 10px 0;
+    line-height: 1.5;
+    font-size: 18px;
+}
+.test-refer ol li strong {
+    display: block;
+    font-weight: 500;
+    color: #5e6488
+}
+.test-refer ol li table {
+    margin-top: 25px;
+    text-align: center;
+}
+.test-refer ol li table th, 
+.test-refer ol li table td {
+    padding: 10px;
+}

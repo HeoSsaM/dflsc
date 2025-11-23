@@ -1,0 +1,77 @@
+@charset "utf-8";
+@import url(reset.css);
+@import url(common.css);
+
+.topik-head {
+    display: none;
+  }
+
+  .topik-item {
+    grid-template-columns: 1fr;
+  }
+
+  .level {
+    border-left: none;
+    border-bottom: 1px solid #ddd;
+    background: #ededf4;
+  }
+
+  .desc {
+    border-left: none;
+    padding-top: 10px;
+  }
+
+ table thead {
+    display: none; /* 헤더 숨김 */
+  }
+
+ .topik-guide th,
+  .topik-guide td {
+    padding: 8px 6px;
+    font-size: 13px;
+  }
+
+  /*  topik 소개 */
+  .speaking-table {
+    border: none;
+  }
+
+  .speaking-table .row.head {
+    display: none; /* 테이블 헤더 숨김 */
+  }
+
+  .speaking-table .row {
+    grid-template-columns: 1fr;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+  }
+
+  .speaking-table .row.summary {
+    margin-top: 8px;
+  }
+
+  .speaking-table .cell {
+    border-left: none;
+    border-top: 1px solid #eee;
+    display: flex;
+    gap: 8px;
+    padding: 8px 10px;
+  }
+
+  .speaking-table .cell:first-child {
+    border-top: none;
+  }
+
+  /* label : value 형태로 보이게 */
+  .speaking-table .cell::before {
+    content: attr(data-label);
+    flex: 0 0 80px;
+    font-weight: 600;
+    color: #666;
+  }
+
+  /* 구분 / 배점도 각 행에서 다시 보이게 (모바일에서는 숨기면 헷갈리니까) */
+  .speaking-table .body .row .col-type,
+  .speaking-table .body .row .col-score {
+    visibility: visible;
+  }

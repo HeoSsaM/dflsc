@@ -6,18 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>디헤럴드 플립 언어능력 평가센터</title>
 
+    <link rel="icon" href="img/common/favicon.ico" type="image/x-icon">
     <!-- AOS 라이브러리 불러오기-->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <!-- Link xe-icon -->
     <link href="https://cdn.jsdelivr.net/xeicon/2/xeicon.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/sub_olt.css">
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <!-- AOS 라이브러리 -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="js/script.js" defer></script>
 </head>
 
 <body>
@@ -29,11 +29,11 @@
                 </h1>
                 <nav>
                     <ul class="gnb">
-                        <li><a href="#">HSPT(영어&middot;중국어&middot;일본어)</a></li>
-                        <li><a href="#">OLT</a></li>
-                        <li><a href="#">OPIc</a></li>
-                        <li><a href="#">TOEIC Speaking</a></li>
-                        <li><a href="#">TOPIK</a></li>
+                        <li><a href="sub_hspt.html">HSPT(영어&middot;중국어&middot;일본어)</a></li>
+                        <li><a href="sub_olt.html">OLT</a></li>
+                        <li><a href="sub_opic.html">OPIc</a></li>
+                        <li><a href="sub_toeic.html">TOEIC Speaking</a></li>
+                        <li><a href="sub_topik.html">TOPIK</a></li>
                     </ul>
                     <a href="" class="btnMypage"><img src="img/common/ico_mypage.png" alt="마이페이지"></a>
                 </nav>
@@ -42,9 +42,246 @@
         </header>
         <!-- //header -->
 
-        <section>HSPT</section>
+        <section id="mainVisual">
+            <div class="inner">
+                <video muted autoplay loop>
+                    <source src="img/olt/olt_mov.mp4" type="video/mp4">
+                </video>
+                <div class="mainTitle">
+                    <h1>OLT(Occupational Language Test)</h1>
+                    <div class="mainText">
+                        <p>OLT(Occupational Language Test)는 직군별 실제 영어 사용 환경에 맞춘 평가 콘텐츠 솔루션입니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //메인비쥬얼 -->
 
-         <footer class="footer">
+        <section id="sec-olt-overview">
+            <div class="inner">
+                <h2>OLT <span>Occupational Language Text</span></h2>
+                <dl class="overview">
+                    <div>
+                        <dt>시험의 목적</dt>
+                        <dd class="text">회사내 업무 영역별 실제 상황에서의 언어사용능력 평가</dd>
+                    </div>
+                    <div>
+                        <dt>평가 진행방법</dt>
+                        <dd class="text">평가자와 응시자가 각 회사의 업무 상황별 Role-play Prompt를 기반으로 양 10분정도 자연스럽게 대화를 나누는 방식으로
+                            진행하며 각 응시자에게 주어지는 Role-play는 응시자의 업무 영역에 따라 달라짐.</dd>
+                    </div>
+                    <div>
+                        <dt>평가방법</dt>
+                        <dd class="text">
+                            <p>평가자는 응시자와 1차 대면으로 Role-play Prompt를 기반으로 한 대화를 수행한 후에 언어영역에서의 1차 레벨평가를 하고, 평가내용 전체를
+                                녹음함.</p>
+                            <p>녹음된 평가내용을 2명 이상의 2차 평가자가 듣고 최종 영역별 평가와 전반적인 업무상 언어활용수준을 평가함.</p>
+                        </dd>
+                    </div>
+                    <div>
+                        <dt>평가레벨</dt>
+                        <dd class="text">NFS(0) - 10(Superior)의 총 11개의 레벨로 평가</dd>
+                    </div>
+                    <div>
+                        <dt>평가영역</dt>
+                        <dd class="text">언어영역 평가 / 서비스 커뮤니케이션 평가</dd>
+                    </div>
+                </dl>
+
+
+                <div class="chart-area">
+                    <figure>
+                        <figcaption>OLT 시험</figcaption>
+                        <img src="img/olt/img_overview-chart.png" alt="직군별 현장에 맞춘 영어맞춤평가솔루션">
+                    </figure>
+
+                    <p class="point">산업별 → R/T에 따라 초고도화 <strong>고객사 맞춤형 TEST 진행</strong></p>
+                    <ul class="custom-list">
+                        <li>호텔</li>
+                        <li>쇼핑면세점</li>
+                        <li>증권</li>
+                        <li>중앙은행</li>
+                        <li>건설시공</li>
+                        <li>시중은행</li>
+                        <li>쇼핑면세점</li>
+                        <li>블록체인</li>
+                        <li>IT개발</li>
+                        <li>간호</li>
+                        <li>건설기술</li>
+                    </ul>
+                </div>
+
+                <h3>OLT 기준표</h3>
+                <table class="olt-base">
+                    <caption class="blind">OLT 레벨별 점수와 레벨 설명</caption>
+                    <colgroup>
+                        <col style="width: 15%;">
+                        <col style="width: 20%;">
+                        <col style="width: auto">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>OLT Level</th>
+                            <th>OLT Score</th>
+                            <th>Level Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="bg">
+                            <td class="bg">10</td>
+                            <td class="bg">9.5-10</td>
+                            <td rowspan="3" class="tl bg">
+                                High degree of language competence. Capable of precise and fluent communication.
+                                <br>Easily comprehends written or verbal communication.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="bg">9</td>
+                            <td class="bg">8.5 - 9.4</td>
+                        </tr>
+                        <tr>
+                            <td class="bg">8</td>
+                            <td class="bg">7.5 - 8.4</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>6.5 - 7.4</td>
+                            <td class="tl">
+                                Able to communicate successfully despite the possibility of occasional reservations or
+                                mistakes that do not obstruct communication
+                            </td>
+                        </tr>
+                        <tr class="bg">
+                            <td>6</td>
+                            <td>5.5 - 6.4</td>
+                            <td class="tl">
+                                Able to converse with ease and confidence when dealing with most routine and social
+                                situations though hesitation and errors may be evident.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>4.5 - 5.4</td>
+                            <td class="tl">
+                                Able to handle a variety of uncomplicated communicative tasks in straightforward social
+                                situations though conversation is generally limited to those predictable and concrete
+                                exchanges necessary for survival in the target culture.
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="bg">4</td>
+                            <td class="bg">3.5 - 4.4</td>
+                            <td rowspan="2" class="tl bg">
+                                Able to understand standard inpub but may require clarification often. Able to handle a
+                                limited number of uncomplicated communicative tasks and understand standard input, but
+                                conversation is restricted to some of the concrete exchagnes and 3 2.5 - 3.4 predictable
+                                topics necessary for survival in the target language culture.
+                            </td>
+                        </tr>
+                        <tr class="bg">
+                            <td>3</td>
+                            <td>2.5 - 3.4</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>1.5-2.4</td>
+                            <td rowspan="2" class="tl">
+                                Able to understand common and simple phrases and sentences. Difficult to handle simple
+                                tasks due to frequent errors occurring regularly, putting communication under strain
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>1.0-1.4</td>
+                        </tr>
+                        <tr class="bg">
+                            <td>NFS</td>
+                            <td></td>
+                            <td class="tl">
+                                Can only communicate if the other person is willing to clarify simple words or phrases
+                                repeatedly.
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </div>
+        </section>
+        <!-- //overview -->
+
+        <sectino id="sec-sample">
+            <div class="inner">
+                <h2>OLT Dialogue 응시자 지시사항 <strong>Sample</strong></h2>
+                <dl class="sample-text">
+                    <div>
+                        <dt>목적에 맞게 대화하시길 바랍니다.</dt>
+                        <dd class="text">
+                            <p>
+                                정해진 시간 내에 상담을 완료할 수 있도록 계획을 세워야 합니다. <br>
+                                환자가 답변에 시간이 걸리는 질문을 하는 것은 상담 과정에서 자연스러운 일이므로 걱정하지 않아도 됩니다. <br>다만, 상담원이 환자보다 대화를 먼저 이끌거나
+                                빠르게 끝낼 수 있는 주제에 지나치게 많은 시간을 할애하면 불이익을 받을 수 있습니다.
+                            </p>
+                        </dd>
+                    </div>
+                    <div>
+                        <dt>논리적으로 말해주시길 바랍니다.</dt>
+                        <dd class="text">
+                            <p>
+                                카드에 제시된 과제 순서를 따라 논리적으로 대화를 진행하면 됩니다. <br>각 과제는 대화의 자연스러운 흐름을 돕기 위해 작성되었으며, 대화 상대가 사용하는
+                                카드에도 반영됩니다. <br>
+                                환자의 물음이 필요한 질문이 아니라면, 나중에 다시 돌아갈 필요 없이 각 과제를 다음 단계로 넘어가기 전에 완전히 마무리하세요.
+                            </p>
+                        </dd>
+                    </div>                    
+                </dl>
+
+                <div class="role-play">
+                    <h3>Doctor Role-play 예시</h3>
+                    <table class="doc-sample">
+                        <caption class="blind">Doctor Role-play 예시</caption>
+                        <colgroup>
+                            <col style="width: 15%;">
+                            <col style="width: 20%;">
+                            <col style="width: auto;">
+                        </colgroup>
+                        <tr>
+                            <td>00:03:51.76</td>
+                            <td>Doctor</td>
+                            <td>"Okay, because exercise will help decrease the lower cholesterol level and also lose your weight and strenthen your heart. So it's very positive for your condition. Is that clear for you?"</td>
+                        </tr>
+                        <tr>
+                            <td>00:03:12.32</td>
+                            <td>Interlocutor</td>
+                            <td>"Yeah, that's very clear. Thank you."</td>
+                        </tr>
+                        <tr>
+                            <td>00:03:14.78</td>
+                            <td>Doctor</td>
+                            <td>"Do you have any questions?"</td>
+                        </tr>
+                        <tr>
+                            <td>00:03:16.77</td>
+                            <td>Interlocutor</td>
+                            <td>"I do actually. I'm I'm really hoping that I can return to work. And I was wondering, um you know, whether the whether I can do that or you know if I have to be off work for a long time."</td>
+                        </tr>
+                    </table>
+                    
+                    <dl class="checkbox">
+                        <dt>→ 이 예에서는 의사가 환자에게 운동에 관한 방금 제공한 정보가 잘 이해되었는지 확인합니다</dt>
+                        <dd>그러나 대화를 환자에게 궁금한 점이 있는지 묻는 것으로 마무리하기보다는 <br>다음 단계로 넘어가 향후 발작을 예방하기 위한 권장 사항을 제시하는 것이 더 적절합니다.</dd>
+                    </dl>
+
+                    <figure>
+                        <figcaption>OLT 대화문 Card Sample</figcaption>
+                        <img src="img/olt/olt-dialog.png" alt="olt대화문 카드예시">
+                    </figure>
+                </div>
+            </div>
+        </sectino>
+
+        <footer class="footer">
             <div class="inner">
                 <div class="f_company">
                     <h1 class="f_logo"><img src="img/common/foot_logo.png" alt="디헤럴드플립언어교육"></h1>

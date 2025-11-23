@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>디헤럴드 플립 언어능력 평가센터</title>
+
+    <link rel="icon" href="img/common/favicon.ico" type="image/x-icon">
+    <!-- AOS 라이브러리 불러오기-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <!-- Link xe-icon -->
+    <link href="https://cdn.jsdelivr.net/xeicon/2/xeicon.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/sub_topik.css">
+    <link rel="stylesheet" href="css/sub-mobile.css" media="screen and (max-width: 768px)">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- AOS 라이브러리 -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <div class="inner">
+                <h1 class="logo">
+                    <a href="index.html"><span class="blind">logo</span></a>
+                </h1>
+                <nav>
+                    <ul class="gnb">
+                        <li><a href="sub_hspt.html">HSPT(영어&middot;중국어&middot;일본어)</a></li>
+                        <li><a href="sub_olt.html">OLT</a></li>
+                        <li><a href="sub_opic.html">OPIc</a></li>
+                        <li><a href="sub_toeic.html">TOEIC Speaking</a></li>
+                        <li><a href="sub_topik.html">TOPIK</a></li>
+                    </ul>
+                    <a href="" class="btnMypage"><img src="img/common/ico_mypage.png" alt="마이페이지"></a>
+                </nav>
+            </div>
+            <a href="#" class="btnMobile"><img src="img/common/btn_mobile.png" alt="모바일메뉴"></a>
+        </header>
+        <!-- //header -->
+
+        <section id="mainVisual">
+            <div class="inner">
+                <video muted autoplay loop>
+                    <source src="img/topik/olt_mov.mp4" type="video/mp4">
+                </video>
+                <div class="mainTitle">
+                    <h1>TOPIK Speaking <span>- Test of Proficiency in Korean -</span></h1>
+
+                    <div class="mainText">
+                        <p>교육부 국립국제교육원이 주관하는 시험 로써 한국어를 모국어로 하지 않는 재외동포 · 외국인의 한국어 학습 방향 제시를 합니다. <br>한국어 보급 확대를 하면서 국어
+                            사용능력을 측정 · 평가하여 그 결과를 국내 대학 유학 및 취업 등에 활용을 위해 보는 한국어 시험을 말합니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //메인비쥬얼 -->
+
+        <section id="sec-topik-overview">
+            <div class="inner">
+                <h2>TOPIK Speaking 소개</h2>
+                <div class="tab-wrap">
+                    <div class="tab-buttons">
+                        <button class="tab-button active" data-tab="tab1">TOPIK I & II 소개</button>
+                        <button class="tab-button" data-tab="tab2">Introduction to TOPIK I & II</button>
+                        <button class="tab-button" data-tab="tab3">TOPIK Speaking 소개</button>
+                    </div>
+
+                    <div class="tab-contents">
+                        <div class="tab-content active" id="tab1">
+                            <div class="title-area">
+                                <h3>TOPIK I & II 소개</h3>
+                                <div class="sub-title">
+                                    <strong>TOPIK(Test of Proficiency in Korean)</strong>
+                                    <ul>
+                                        <li class="text">TOPIK은 국립국제교육원이 주관하는 한국어 능력 평가 시험으로, 한국어를 모국어로 하지않는 재외동포 및 외국인의
+                                            한국어 방향 제시와 보급을 목적으로 합니다. </li>
+                                        <li class="text">성적은 국내 대학 유학, 취업 등에 활용 가능하며, 발표일로부터 2년간 유효합니다.</li>
+                                        <li class="text">시험은 PBT와 IBT 방식 모두 동일한 효력을 가집니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="topik-test">
+                                <h3>TOPIK I & II 모의테스트</h3>
+                                <p class="text">실제 시험과 유사한 방식으로 구성되어 있어 시험대응력 향상 및 예상 점수 확인에 유용합니다.</p>
+                                <div class="table-wrap">
+                                    <table class="topik-guide">
+                                        <caption class="blind">TOPIK I & II 모의테스트 정보</caption>
+                                        <thead>
+                                            <tr>
+                                                <th>구분</th>
+                                                <th>영역</th>
+                                                <th>문항수</th>
+                                                <th>시간</th>
+                                                <th>배점</th>
+                                                <th>총점</th>
+                                                <th>레벨(점수)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td rowspan="2">TOPIK I IBT</td>
+                                                <td>듣기</td>
+                                                <td>26문제</td>
+                                                <td>30분</td>
+                                                <td>200점</td>
+                                                <td rowspan="2">400점</td>
+                                                <td>Level 1 <br>(132~207)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>읽기</td>
+                                                <td>26문제</td>
+                                                <td>30분</td>
+                                                <td>200점</td>
+                                                <td>Level 2 <br>(208~400)</td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="4">TOPIK II IBT</td>
+                                                <td>듣기</td>
+                                                <td>30문제</td>
+                                                <td>35분</td>
+                                                <td>200점</td>
+                                                <td rowspan="4">600점</td>
+                                                <td>Level 3 <br>(204~261)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>읽기</td>
+                                                <td>30문제</td>
+                                                <td>40분</td>
+                                                <td>200점</td>
+                                                <td>Level 4 <br>(262-330)</td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="2">쓰기</td>
+                                                <td rowspan="2">3문제</td>
+                                                <td rowspan="2">50분</td>
+                                                <td rowspan="2">200점</td>
+                                                <td>Level 5 <br>(331~411)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Level 6 <br>(412~600)</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="topik-display">
+                                    <h3>IBT 시험문제 유형</h3>
+
+                                </div>
+                                <div class="topik-box">
+                                    <!-- TOPIK 1 -->
+                                    <div class="topik-level">
+                                        <h3 class="topik-title">TOPIK 1 IBT</h3>
+                                        <div class="topik-head">
+                                            <div>영역</div>
+                                            <div>문항 수</div>
+                                        </div>
+                                        <!-- 1급 -->
+                                        <div class="topik-item">
+                                            <div class="level">1급</div>
+                                            <div class="desc">
+                                                자기 소개하기, 물건 사기, 음식 주문하기 등 생존에 필요한 기초적인 언어 기능을 수행할 수 있으며 자기 자신, 취미,
+                                                날씨 등 매우 사적이고 친숙한 화제에 관련된 내용을 이해하고 표현할 수 있다. <br>약 800개의 기초 어휘와 기본
+                                                문법에 대한 이해를 바탕으로 간단한 문장을 생성할 수 있다. 또한 간단한 생활문과 실용문을 이해하고, 구성할 수 있다.
+                                            </div>
+                                        </div>
+                                        <!-- 2급 -->
+                                        <div class="topik-item border-bot">
+                                            <div class="level">2급</div>
+                                            <div class="desc">
+                                                전화하기, 부탁하기 등의 일상생활에 필요한 기능과 공공시설 이용을 수행할 수 있다. <br>
+                                                약 1,500~2,000개의 어휘를 이용하여 사적인 친숙한 화제와 문단 단위 표현이 가능하다. <br>
+                                                공식적·비공식적 상황에 맞는 언어를 구분해 사용할 수 있다.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- TOPIK 2 -->
+                                    <div class="topik-level">
+                                        <h3 class="topik-title">TOPIK 2 IBT</h3>
+                                        <div class="topik-head">
+                                            <div>영역</div>
+                                            <div>문항 수</div>
+                                        </div>
+                                        <!-- 3급 -->
+                                        <div class="topik-item">
+                                            <div class="level">3급</div>
+                                            <div class="desc">
+                                                일상생활을 영위하는 데 별 어려움을 느끼지 않으며 다양한 공공시설의 이용과 사회적 관계유지에 필요한 기초적 언어 기능을
+                                                수행할 수 있다. <br>친숙하고 구체적인 소재는 물론, 자신에게 친숙한 사회적 소재를 묻는 단위로 표현하거나 이해할 수
+                                                있으며 문어와 구어의 기본적인 특성을 구분해서 이해하고 사용할 수 있다.
+                                            </div>
+                                        </div>
+                                        <!-- 4급 -->
+                                        <div class="topik-item">
+                                            <div class="level">4급</div>
+                                            <div class="desc">
+                                                일반적인 사회적, 추상적 소재를 비교적 정확하게 이해하고 사용할 수 있다. <br> 공공시설 이용과 사회적 관계 유지에
+                                                필요한 언어 기능을 수행할 수 있으며, 일반적인 업무 수행에 필요한 기능을 어느 정도 수행할 수 있다. <br>또한 뉴스,
+                                                신문 기사 중 비교적 평이한 내용을 이해할 수 있고 자주 사용되는 관용적 표현과 대표적인 한국 문화에 대한 이해를 바탕으로
+                                                한국 사회, 문화적인 내용을 이해하고 사용할 수 있다.
+                                            </div>
+                                        </div>
+                                        <!-- 5급 -->
+                                        <div class="topik-item">
+                                            <div class="level">5급</div>
+                                            <div class="desc">
+                                                전문 분야에서의 연구나 업무 수행에 필요한 언어 기능을 어느 정도 수행할 수 있으며 정치, 경제, 사회, 문화 전반에 거쳐
+                                                친숙한 소재뿐 아니라 공식적, 비공식적 맥락과 구어적, 문어적 맥락에 따라 언어를 적절히 구분하여 사용할 수 있다.
+                                            </div>
+                                        </div>
+                                        <!-- 6급 -->
+                                        <div class="topik-item border-bot">
+                                            <div class="level">6급</div>
+                                            <div class="desc">
+                                                전문 분야에서의 연구나 업무를 비교적 정확하고 유창하게 수행할 수 있으며 정치, 경제, 사회, 문화 전반에 걸쳐 친숙하지
+                                                않은 주제에 관해서도 이해하고 사용할 수 있다. <br>원어민 화자의 수준에는 이르지 못하나 기능 수행에 큰 어려움은
+                                                없다.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="btn-area"><a href="https://www.dheraldlang.com/" class="btn style1"
+                                        target="_blank">디헤럴드플립언어교육 홈페이지</a></div>
+                            </div>
+                        </div>
+                        <!-- //tab-content 1 -->
+
+                        <div class="tab-content" id="tab2">
+                            <div class="title-area">
+                                <h3>Introduction to TOPIK I & II</h3>
+                                <div class="sub-title">
+                                    <p class="text">
+                                        TOPIK test measures proficiency in reading, writing, and listening comprehension
+                                        in the Korean language.
+                                    </p>
+                                    <p class="text">
+                                        TOPIK is orgarnized by National Institute for International Education (NIIED)
+                                        and there are two levels in the test; TOPIK I and TOPIK II.
+                                    </p>
+                                    <p class="text">
+                                        While TOPIK I has 2 sublevels that are for beginners, TOPIK II has 4 sublevels
+                                        that are intermediate and advanced.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="topik-test">
+                                <p class="text">IBT TOPIK is conducted 3 times a year,</p>
+                                <h3>TOPIK I & II 모의테스트</h3>
+
+                                <div class="table-wrap">
+                                    <table class="topik-guide">
+                                        <caption class="blind">TOPIK I & II 모의테스트 정보</caption>
+                                        <thead>
+                                            <tr>
+                                                <th>Test Types</th>
+                                                <th>Section</th>
+                                                <th>No. of Items</th>
+                                                <th>Time Limit <br>(min.)</th>
+                                                <th>Point allocation</th>
+                                                <th>Total Score</th>
+                                                <th>Level(Score)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td rowspan="2">TOPIK I IBT</td>
+                                                <td>Listening</td>
+                                                <td>26</td>
+                                                <td>30(min)</td>
+                                                <td>200</td>
+                                                <td rowspan="2">400</td>
+                                                <td>Level 1 <br>(132~207)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Reading</td>
+                                                <td>26</td>
+                                                <td>30(min)</td>
+                                                <td>200</td>
+                                                <td>Level 2 <br>(208~400)</td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="4">TOPIK II IBT</td>
+                                                <td>Listening</td>
+                                                <td>30</td>
+                                                <td>35(min)</td>
+                                                <td>200점</td>
+                                                <td rowspan="4">600</td>
+                                                <td>Level 3 <br>(204~261)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Reading</td>
+                                                <td>30</td>
+                                                <td>40(min)</td>
+                                                <td>200점</td>
+                                                <td>Level 4 <br>(262-330)</td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="2">Writing</td>
+                                                <td rowspan="2">3</td>
+                                                <td rowspan="2">50(min)</td>
+                                                <td rowspan="2">200점</td>
+                                                <td>Level 5 <br>(331~411)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Level 6 <br>(412~600)</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="topik-display">
+                                    <h3>IBT Type of Questions</h3>
+
+                                </div>
+                                <div class="topik-box">
+                                    <!-- TOPIK 1 -->
+                                    <div class="topik-level">
+                                        <h3 class="topik-title">TOPIK 1 IBT</h3>
+                                        <div class="topik-head">
+                                            <div>Level</div>
+                                            <div>Level Description</div>
+                                        </div>
+                                        <!-- 1급 -->
+                                        <div class="topik-item">
+                                            <div class="level">Level 1</div>
+                                            <div class="desc">
+                                                The individual can perform basic language functions necessary for
+                                                elementary communication (such as introducing themselves, buying things
+                                                and ordering food) and can understand and express content related to
+                                                familiar topics, such as self-introductions, family, hobbies, and the
+                                                weather. <br>Based on an understanding of 800 basic vocabulary words and
+                                                rudimentary grammar, simple sentences can be created. <br>He/she can
+                                                also understand and communicate basic daily tasks and practical texts.
+                                            </div>
+                                        </div>
+                                        <!-- 2급 -->
+                                        <div class="topik-item border-bot">
+                                            <div class="level">Level 2</div>
+                                            <div class="desc">
+                                                The individual has the language skills necessary for everyday life, such
+                                                as making phone calls, asking for a favor, and using the post office,
+                                                bank, or public facilities. <br>
+                                                He/she knows about 1,500 to 2,000 words and can understand and compose
+                                                paragraphs about casual or familiar topics. <br>The person can also
+                                                communicate in formal and informal situations.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- TOPIK 2 -->
+                                    <div class="topik-level">
+                                        <h3 class="topik-title">TOPIK 2 IBT</h3>
+                                        <div class="topik-head">
+                                            <div>Level</div>
+                                            <div>Level Description</div>
+                                        </div>
+                                        <!-- 3급 -->
+                                        <div class="topik-item">
+                                            <div class="level">Level 3</div>
+                                            <div class="desc">
+                                                The individual has no problem doing normal, day-to-day activities and
+                                                has the basic language skills to use various public facilities and
+                                                maintain interpersonal relationships. <br>He/she can understand and
+                                                express him/herself regarding not only familiar and specific topics, but
+                                                also familiar social issues in paragraph form. <br>
+                                                He/she is also capable of distinguishing the basic features of
+                                                colloquial language and literary language and can understand and use the
+                                                two forms of language him/herself.
+                                            </div>
+                                        </div>
+                                        <!-- 4급 -->
+                                        <div class="topik-item">
+                                            <div class="level">Level 4</div>
+                                            <div class="desc">
+                                                The individual has the language skills to use various public facilities
+                                                and maintain interpersonal relationships and apply his/her skills to
+                                                work situations to a certain extent. <br>He/she can understand the news,
+                                                news articles, etc., when it is in relatively plain language. He/she can
+                                                understand and express him/herself about general social issues and
+                                                abstract concepts in a fairly accurate and fluent manner. <br>The person
+                                                can also talk about social and cultural issues based on frequently used
+                                                idiomatic expressions and an understanding of Korean culture.
+                                            </div>
+                                        </div>
+                                        <!-- 5급 -->
+                                        <div class="topik-item">
+                                            <div class="level">Level 5</div>
+                                            <div class="desc">
+                                                The individual can use his/her language skills professionally or for
+                                                research in a specialized field to a certain extent and can understand
+                                                and express him/herself regarding unfamiliar and challenging topics
+                                                concerning politics, the economy, culture, and so on. <br>He/she can
+                                                appropriately use different forms of language according to the context
+                                                and situation (e.g. formal/informal and colloquial/literary).
+                                            </div>
+                                        </div>
+                                        <!-- 6급 -->
+                                        <div class="topik-item border-bot">
+                                            <div class="level">Level 6</div>
+                                            <div class="desc">
+                                                The individual can use his/her language skills professionally or for
+                                                research in a specialized field in a largely accurate and fluent manner
+                                                and can understand and express him/herself regarding unfamiliar topics
+                                                concerning politics, the economy, culture, and so on. <br>While he/she
+                                                may not be able to speak as fluently as a native Korean speaker, he/she
+                                                has no trouble expressing him/herself as intended.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="btn-area">
+                                    <a href="https://www.dheraldlang.com/" class="btn style1" target="_blank">
+                                        디헤럴드플립언어교육 홈페이지
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //tab-content 2 -->
+
+                        <div class="tab-content" id="tab3">
+                            <div class="title-area">
+                                <h3>TOPIK Speaking 소개</h3>
+                                <div class="sub-title">
+                                    <p class="text">
+                                        <strong>TOPIK(Test of Proficiency in Korean)</strong>은 교육부 국립국제교육원이 주관하는 시험 로써
+                                        한국어를 모국어로 하지 않는 재외동포 · 외국인의 한국어 학습 방향 제시를 합니다. <br>한국어 보급 확대를 하면서 국어 사용능력을 측정 ·
+                                        평가하여 그 결과를 국내 대학 유학 및 취업 등에 활용을 위해 보는 한국어 시험을 말합니다.
+                                    </p>
+                                </div>
+                                <div class="btn-area">
+                                    <button class="btn style1">TOPIK Speaking 응시 메뉴얼</button>
+                                    <button class="btn style2">TOPIK Speaking 응시하기</button>
+                                </div>
+                            </div>
+                            <div class="speaking-table">
+                                <h3>시험 구성 및 배점</h3>
+                                <table>
+                                    <caption class="blind">TOPIK 시험 구성 및 배점</caption>
+                                    <thead>
+                                        <tr>
+                                            <th>구 분</th>
+                                            <th>문항유형</th>
+                                            <th>준비시간</th>
+                                            <th>응답시간</th>
+                                            <th>배정 /<br>Level</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td rowspan="6">Speaking<br>Test</td>
+                                            <td>질문에 답하기</td>
+                                            <td>20초</td>
+                                            <td>30초</td>
+                                            <td rowspan="6">200/6급</td>
+                                        </tr>
+                                        <tr>
+                                            <td>그림보고 역할수행하기</td>
+                                            <td>30초</td>
+                                            <td>40초</td>
+                                        </tr>
+                                        <tr>
+                                            <td>그림보고 이야기하기</td>
+                                            <td>40초</td>
+                                            <td>60초</td>
+                                        </tr>
+                                        <tr>
+                                            <td>대화 완성하기</td>
+                                            <td>40초</td>
+                                            <td>60초</td>
+                                        </tr>
+                                        <tr>
+                                            <td>자료 해석하기</td>
+                                            <td>70초</td>
+                                            <td>80초</td>
+                                        </tr>
+                                        <tr>
+                                            <td>의견 제시하기</td>
+                                            <td>70초</td>
+                                            <td>80초</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td>Total</td>
+                                            <td>6개 유형</td>
+                                            <td>약 30분</td>
+                                            <td>6문항</td>
+                                            <td>200점</td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+
+                            <div class="topik-test-display">
+                                <h3>TOPIK Speaking 시험 화면</h3>
+                            </div>
+                            <div class="topik-test-level">
+                                <h3>등급 체계</h3>
+                                <table>
+                                    <caption class="blind">TOPIK Speaking 등급체계</caption>
+                                    <thead>
+                                        <tr>
+                                            <th rowspan="2">구분</th>
+                                            <th colspan="7">한국어 능력시험 말하기 평가 등급</th>
+                                        </tr>
+                                        <tr>
+                                            <th>불합격</th>
+                                            <th>1급</th>
+                                            <th>2급</th>
+                                            <th>3급</th>
+                                            <th>4급</th>
+                                            <th>5급</th>
+                                            <th>6급</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>척도점수<br>범위(점)</td>
+                                            <td>0 ~ 19</td>
+                                            <td>20 ~ 49</td>
+                                            <td>50 ~ 89</td>
+                                            <td>90 ~ 109</td>
+                                            <td>110 ~ 129</td>
+                                            <td>130 ~ 159</td>
+                                            <td>160 ~ 200</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <strong>*  한국어 능력시험 말하기 평가 척도 점수는 현대 측정이론인 문항반응이론을 적용하여 개발된 점수로 0점부터 200점까지 범위를 갖습니다.</strong>
+                            </div>
+
+                            <div class="level-skills">
+                                <h3>등급 기술</h3>
+                                <table>
+                                    <caption class="blind">TOPIK 등급기술</caption>
+                                    <thead>
+                                        <tr>
+                                            <th>등급</th>
+                                            <th>등급 기술</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>6급</td>
+                                            <td>
+                                                <ul>
+                                                    <li>사회적 화제나 추상적 화제에 대해 논리적이고 설득력 있게 말할 수 있다.</li>
+                                                    <li>오류가 거의 없으며 매우 다양한 어휘와 문법을 답화 상황에 맞게 사용할 수 있다.</li>
+                                                    <li>발음과 억양, 속도가 자연스러워 발화 전달력이 우수한가.</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>5급</td>
+                                            <td>
+                                                <ul>
+                                                    <li>사회적 화제나 일부 추상적 화제에 대해 비교적 논리적이고 일관되게 말할 수 있다.</li>
+                                                    <li>사회적 화제나 일부 추상적 화제에 대해 비교적 논리적이고 일관되게 말할 수 있다.</li>
+                                                    <li>추상적 화제에 대해 비교적 논리적이고 일관되게 말할 수 있다.</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>4급</td>
+                                            <td>
+                                                <ul>
+                                                    <li>일부 사회적 화제에 대해 대체로 구체적이고 조리 있게 말할 수 있다.</li>
+                                                    <li>오류가 때때로 나타나나 다양한 어휘와 표현을 대체로 담화 상황에 맞게 사용할 수 있다.</li>
+                                                    <li>발음과 억양, 속도가 비교적 자연스러워 의미 전달에 문제가 거의 없다.</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3급</td>
+                                            <td>
+                                                <ul>
+                                                    <li>친숙한 사회적 화제에 대해 비교적 구체적으로 말할 수 있다.</li>
+                                                    <li>오류가 때때로 나타나나 어느정도 다양한 어휘와 표현을 비교적 담화 상황에 맞게 사용할 수 있다.</li>
+                                                    <li>발음과 억양, 속도가 다소 부자연스러우나 의미 전달에 큰 문제가 없다.</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2급</td>
+                                            <td>
+                                                <ul>
+                                                    <li>자주 접하는 사회적 상황에서 일상적 화제에 대해 묻거나 답할 수 있다.</li>
+                                                    <li>언어 사용이 제한적이며 담화 상황에 맞지 않는 경우가 있고 오류가 잦다.</li>
+                                                    <li>발음과 억양, 속도가 부자연스러워 의미 전달에 다소 문제가 있다.</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1급</td>
+                                            <td>
+                                                <ul>
+                                                    <li>친숙한 일상적 화제에 대해 질문을 듣고 간단하게 답할 수 있다.</li>
+                                                    <li> 언어 사용이 매우 제한적이며 오류가 빈번하다.</li>
+                                                    <li>발음과 억양, 속도가 매우 부자연스러워 의미 전달에 문제가 있다.</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- //tab-content 3 -->
+                        </div>
+
+        </section>
+        <!-- //opic 소개 -->
+
+
+
+
+        <footer class="footer">
+            <div class="inner">
+                <div class="f_company">
+                    <h1 class="f_logo"><img src="img/common/foot_logo.png" alt="디헤럴드플립언어교육"></h1>
+                    <address class="f_address">
+                        <p class="com_add">(주)디헤럴드플립언어교육 | 서울특별시 중구 세종대로 72, 3층</p>
+                        <p class="com_ceo">대표이사 허혜진</p>
+                        <p class="com_info">통신판매업신고번호 |제 2020-서울중구-1786호 </p>
+                        <p class="com_info">사업자 등록번호 | 863-86-01364 </p>
+                        <p class="com_call"><span>대표전화: (+82)2-752-2200</span>|<span>FAX: 02-752-2022</span></p>
+                        <p class="com_admin">개인정보보호책임자 | 김보민</p>
+                    </address>
+
+                    <div class="f_bottom">
+                        <p class="copyright">
+                        <p>&copy; Copyright ©2019 Dherald Flip Language Assessment Center</p>
+                    </div>
+                </div>
+
+                <div class="f_contact">
+                    <h2 class="f_title">문의 및 SNS</h2>
+                    <p class="f_text">궁금한 점이 있으시면 언제든지 문의해주세요.</p>
+                    <button class="f_button">문의하기</button>
+                    <div class="f_sns">
+                        <a href="#"><i class="xi-instagram"></i><span class="blind">Instagram</span></a>
+                        <a href="#"><i class="xi-facebook-official"></i><span class="blind">Facebook</span></a>
+                        <a href="#"><img src="img/common/sns_blog.png" alt=""><span class="blind">Blog</span></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -99,6 +99,7 @@ header .btnMobile {
 }
 
 .loginArea .btnArea button {
+    padding: 0;
     width: 115px;
     height: 38px;
     font-size: 14px;
@@ -153,6 +154,7 @@ header .btnMobile {
 
 .notice-group .notice-list h3 {
     font-size: 28px;
+    margin-bottom: 15px;
 }
 
 .notice-group .notice-list li {
@@ -162,7 +164,7 @@ header .btnMobile {
 .notice-group .notice-list li>a {
     display: var(--flex);
     justify-content: var(--just-sb);
-    padding: 14px 0;
+    padding: 10px 0;
     gap: 80px;
     color: rgba(0, 0, 0, 0.7)
 }
@@ -173,7 +175,7 @@ header .btnMobile {
 
 .notice-group .notice-list li .list-text {
     position: relative;
-    width: 65%
+    width: 64%
 }
 
 .notice-group .notice-list li .list-text .ico-new {
