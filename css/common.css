@@ -145,20 +145,21 @@ header .logo a {
 }
 
 header nav {
+    position: relative;
     display: var(--flex);
     justify-content: var(--just-sb);
     gap: 30px;
     align-items: var(--align-center);
 }
 
-header nav ul {
+header nav > ul {
     display: var(--flex);
     justify-content: var(--just-sb);
     align-items: var(--align-center);
     gap: 30px;
 }
-
-header nav ul li a {
+header nav > ul > li {position: relative;}
+header nav ul > li > a {
     display: block;
     padding: 5px;
     font-weight: 500;
@@ -167,8 +168,41 @@ header nav ul li a {
     transition: color 0.25s;
 }
 
-header nav ul li a:hover {
+header nav > ul > li > a:hover {
     color: var(--color-primary)
+}
+header nav ul .sub-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    display: none;        
+    z-index: 100;
+}
+
+header nav ul .sub-menu li a {
+    display: block;
+    padding: 10px 15px;
+    white-space: nowrap;
+    font-size: 16px;
+    color: #333;
+}
+
+header nav ul .sub-menu li a:hover {
+    background: #f1f1f8;
+    color: var(--color-primary);
+}
+
+
+/* 열릴 때만 보이게 */
+header nav ul .sub-menu {
+    display: none;
+}
+header nav ul .sub-menu.active {
+    display: block; /* flex로 다시 보이게 */
 }
 
 header .btnMobile {
@@ -280,4 +314,9 @@ table .tc {
 table .bg {
     background: #f1f1f1;
     text-align: center;
+}
+/* 테스트 화면 이미지 사이즈 */
+.test-display figure {
+    max-width: 80%;
+    margin: 0 auto 40px;
 }

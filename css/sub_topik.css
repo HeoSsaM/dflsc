@@ -45,7 +45,11 @@
 header .btnMobile {
     display: none;
 }
-
+section h2 {
+    position: relative;
+    text-align: center;
+    font-weight: 700;
+}
 /* mainVisual */
 #mainVisual .inner {
     overflow: hidden;

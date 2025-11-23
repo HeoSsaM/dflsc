@@ -31,6 +31,19 @@
     font-size: 13px;
   }
 
+  /* opic 시험 결과  */
+  .opi-info .row {
+    grid-template-columns: 1fr;
+  }
+
+  .opi-info dt {
+    background: #f4eefe;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .opi-info dd {
+    padding-top: 10px;
+  }
   /*  topik 소개 */
   .speaking-table {
     border: none;

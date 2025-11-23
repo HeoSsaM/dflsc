@@ -18,6 +18,7 @@
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <!-- AOS 라이브러리 -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js" defer></script>
 </head>
 
 <body>
@@ -34,8 +35,16 @@
                         <li><a href="sub_opic.html">OPIc</a></li>
                         <li><a href="sub_toeic.html">TOEIC Speaking</a></li>
                         <li><a href="sub_topik.html">TOPIK</a></li>
-                    </ul>
-                    <a href="" class="btnMypage"><img src="img/common/ico_mypage.png" alt="마이페이지"></a>
+                        <li class="mypage">
+                            <a href="" class="btnMypage"><img src="img/common/ico_mypage.png" alt="마이페이지"></a>
+                            <ul class="sub-menu">
+                                <li><a href="">정보수정</a></li>
+                                <li><a href="">결제내역</a></li>
+                                <li><a href="">시험응시내역&결과확인</a></li>
+                                <li><a href="">상담게시퍈</a></li>
+                            </ul>
+                        </li>
+                    </ul>                    
                 </nav>
             </div>
             <a href="#" class="btnMobile"><img src="img/common/btn_mobile.png" alt="모바일메뉴"></a>
@@ -276,15 +285,20 @@
 
         <section id="toeic-test">
             <div class="inner test-guide">
-                <h2 class="blind">토익 스피킹 모의테스트 화면과 응시안내</h2>
                 <div class="test-display">
-                    <h3>TOEIC Speaking 모의 테스트 화면</h3>
+                    <h2>TOEIC Speaking 모의 테스트 화면</h2>
+                    <figure>
+                        <img src="img/toeic/toeic-display03.png" alt="">
+                        <img src="img/toeic/toeic-display04.png" alt="">
+                        <img src="img/toeic/toeic-display05.png" alt="">
+                        <img src="img/toeic/toeic-display07.png" alt="">
+                    </figure>
                 </div>
                 <div class="test-result">
-                    <h3>TOEIC Speaking 성적표</h3>
+                    <h2>TOEIC Speaking 성적표</h2>
                 </div>
                 <div class="test-fee">
-                    <h3>응시료</h3>
+                    <h2>응시료</h2>
                     <table>
                         <thead>
                             <tr>
@@ -305,7 +319,7 @@
                     </table>
                 </div>
                 <div class="test-refer">
-                    <h3>테스트 참고사항</h3>
+                    <h2>테스트 참고사항</h2>
                     <ol>
                         <li>응시 전 응시방법을 참고하여 응시환경에 문제가 없는지 확인합니다. <strong>※ 모의고사 진행시에는 마이크(헤드셋)이 반드시 필요합니다.</strong></li>
                         <li>결제관련 영수증은 바로 출력이 가능합니다.</li>

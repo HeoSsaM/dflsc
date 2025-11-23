@@ -1,3 +1,23 @@
+//submenu
+document.addEventListener("DOMContentLoaded", function () {
+  const mypage = document.querySelector(".mypage");
+  const btnMypage = mypage.querySelector(".btnMypage");
+  const subMenu = mypage.querySelector(".sub-menu");
+
+  btnMypage.addEventListener("click", function (e) {
+    e.preventDefault(); // 링크 이동 방지
+    subMenu.classList.toggle("active");
+  });
+
+  // 화면 다른 곳 클릭 시 메뉴 닫기 (선택사항)
+  document.addEventListener("click", function (e) {
+    if (!mypage.contains(e.target)) {
+      subMenu.classList.remove("active");
+    }
+  });
+});
+
+
 /* ============================================
    대학 로고 자동 생성
 ============================================ */
