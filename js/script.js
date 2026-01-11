@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
 /* ============================================
    대학 로고 자동 생성
 ============================================ */
@@ -100,3 +99,124 @@ document.addEventListener("DOMContentLoaded", function () {
   initCompanyLogos();
   initTabs();
 });
+
+//메인 특장점 타이틀 영역
+const $secPoints = document.querySelectorAll(".points-list .title");
+console.log($secPoints);
+
+$secPoints.forEach((title) => {
+  console.log(title);
+  title.classList.remove("blind");
+});
+
+//모바일 메뉴
+document.addEventListener("DOMContentLoaded", () => {
+  const btnMobile = document.querySelector(".btnMobile");
+  const btnMypage = document.querySelector(".m-header .btnMypage");
+  const mNav = document.querySelector(".m-nav");
+  const dim = document.querySelector(".dim");
+
+  if (!mNav || !dim) {
+    console.warn("필수 요소(.m-nav, .dim) 없음");
+    return;
+  }
+
+  // 1) 모바일 nav 상단바(로고+닫기) 없으면 생성
+  function ensureNavHeader() {
+    if (mNav.querySelector(".m-nav-head")) return;
+
+    const head = document.createElement("div");
+    head.className = "m-nav-head";
+    head.innerHTML = `
+      <button type="button" class="btnClose" aria-label="메뉴 닫기">✕</button>
+      <a href="index.html" class="m-nav-logo" aria-label="홈으로 이동"></a>
+    `;
+    mNav.prepend(head);
+
+    head.querySelector(".btnClose").addEventListener("click", closeNav);
+  }
+
+  function openNav() {
+    ensureNavHeader();
+    mNav.classList.add("open");               // ✅ CSS: .m-nav.open
+    mNav.setAttribute("aria-hidden", "false");
+    dim.hidden = false;                       // ✅ CSS: .dim[hidden]
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeNav() {
+    mNav.classList.remove("open");
+    mNav.setAttribute("aria-hidden", "true");
+    dim.hidden = true;
+    document.body.style.overflow = "";
+
+    // 메뉴 닫을 때 서브메뉴도 같이 닫고 싶으면(원하면 유지)
+    mNav.querySelectorAll(".sub-menu.active").forEach((ul) => {
+      ul.classList.remove("active");
+    });
+  }
+
+  // 햄버거 → 열기
+  if (btnMobile) {
+    btnMobile.addEventListener("click", (e) => {
+      e.preventDefault();
+      openNav();
+    });
+  }
+
+  // 오른쪽 마이페이지 → 열기
+  if (btnMypage) {
+    btnMypage.addEventListener("click", (e) => {
+      e.preventDefault();
+      openNav();
+    });
+  }
+
+  // dim 클릭 → 닫기
+  dim.addEventListener("click", closeNav);
+
+  // ESC → 닫기
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && mNav.classList.contains("open")) closeNav();
+  });
+
+  // 2) 모바일 nav 내부 "마이페이지" 서브메뉴 토글
+  // (현재 HTML에서 m-nav 안의 .m-mypage > .sub-menu 를 토글)
+  /* const mypageTitle = mNav.querySelector(".m-mypage strong");
+  const mypageSub = mNav.querySelector(".m-mypage .sub-menu");
+
+  if (mypageTitle && mypageSub) {
+    mypageTitle.style.cursor = "pointer"; // CSS 수정 없이 클릭 가능하게
+    mypageTitle.addEventListener("click", () => {
+      mypageSub.classList.toggle("active"); // ✅ CSS: .sub-menu.active
+    });
+  } */
+});
+// thead의 th 텍스트를 읽어서 각 td에 data-label 붙이기
+  (function () {
+    const table = document.querySelector('.toeic-exam');
+    if (!table) return;
+
+    const headers = Array.from(table.querySelectorAll('thead th')).map(th =>
+      th.innerText.replace(/\s+/g, ' ').trim()
+    );
+
+    const rows = table.querySelectorAll('tbody tr');
+
+    rows.forEach(tr => {
+      const tds = Array.from(tr.children).filter(el => el.tagName === 'TD');
+
+      tds.forEach(td => {
+        if (td.classList.contains('title')) return;
+        if (td.hasAttribute('rowspan')) return;
+
+      });
+
+      const visibleTds = tds.filter(td => !td.classList.contains('title') && !td.hasAttribute('rowspan'));
+      const labels = [headers[1], headers[2], headers[3]]; // 문제 유형, 시간, 문제수
+
+      visibleTds.forEach((td, i) => {
+        td.setAttribute('data-label', labels[i] || '');
+      });
+    });
+  })();

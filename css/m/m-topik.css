@@ -1,0 +1,217 @@
+@charset "utf-8";
+@import url(m-common.css);
+
+:root {
+    /* layout */
+    --flex: flex;
+    --just-sb: space-between;
+    --align-center: center;
+    --sec-space-pc: 80px;
+    --sec-space-mo: 60px;
+
+    /* 컬러 */
+    --gmarket: 'GMarketSans';
+    --color-bg: #f1f2f6;
+    --color-surface: #ffffff;
+    --color-primary: #1b3c98;
+    --color-primary-soft: #7d79c9;
+    --color-accent: #403c98;
+    --color-text-main: #111322;
+    --color-text-sub: #5e6488;
+    --color-line: #dde1f3;
+
+    /* 메인 타이틀 (히어로)  
+     모바일 22px → PC 40px 사이 자동 반응 */
+    --fz-title-xl: clamp(22px, 4vw + 1rem, 42px);
+
+    /* 섹션 타이틀  
+     모바일 20px → PC 32px */
+    --fz-title-lg: clamp(20px, 2.5vw + 0.5rem, 32px);
+
+    /* 중간 제목 (h3 같은 레벨)  
+     모바일 17px → PC 22px */
+    --fz-title-md: clamp(17px, 1.4vw + 0.5rem, 22px);
+
+    /* 본문 글자  
+     모바일 14px → PC 16px */
+    --fz-body: clamp(14px, 1vw + 0.2rem, 16px);
+
+    /* 캡션(작은 글씨)
+     모바일 12px → PC 14px */
+    --fz-caption: clamp(12px, 0.6vw + 0.2rem, 14px);
+}
+
+section+section .inner {
+    padding: 40px 4%;
+}
+
+section h2 {
+    font-family: initial;
+    font-weight: 600;
+    margin-bottom: 35px;
+    font-size: 26px;
+    text-align: center;
+}
+
+/* main-visual */
+#mainVisual {
+    width: 96%;
+    margin: 70px auto 0;
+}
+
+#mainVisual .inner {
+    height: 36vh;
+    position: relative;
+    padding: 0 4%;
+}
+
+#mainVisual video {
+    object-fit: cover;
+    height: 100%;
+    z-index: -1;
+}
+
+#mainVisual .mainTitle h1 {
+    font-family: initial;
+    font-size: var(--fz-title-xl);
+    margin-bottom: 15px;
+}
+
+#mainVisual .mainTitle h1 span {
+    display: block;
+    font-size: var(--fz-title-lg);
+}
+
+#mainVisual .mainTitle p {
+    font-size: 16px;
+    word-break: keep-all;
+    text-align: left;
+}
+
+/* #mainVisual .mainTitle p br {
+    display: none;
+} */
+
+/* tabs.css */
+.tab-wrap {
+    max-width: 100%;
+    margin: 40px auto;
+}
+
+.tab-buttons {
+    display: flex;
+    border-bottom: 3px solid #dddddd;
+}
+
+.tab-button {
+    padding: 8px;
+    font-size: 16px;
+    line-height: 1.2;
+    transition: background-color 0.2s, color 0.2s, border-bottom 0.2s;
+}
+
+.tab-button.active {
+    font-weight: 500;
+    /* 밑줄 자연스럽게 붙게 */
+}
+
+.tab-contents {
+    width: 100%;
+    padding: 30px 0;
+}
+
+.tab-contents h3 {
+    font-size: 18px;
+}
+
+.tab-contents .title-area .sub-title {
+    padding: 0 20px;
+    margin-bottom: 40px;
+}
+
+.tab-contents .title-area .sub-title strong {
+    font-size: 18px;
+    color: #403c98
+}
+.tab-contents .topik-test h2 {
+    margin-bottom: 20px;
+}
+.tab-contents .topik-test .text {
+    padding-left: 0;
+    font-size: 16px;
+}
+
+/* 탭3 */
+.tab-content#tab3 > div {
+    margin-bottom: 50px;
+}
+
+.tab-content#tab3 > div table {
+    text-align: center;
+    margin-bottom: 15px;
+}
+.tab-content#tab3 > div table + strong {
+    font-weight: 600;
+    color: var(--color-primary)
+}
+.tab-content.active {
+    display: block;
+}
+.topik-guide {
+  width: 100%;
+  min-width: 900px;      /* 이 값보다 좁은 화면에서는 스크롤 생김 */
+  table-layout: fixed;   /* 칼럼 폭 균등하게 */
+}
+.topik-guide th,
+.topik-guide td {
+    font-size: 16px;
+    padding: 8px;
+}
+
+/* topik 출제기준 */
+.topik-display {
+    padding-top: 40px;
+}
+.topik-level {
+    margin-bottom: 40px;
+}
+.tab-content .topik-level h3 {
+    margin-bottom: 0
+}
+
+.topik-box {
+    max-width: 1100px;
+    margin: 0 auto 40px;
+}
+
+.topik-title {
+    padding: 10px 12px;
+    font-weight: 600;
+}
+.level {
+    background: #fafafa;
+    padding: 14px 16px;
+    font-weight: 600;
+    border-left: 1px solid #ccc;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.desc {
+    padding: 14px 16px;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    line-height: 1.6;
+}
+.btn-area {
+    text-align: center;
+}
+.btn {
+    padding: 15px 30px;
+}
+.btn:hover {
+    padding: 15px 30px;
+    background: #403c98;
+}

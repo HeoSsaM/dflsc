@@ -14,6 +14,7 @@
 
 
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/m/m-main.css" media="screen and (max-width: 599px)">
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -24,33 +25,79 @@
 
 <body>
     <div id="wrapper">
-        <header>
-            <div class="inner">
+        <header id="header">
+
+            <div class="m-header">
+                <button type="button" class="btnMobile" aria-label="모바일 메뉴 열기" aria-controls="mNav"
+                    aria-expanded="false">
+                    <img src="img/common/btn_mobile.png" alt="">
+                </button>
+
                 <h1 class="logo">
                     <a href="index.html"><span class="blind">logo</span></a>
                 </h1>
-                <nav>
+
+                <a href="#" class="btnMypage">
+                    <img src="img/common/ico_mypage.png" alt="마이페이지">
+                </a>
+            </div>
+
+
+            <!-- 2) PC 헤더 -->
+            <div class="pc-header inner">
+                <h1 class="logo">
+                    <a href="index.html"><span class="blind">logo</span></a>
+                </h1>
+
+                <nav class="pc-nav">
                     <ul class="gnb">
                         <li><a href="sub_hspt.html">HSPT(영어&middot;중국어&middot;일본어)</a></li>
                         <li><a href="sub_olt.html">OLT</a></li>
                         <li><a href="sub_opic.html">OPIc</a></li>
                         <li><a href="sub_toeic.html">TOEIC Speaking</a></li>
                         <li><a href="sub_topik.html">TOPIK</a></li>
+
                         <li class="mypage">
-                            <a href="" class="btnMypage"><img src="img/common/ico_mypage.png" alt="마이페이지"></a>
+                            <a href="#" class="btnMypage">
+                                <img src="img/common/ico_mypage.png" alt="마이페이지">
+                            </a>
+
                             <ul class="sub-menu">
-                                <li><a href="">정보수정</a></li>
-                                <li><a href="">결제내역</a></li>
-                                <li><a href="">시험응시내역&결과확인</a></li>
-                                <li><a href="">상담게시퍈</a></li>
+                                <li><a href="#">정보수정</a></li>
+                                <li><a href="#">결제내역</a></li>
+                                <li><a href="#">시험응시내역&결과확인</a></li>
+                                <li><a href="#">상담게시판</a></li>
                             </ul>
                         </li>
-                    </ul>                    
+                    </ul>
                 </nav>
             </div>
-            <a href="#" class="btnMobile"><img src="img/common/btn_mobile.png" alt="모바일메뉴"></a>
+
+
+            <!-- 3) 모바일 메뉴 패널(드로어/전체메뉴) : PC nav를 복잡하게 재활용하지 말고 별도로 둠 -->
+            <nav class="m-nav" id="mNav" aria-hidden="true">
+                <ul class="m-gnb">
+                    <li><a href="sub_hspt.html">HSPT</a></li>
+                    <li><a href="sub_olt.html">OLT</a></li>
+                    <li><a href="sub_opic.html">OPIc</a></li>
+                    <li><a href="sub_toeic.html">TOEIC Speaking</a></li>
+                    <li><a href="sub_topik.html">TOPIK</a></li>
+                </ul>
+
+                <div class="m-mypage">
+                    <strong>마이페이지</strong>
+                    <ul class="sub-menu">
+                        <li><a href="#">정보수정</a></li>
+                        <li><a href="#">결제내역</a></li>
+                        <li><a href="#">시험응시내역&결과확인</a></li>
+                        <li><a href="#">상담게시판</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="dim" hidden></div>
         </header>
-        <!-- //header -->
+
 
         <section id="mainVisual">
             <div class="inner">
@@ -94,8 +141,16 @@
                             <li>
                                 <a href="">
                                     <p class="list-text">
-                                        유한킴벌리 시즌 3 사후테스트(민병철) 테스트 일정 안내
-                                        <span class="ico-new"><img src="img/common/ico_new.png" alt="new"></span>
+                                        유한킴벌리 시즌 3 사후테스트(민병철) 테스트 일정 안내                                        
+                                    </p>
+                                    <span class="date">2025-11-06</span>
+                                    <span class="ico-new"><img src="img/common/ico_new.png" alt="new"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <p class="list-text">
+                                        유한킴벌리 시즌 3 사후테스트(민병철) 테스트 일정 안내                                        
                                     </p>
                                     <span class="date">2025-11-06</span>
                                 </a>
@@ -104,7 +159,6 @@
                                 <a href="">
                                     <p class="list-text">
                                         유한킴벌리 시즌 3 사후테스트(민병철) 테스트 일정 안내
-                                        <!-- <span class="ico-new"><img src="img/common/ico_new.png" alt="new"> -->
                                     </p>
                                     <span class="date">2025-11-06</span>
                                 </a>
@@ -113,7 +167,6 @@
                                 <a href="">
                                     <p class="list-text">
                                         유한킴벌리 시즌 3 사후테스트(민병철) 테스트 일정 안내
-                                        <!-- <span class="ico-new"><img src="img/common/ico_new.png" alt="new"> -->
                                     </p>
                                     <span class="date">2025-11-06</span>
                                 </a>
@@ -122,7 +175,6 @@
                                 <a href="">
                                     <p class="list-text">
                                         유한킴벌리 시즌 3 사후테스트(민병철) 테스트 일정 안내
-                                        <!-- <span class="ico-new"><img src="img/common/ico_new.png" alt="new"> -->
                                     </p>
                                     <span class="date">2025-11-06</span>
                                 </a>
@@ -131,21 +183,12 @@
                                 <a href="">
                                     <p class="list-text">
                                         유한킴벌리 시즌 3 사후테스트(민병철) 테스트 일정 안내
-                                        <!-- <span class="ico-new"><img src="img/common/ico_new.png" alt="new"> -->
-                                    </p>
-                                    <span class="date">2025-11-06</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <p class="list-text">
-                                        유한킴벌리 시즌 3 사후테스트(민병철) 테스트 일정 안내
-                                        <!-- <span class="ico-new"><img src="img/common/ico_new.png" alt="new"> -->
                                     </p>
                                     <span class="date">2025-11-06</span>
                                 </a>
                             </li>
                         </ul>
+                        <a href="" class="btn-notice-more"><i class="xi-plus-thin"></i></a>
                     </div>
                 </div>
             </div>
@@ -155,7 +198,7 @@
         <section id="sec-features" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-out-cubic"
             data-aos-duration="2000">
             <div class="inner">
-                <h2>국내 유일의 OPIc·TOEIC Speaking <br>TOPIK· TSC 모의시험 사이트</h2>
+                <h2>국내 유일의 <br> OPIc·TOEIC Speaking <br>TOPIK· TSC 모의시험 사이트</h2>
                 <p class="mainText">
                     평가 전문기업으로 쌓아 온 노하우와 전문 평가인력, 방대한 데이터를 토대로 <br>공인 OPIc, TOEIC 스피킹, TOPIK, TSC 시험과 오차범위가 거의 없는
                     <br>정확하고 신뢰할 수 있는 평가를 제공합니다.
@@ -169,14 +212,14 @@
                         <p class="text">
                             언어별 전문 평가진 <br>방대한 기출문제 DB
                         </p>
-                        <em>DB내 20,000+ 문제수록</em>
+                        <em>DB내 20,000+ <span>문제수록</span></em>
                     </li>
                     <li>
                         <p class="big">
                             <strong>실전과 100% 동일한</strong>
                             <span>시험환경과 점수</span>
                         </p>
-                        <em>국내 유일 IBT 시험환경</em>
+                        <em>국내 유일 <span>IBT 시험환경</span></em>
                     </li>
                     <li>
                         <p class="big">
@@ -208,7 +251,7 @@
             <div class="inner">
                 <h2>
                     모의 테스트 응시 인원 및 고객사 현황
-                    <span>연간 50여개 대학교에서 평균 20,000명 이상 응시</span>
+                    <span>연간 50여개 대학교에서 <em>평균 20,000명 이상 응시</em></span>
                 </h2>
 
                 <!-- 대학로고 -->
@@ -272,21 +315,25 @@
         <section id="sec-points" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-out-cubic"
             data-aos-duration="2000">
             <div class="inner">
-                <h2>디헤럴드플립<br>모의테스트<br>특장점</h2>
+                <h2><span>디헤럴드플립</span><br>모의테스트<br>특장점</h2>
                 <ol class="points-list">
                     <li>
+                        <p class="title blind">시험문제</p>
                         <p class="points">실제 시험문제 출제경향을 반영한 <br>20,000개 이상의 문제DB 개발.업데이트<br>전문 평가진.강사진의 문제 분석 및 검수</p>
                         <p class="text">관리자가 시험 특성에 맞추어 <br>난이도 조정하여시험문제 <br> 세팅이 가능합니다.</p>
                     </li>
                     <li>
+                        <p class="title blind">모의테스트</p>
                         <p class="points">실전 시험과 똑같은 시험 진행 <br>모의시험 장소 선택 가능 <br>실전 시험 부담감 최소화</p>
                         <p class="text">모의테스트 홈페이지를 이용하여 <br>장소 상관 없이 온라인 모의 시험이 <br>가능합니다.</p>
                     </li>
                     <li>
+                        <p class="title blind">결과분석</p>
                         <p class="points">응시자의 녹음 답변을 실제시험과 같은 <br>7개 평가영역으로 분석 후 <br>영역별 시험 결과분석 제공</p>
                         <p class="text">Speaking 전문 원어민 강사의 정확한 <br>영역별 평가 결과(OPIc)로 부족한 부분을 <br>보완하여 시험대비</p>
                     </li>
                     <li>
+                        <p class="title blind">평가채점</p>
                         <p class="points">전 ACTFL,ETS,G-TELP <br>평가경력이 있는 전문 원어민 <br>평가진에 의한 정확하고 <br>신뢰도 높은 채점/검수</p>
                         <p class="text">모의시험과 실제시험 점수 <br><span>싱크로율 99% 이상</span></p>
                     </li>
@@ -322,8 +369,7 @@
             </div>
         </section>
 
-        <footer class="footer" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-out-cubic"
-            data-aos-duration="2000">
+        <footer class="footer">
             <div class="inner">
                 <div class="f_company">
                     <h1 class="f_logo"><img src="img/common/foot_logo.png" alt="디헤럴드플립언어교육"></h1>
@@ -338,7 +384,7 @@
 
                     <div class="f_bottom">
                         <p class="copyright">
-                        <p>&copy; Copyright ©2019 Dherald Flip Language Assessment Center</p>
+                        <p>&copy; 2019 Dherald Flip Language Assessment Center</p>
                     </div>
                 </div>
 

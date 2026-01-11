@@ -130,6 +130,10 @@ h3 {
 
 
 /* header */
+.m-header, .m-nav, .dim { display: none; }
+.pc-header { display: flex; align-items: center; }
+
+
 header .inner {
     display: var(--flex);
     justify-content: var(--just-sb);
@@ -209,6 +213,7 @@ header .btnMobile {
     display: block;
     width: 30px;
 }
+
 
 /* footer */
 .footer {    

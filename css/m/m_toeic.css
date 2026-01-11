@@ -1,0 +1,480 @@
+@charset "utf-8";
+@import url(m-common.css);
+
+:root {
+    /* layout */
+    --flex: flex;
+    --just-sb: space-between;
+    --align-center: center;
+    --sec-space-pc: 80px;
+    --sec-space-mo: 60px;
+
+    /* 컬러 */
+    --gmarket: 'GMarketSans';
+    --color-bg: #f1f2f6;
+    --color-surface: #ffffff;
+    --color-primary: #1b3c98;
+    --color-primary-soft: #7d79c9;
+    --color-accent: #403c98;
+    --color-text-main: #111322;
+    --color-text-sub: #5e6488;
+    --color-line: #dde1f3;
+
+    /* 메인 타이틀 (히어로)  
+     모바일 22px → PC 40px 사이 자동 반응 */
+    --fz-title-xl: clamp(22px, 4vw + 1rem, 42px);
+
+    /* 섹션 타이틀  
+     모바일 20px → PC 32px */
+    --fz-title-lg: clamp(20px, 2.5vw + 0.5rem, 32px);
+
+    /* 중간 제목 (h3 같은 레벨)  
+     모바일 17px → PC 22px */
+    --fz-title-md: clamp(17px, 1.4vw + 0.5rem, 22px);
+
+    /* 본문 글자  
+     모바일 14px → PC 16px */
+    --fz-body: clamp(14px, 1vw + 0.2rem, 16px);
+
+    /* 캡션(작은 글씨)
+     모바일 12px → PC 14px */
+    --fz-caption: clamp(12px, 0.6vw + 0.2rem, 14px);
+}
+
+section+section .inner {
+    padding: 40px 4%;
+}
+
+section h2 {
+    font-family: initial;
+    font-weight: 600;
+    margin-bottom: 35px;
+    font-size: 26px;
+    text-align: center;
+}
+
+/* main-visual */
+#mainVisual {
+    width: 96%;
+    margin: 70px auto 0;
+}
+
+#mainVisual .inner {
+    height: 25vh;
+    position: relative;
+    padding: 0 4%;
+}
+
+#mainVisual video {
+    object-fit: cover;
+    height: 100%;
+    z-index: -1;
+}
+
+#mainVisual .mainTitle h1 {
+    font-family: initial;
+    font-size: var(--fz-title-xl);
+    margin-bottom: 15px;
+}
+
+#mainVisual .mainTitle h1 span {
+    display: block;
+    font-size: var(--fz-title-lg);
+}
+
+#mainVisual .mainTitle p {
+    font-size: var(--fz-title-md);
+    word-break: keep-all;
+}
+
+#mainVisual .mainTitle p br {
+    display: none;
+}
+
+
+/* opic overview */
+#sec-toeic-overview h2::after {
+    bottom: -20px;
+}
+
+.toeic-intro {
+    width: 100%;
+    margin: 0 auto 25px;
+    padding-top: 20px;
+}
+
+.opic-intro li {
+    text-align: left;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-size: 16px;
+    word-break: keep-all;
+}
+
+.opic-intro li br {
+    display: none;
+}
+
+
+/* 시험의 특징 */
+#sec-toeic-test {
+    background: #f1f2f6;
+}
+
+#sec-toeic-test .exam-feature {
+    margin-bottom: 50px;
+}
+
+#sec-toeic-test dl {
+    margin-bottom: 0
+}
+
+#sec-toeic-test dl div {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+#sec-toeic-test dt {
+    background: linear-gradient(45deg, #564a99, #44418d);
+    display: inline-block;
+    border-radius: 8px 8px 0 0;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 0;
+    height: auto;
+    line-height: inherit;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+#sec-toeic-test dd {
+    width: 100%;
+    background: #fff;
+    height: auto;
+    border-radius: 0 0 8px 8px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0 5px 15px;
+    font-size: 16px;
+}
+
+.exam-feature .btn-area * {
+    width: 320px;
+    padding: 15px 0;
+    margin-top: 15px;
+}
+
+.toeic-exam-info {
+    padding: 0
+}
+
+.toeic-exam-info .config {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.toeic-exam-info .toeic-exam {
+    border: 0;
+}
+
+/* 모바일용 테이블 */
+/* 1) thead 숨김 */
+.toeic-exam thead {
+    display: none;
+}
+
+/* 2) table 구조를 block으로 */
+.toeic-exam,
+.toeic-exam tbody,
+.toeic-exam tr,
+.toeic-exam td,
+.toeic-exam tfoot {
+    display: block;
+    width: 100%;
+}
+
+.toeic-exam {
+    border: 0;
+}
+
+.toeic-exam td {
+    border: 0;
+}
+
+/* 3) rowspan 셀(구분/배점)은 모바일에서 숨김 */
+.toeic-exam td.title {
+    display: none;
+}
+
+/* Speaking Test */
+.toeic-exam td[rowspan] {
+    display: none;
+}
+
+/* 200/10 Level */
+
+/* 4) 그룹 헤더: Speaking Test + 200/10 Level */
+.toeic-exam tbody.group {
+    border: 1px solid #e6e6ee;
+    border-radius: 14px;
+    padding: 12px;
+    margin-bottom: 14px;
+    background: #fff;
+}
+
+.toeic-exam tbody.group td[data-label] {
+    align-items: flex-start;
+}
+
+
+.toeic-exam tbody.group::before {
+    content: attr(data-group) " · " attr(data-score);
+    display: block;
+    font-weight: 600;
+    font-size: 17px;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 15px 0;
+}
+
+/* 5) 행(card) 스타일 */
+.toeic-exam tbody.group tr {
+    border: 1px solid #f0f0f6;
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: 10px;
+    background: #fafafe;
+}
+
+.toeic-exam tbody.group tr:last-child {
+    margin-bottom: 0;
+}
+
+/* 6) 각 td를 "라벨 : 내용" 형태로 */
+.toeic-exam tbody.group td[data-label] {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 12px 0;
+    text-align: left;
+}
+
+.toeic-exam tbody.group td[data-label]::before {
+    content: attr(data-label);
+    font-weight: 500;
+    flex: 0 0 30%;
+    background: #6969a0;
+    padding: 12px 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+
+    /* 열처럼 보이게 고정 */
+    min-width: 90px;
+    max-width: 90px;
+}
+
+/* 내용 영역 */
+.toeic-exam tbody.group td[data-label]>* {
+    flex: 1;
+}
+
+/* ul 내용은 줄바꿈 자연스럽게 */
+.toeic-exam tbody.group td ul {
+    margin: 0;
+    padding-left: 18px;
+}
+
+/* 7) 문제유형 td는 가독성 좋게 (영문/한글 줄) */
+.toeic-exam tbody.group td[data-label="문제 유형"] li {
+    line-height: 1.35;
+    margin: 2px 0;
+}
+
+/* Total 영역을 카드처럼 */
+.toeic-exam tfoot {
+    display: block;
+    margin-top: 16px;
+}
+
+.toeic-exam tfoot tr {
+    display: block;
+    border: 1px solid #6f6fa3;
+    padding: 12px;
+    background: #ebe9f0;
+}
+
+.toeic-exam tfoot td {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    border: 0;
+    text-align: left;
+    font-weight: 600;
+    color: #000;
+    border-bottom: 1px solid #7e69a5;
+}
+
+/* 왼쪽 타이틀(라벨) */
+.toeic-exam tfoot td::before {
+    flex: 0 0 100px;
+    font-size: 16px;
+    opacity: 0.85;
+    color: #000;
+    border-right: 1px solid #7e69a5;
+    text-align: center;
+}
+
+/* 각 셀별 라벨 지정 */
+.toeic-exam tfoot td:nth-child(1)::before {
+    content: "none";
+}
+
+.toeic-exam tfoot td:nth-child(2)::before {
+    content: "유형";
+}
+
+.toeic-exam tfoot td:nth-child(3)::before {
+    content: "시간";
+}
+
+.toeic-exam tfoot td:nth-child(4)::before {
+    content: "문제수";
+}
+
+.toeic-exam tfoot td:nth-child(5)::before {
+    content: "배점";
+}
+
+.toeic-exam tfoot td:first-child {
+    font-size: 16px;
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+
+/* 첫 행에는 라벨 제거 */
+.toeic-exam tfoot td:first-child::before {
+    content: none;
+}
+.toeic-exam-info .level table {
+    width: 100%;
+}
+
+
+/* 모의테스트 */
+#toeic-test h2 span {display: block;}
+#toeic-test .inner>div {
+    margin-bottom: 30px;
+}
+#toeic-test figure {
+    max-width: 100%;
+}
+#toeic-test figure * {
+    margin-bottom: 10px;
+}
+.test-guide table {
+    margin: 0 auto;
+}
+
+.test-fee table {
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    border: none;
+}
+
+.test-fee table thead {
+    display: none;
+}
+
+.test-fee,
+.test-fee tbody,
+.test-fee tr,
+.test-fee td {
+    display: block;
+    width: 100%;
+    padding: 0;
+}
+
+.test-fee tr {
+    margin-bottom: 12px;
+    background: #fff;
+}
+.test-fee td {
+    text-align: left;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.test-fee td.bg {
+    background: none;
+}
+
+.test-fee td::before {
+    content: attr(data-label);
+    font-weight: 500;
+    color: #666;
+    flex: 0 0 45%;
+    background: #5e6488;
+    height: 55px;
+    text-align: center;
+    line-height: 55px;
+    color: #fff;
+    border-bottom: 1px solid #cdcdcd;
+}
+.test-fee td {
+    border-bottom: 1px solid #cdcdcd;
+    margin-top: -1px;
+}
+.test-fee td:last-child .btn-apply {
+    width: 100%;
+    height: 48px;
+}
+
+.test-fee .bg button {
+    padding: 8px 20px;
+    background: #000;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.test-refer {
+    max-width: 100%;
+    margin: 0 auto;
+}
+.test-refer ol {
+    margin-left: 30px;
+}
+.test-refer ol li {
+    font-size: 16px;
+}
+
+.test-refer ol li strong {
+    display: block;
+    font-weight: 500;
+    color: #5e6488
+}
+
+.test-refer ol li table {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.test-refer ol li table th,
+.test-refer ol li table td {
+    padding: 10px;
+}
+
+.test-result {
+    padding-top: 40px;
+    border-top: 1px solid #ccc;
+}
+.test-result h2 {
+    margin-bottom: 20px;
+}

@@ -13,6 +13,7 @@
     <link href="https://cdn.jsdelivr.net/xeicon/2/xeicon.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="css/sub_toeic.css">
+    <link rel="stylesheet" href="css/m/m_toeic.css" media="screen and (max-width: 599px)">
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -23,31 +24,77 @@
 
 <body>
     <div id="wrapper">
-        <header>
-            <div class="inner">
+        <header id="header">
+
+            <div class="m-header">
+                <button type="button" class="btnMobile" aria-label="모바일 메뉴 열기" aria-controls="mNav"
+                    aria-expanded="false">
+                    <img src="img/common/btn_mobile.png" alt="">
+                </button>
+
                 <h1 class="logo">
                     <a href="index.html"><span class="blind">logo</span></a>
                 </h1>
-                <nav>
+
+                <a href="#" class="btnMypage">
+                    <img src="img/common/ico_mypage.png" alt="마이페이지">
+                </a>
+            </div>
+
+
+            <!-- 2) PC 헤더 -->
+            <div class="pc-header inner">
+                <h1 class="logo">
+                    <a href="index.html"><span class="blind">logo</span></a>
+                </h1>
+
+                <nav class="pc-nav">
                     <ul class="gnb">
                         <li><a href="sub_hspt.html">HSPT(영어&middot;중국어&middot;일본어)</a></li>
                         <li><a href="sub_olt.html">OLT</a></li>
                         <li><a href="sub_opic.html">OPIc</a></li>
                         <li><a href="sub_toeic.html">TOEIC Speaking</a></li>
                         <li><a href="sub_topik.html">TOPIK</a></li>
+
                         <li class="mypage">
-                            <a href="" class="btnMypage"><img src="img/common/ico_mypage.png" alt="마이페이지"></a>
+                            <a href="#" class="btnMypage">
+                                <img src="img/common/ico_mypage.png" alt="마이페이지">
+                            </a>
+
                             <ul class="sub-menu">
-                                <li><a href="">정보수정</a></li>
-                                <li><a href="">결제내역</a></li>
-                                <li><a href="">시험응시내역&결과확인</a></li>
-                                <li><a href="">상담게시퍈</a></li>
+                                <li><a href="#">정보수정</a></li>
+                                <li><a href="#">결제내역</a></li>
+                                <li><a href="#">시험응시내역&결과확인</a></li>
+                                <li><a href="#">상담게시판</a></li>
                             </ul>
                         </li>
-                    </ul>                    
+                    </ul>
                 </nav>
             </div>
-            <a href="#" class="btnMobile"><img src="img/common/btn_mobile.png" alt="모바일메뉴"></a>
+
+
+            <!-- 3) 모바일 메뉴 패널(드로어/전체메뉴) : PC nav를 복잡하게 재활용하지 말고 별도로 둠 -->
+            <nav class="m-nav" id="mNav" aria-hidden="true">
+                <ul class="m-gnb">
+                    <li><a href="sub_hspt.html">HSPT</a></li>
+                    <li><a href="sub_olt.html">OLT</a></li>
+                    <li><a href="sub_opic.html">OPIc</a></li>
+                    <li><a href="sub_toeic.html">TOEIC Speaking</a></li>
+                    <li><a href="sub_topik.html">TOPIK</a></li>
+                </ul>
+
+                <div class="m-mypage">
+                    <strong>마이페이지</strong>
+                    <ul class="sub-menu">
+                        <li><a href="#">정보수정</a></li>
+                        <li><a href="#">결제내역</a></li>
+                        <li><a href="#">시험응시내역&결과확인</a></li>
+                        <li><a href="#">상담게시판</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="dim" hidden></div>
         </header>
         <!-- //header -->
 
@@ -137,7 +184,7 @@
                                     <th>배점<br>/Level</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody class="group" data-group="Speaking Test" data-score="200/10 Level">
                                 <tr>
                                     <td rowspan="5" class="title">Speaking Test</td>
                                     <td>
@@ -233,8 +280,8 @@
                         <table>
                             <caption class="blind">점수와 레벨</caption>
                             <colgroup>
-                                <col style="width: 75%">
-                                <col style="width: 25%">
+                                <col style="width: 65%">
+                                <col style="width: 35%">
                             </colgroup>
                             <thead>
                                 <tr>
@@ -286,7 +333,7 @@
         <section id="toeic-test">
             <div class="inner test-guide">
                 <div class="test-display">
-                    <h2>TOEIC Speaking 모의 테스트 화면</h2>
+                    <h2>TOEIC Speaking <span>모의 테스트 화면</span></h2>
                     <figure>
                         <img src="img/toeic/toeic-display03.png" alt="">
                         <img src="img/toeic/toeic-display04.png" alt="">
@@ -310,10 +357,10 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>1회 60분</td>
-                                <td>온라인 모의고사</td>
-                                <td>19,000원</td>
-                                <td class="bg"><button>테스트 신청하기</button></td>
+                                <td data-label="수업 구분">1회 60분</td>
+                                <td data-label="수업 방식">온라인 모의고사</td>
+                                <td data-label="수강료">19,000원</td>
+                                <td data-label="온라인 테스트 신청" class="bg"><button>테스트 신청하기</button></td>
                             </tr>
                         </tbody>
                     </table>

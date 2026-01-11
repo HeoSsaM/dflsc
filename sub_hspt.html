@@ -13,6 +13,7 @@
     <link href="https://cdn.jsdelivr.net/xeicon/2/xeicon.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="css/hspt.css">
+     <link rel="stylesheet" href="css/m/m-hspt.css" media="screen and (max-width: 599px)">
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -24,31 +25,77 @@
 
 <body>
     <div id="wrapper">
-        <header>
-            <div class="inner">
+        <header id="header">
+
+            <div class="m-header">
+                <button type="button" class="btnMobile" aria-label="모바일 메뉴 열기" aria-controls="mNav"
+                    aria-expanded="false">
+                    <img src="img/common/btn_mobile.png" alt="">
+                </button>
+
                 <h1 class="logo">
                     <a href="index.html"><span class="blind">logo</span></a>
                 </h1>
-                <nav>
+
+                <a href="#" class="btnMypage">
+                    <img src="img/common/ico_mypage.png" alt="마이페이지">
+                </a>
+            </div>
+
+
+            <!-- 2) PC 헤더 -->
+            <div class="pc-header inner">
+                <h1 class="logo">
+                    <a href="index.html"><span class="blind">logo</span></a>
+                </h1>
+
+                <nav class="pc-nav">
                     <ul class="gnb">
                         <li><a href="sub_hspt.html">HSPT(영어&middot;중국어&middot;일본어)</a></li>
                         <li><a href="sub_olt.html">OLT</a></li>
                         <li><a href="sub_opic.html">OPIc</a></li>
                         <li><a href="sub_toeic.html">TOEIC Speaking</a></li>
                         <li><a href="sub_topik.html">TOPIK</a></li>
+
                         <li class="mypage">
-                            <a href="" class="btnMypage"><img src="img/common/ico_mypage.png" alt="마이페이지"></a>
+                            <a href="#" class="btnMypage">
+                                <img src="img/common/ico_mypage.png" alt="마이페이지">
+                            </a>
+
                             <ul class="sub-menu">
-                                <li><a href="">정보수정</a></li>
-                                <li><a href="">결제내역</a></li>
-                                <li><a href="">시험응시내역&결과확인</a></li>
-                                <li><a href="">상담게시퍈</a></li>
+                                <li><a href="#">정보수정</a></li>
+                                <li><a href="#">결제내역</a></li>
+                                <li><a href="#">시험응시내역&결과확인</a></li>
+                                <li><a href="#">상담게시판</a></li>
                             </ul>
                         </li>
-                    </ul>                    
+                    </ul>
                 </nav>
             </div>
-            <a href="#" class="btnMobile"><img src="img/common/btn_mobile.png" alt="모바일메뉴"></a>
+
+
+            <!-- 3) 모바일 메뉴 패널(드로어/전체메뉴) : PC nav를 복잡하게 재활용하지 말고 별도로 둠 -->
+            <nav class="m-nav" id="mNav" aria-hidden="true">
+                <ul class="m-gnb">
+                    <li><a href="sub_hspt.html">HSPT</a></li>
+                    <li><a href="sub_olt.html">OLT</a></li>
+                    <li><a href="sub_opic.html">OPIc</a></li>
+                    <li><a href="sub_toeic.html">TOEIC Speaking</a></li>
+                    <li><a href="sub_topik.html">TOPIK</a></li>
+                </ul>
+
+                <div class="m-mypage">
+                    <strong>마이페이지</strong>
+                    <ul class="sub-menu">
+                        <li><a href="#">정보수정</a></li>
+                        <li><a href="#">결제내역</a></li>
+                        <li><a href="#">시험응시내역&결과확인</a></li>
+                        <li><a href="#">상담게시판</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="dim" hidden></div>
         </header>
         <!-- //header -->
 
@@ -58,7 +105,7 @@
                     <source src="img/hspt/bg.mp4" type="video/mp4">
                 </video>
                 <div class="mainTitle">
-                    <h1>HSPT(Herald Speaking Proficiency Test)</h1>
+                    <h1>HSPT<span>(Herald Speaking Proficiency Test)</span></h1>
                     <div class="mainText">
                         <p>HSPT(Herald Speaking Proficiency Test)는 원어민 1:1 인터뷰를 통해 <br>실제 의사소통 능력을 자연스럽고 정확하게 평가하는 영어 말하기 시험입니다.</p>
                     </div>

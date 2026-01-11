@@ -42,7 +42,6 @@
     --fz-caption: clamp(12px, 0.6vw + 0.2rem, 14px);
 }
 
-
 header .btnMobile {
     display: none;
 }
@@ -143,6 +142,7 @@ section h2 {
 .btn-area button + button {
     background: #444;
 }
+
 /* 시험의 특징 */
 #sec-toeic-test {
     background: #f1f2f6;
