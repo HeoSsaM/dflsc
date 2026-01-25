@@ -49,13 +49,6 @@
 #sec-notice .inner {
     padding: 50px 4% 25px;
 }
-#sec-notice .notice-group {
-    display: block;
-}
-
-.notice-group article {
-    display: none;
-}
 
 .notice-group .notice-list {
     position: relative;
@@ -96,13 +89,19 @@
 .notice-group .notice-list li .date {
     font-size: 14px;
 }
-.notice-group .btn-notice-more {
+.notice-group .notice-area .btn-notice-more {
     position: absolute;
-    top: 2px; right: 0;
-    padding: 4px;
-    border: 1px solid #000;
+    top: -0; right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border: 1px solid #111;
+    width: 32px; height: 32px;
 }
-
+.notice-group .notice-area .btn-notice-more i {
+    font-size: 22px;
+}
 /* 특징영역 */
 #sec-features .inner {
     padding: 50px 4%;
