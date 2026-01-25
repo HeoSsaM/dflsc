@@ -218,12 +218,9 @@ document.addEventListener("DOMContentLoaded", () => {
       visibleTds.forEach((td, i) => {
         td.setAttribute('data-label', labels[i] || '');
       });
-    });
-<<<<<<< HEAD
+    });    
   })();
-=======
-  })();
-
+  
   var swiper = new Swiper(".notice-banner", {
       slidesPerView: 1,
       spaceBetween: 10,
@@ -246,4 +243,3 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       },
     });
->>>>>>> 657034d (mypage/notice area 수정)

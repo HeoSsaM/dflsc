@@ -49,8 +49,6 @@
 #sec-notice .inner {
     padding: 50px 4% 25px;
 }
-
-<<<<<<< HEAD
 #sec-notice .notice-group {
     display: block;
 }
@@ -62,10 +60,9 @@
 .notice-group .notice-list {
     position: relative;
     width: 100%
-=======
+}
 .notice-group .notice-list {
     position: relative;
->>>>>>> 657034d (mypage/notice area 수정)
 }
 
 .notice-group .notice-list h3 {
@@ -75,11 +72,6 @@
 .notice-group .notice-list li>a {
     position: relative;
     display: block;
-<<<<<<< HEAD
-    padding: 10px 0;
-    gap: 80px;
-=======
->>>>>>> 657034d (mypage/notice area 수정)
     color: rgba(0, 0, 0, 0.7)
 }
 
