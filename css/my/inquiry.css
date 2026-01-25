@@ -1,0 +1,145 @@
+@charset "utf-8";
+@import url(../reset.css);
+@import url(../common.css);
+
+/* mainVisual */
+#mainVisual .inner {
+    overflow: hidden;
+    height: 200px;
+    position: relative;
+    padding: 0 40px;
+    background: url(../../img/my/img_joinus.png) no-repeat center/cover;
+    display: var(--flex);
+    justify-content: center;
+    align-items: var(--align-center);
+    border-radius: 25px;
+    margin-bottom: clamp(32px, 4vw, 60px);
+}
+
+#mainVisual .mainTitle h1 {
+    font-family: initial;
+    font-size: var(--fz-title-xl);
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+#container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding-bottom: clamp(30px, 4vh, 50px);
+}
+
+#container h2 {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+
+#container h2::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 30px;
+    border-radius: 10px;
+    background: #583a8f;
+    line-height: 1;
+    content: '';
+}
+
+/* 상단 검색 */
+.board-top {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.search {
+  position: relative;
+}
+
+.search input {
+  width: 220px;
+  height: 30px;
+  padding: 0 36px 0 10px;
+  border: 1px solid #ccc;
+  font-size: 13px;
+}
+
+.btn-search {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  border: none;
+  cursor: pointer;
+}
+.btn-search i {
+    width: 32px;
+    height: 32px;
+}
+/* 테이블 */
+.board {
+  width: 100%;  
+}
+
+.board th {
+  background: #7690af;
+  padding: 12px 8px;
+  font-size: 14px;
+}
+
+.board td {
+  padding: 14px 8px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  font-size: 13px;
+}
+
+.board td:nth-child(2) {
+  text-align: center;
+}
+
+/* 비어있는 상태 */
+.board tr.empty td {
+  padding: 30px 0;
+  color: #666;
+  font-size: 13px;
+}
+
+/* 하단 버튼 */
+.board-bottom {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+.btn-write {
+  padding: 8px 18px;
+  background: #4b4fae;
+  color: #fff;
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.btn-write:hover {
+  background: #3f43a0;
+}
+
+/* 반응형 */
+@media (max-width: 600px) {
+  .search input {
+    width: 160px;
+  }
+
+  .board th,
+  .board td {
+    font-size: 12px;
+  }
+}

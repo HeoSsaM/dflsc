@@ -113,53 +113,42 @@ header .btnMobile {
     padding-top: 80px;
 }
 
-#sec-notice .notice-group {
-    display: var(--flex);
-    justify-content: var(--just-sb);
-    gap: 60px;
-}
-
-.notice-group article {
-    width: 426px;
-    height: 260px;
-    background: url(../img/main/notice_bg.png) no-repeat center/cover;
-    display: var(--flex);
-    flex-direction: column;
-    justify-content: center;
-    align-items: var(--align-center);
-}
-
-.notice-group article>* {
-    font-family: var(--gmarket);
-    font-weight: 500;
-    color: #fff;
-    text-align: center;
-    line-height: 1;
-}
-
-.notice-group article strong {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.notice-group article span {
-    font-size: 24px;
-    line-height: 1.4;
-}
-
-.notice-group .notice-list {
+#sec-notice .notice-area {
     position: relative;
-    width: 600px
 }
-
-.notice-group .notice-list h3 {
+#sec-notice .btn-notice-more {
+    position: absolute;
+    top: 0; right: 0;
+    width: 32px; height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+#sec-notice .btn-notice-more i {
+    font-size: 25px;
+}
+.notice-group .notice-area h3 {
+    font-family: var(--gmarket);
     font-size: 28px;
+<<<<<<< HEAD
     margin-bottom: 15px;
+=======
+    font-weight: 500;
+    color: #000;
+    line-height: 1;
+    margin-bottom: 30px;
+>>>>>>> 657034d (mypage/notice area 수정)
 }
 
-.notice-group .notice-list li {
-    border-bottom: 1px solid #efefef;
+.notice-area .notice-list {
+    position: relative;
+    /* display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px; */
+    padding-bottom: 40px;
 }
+<<<<<<< HEAD
 
 .notice-group .notice-list li>a {
     display: var(--flex);
@@ -167,21 +156,30 @@ header .btnMobile {
     padding: 10px 0;
     gap: 80px;
     color: rgba(0, 0, 0, 0.7)
+=======
+.notice-area .notice-list li > a {
+    position: relative;
+    display: block;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #cdcdcd;
+>>>>>>> 657034d (mypage/notice area 수정)
 }
-
-.notice-group .notice-list li>a:hover {
-    color: #000
-}
-
 .notice-group .notice-list li .list-text {
     position: relative;
+<<<<<<< HEAD
     width: 64%
+=======
+    word-break: keep-all;
+    margin: 20px 0 15px;
+    margin-bottom: 15px;
+    font-size: 18px;
+>>>>>>> 657034d (mypage/notice area 수정)
 }
-
-.notice-group .notice-list li .list-text .ico-new {
+.notice-group .notice-list li .ico-new {
     position: absolute;
-    top: -10px;
-    right: 0;
+    top: 10px;
+    right: 10px;
 }
 
 /* 특징영역 */

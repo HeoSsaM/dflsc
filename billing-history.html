@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>디헤럴드 플립 언어능력 평가센터</title>
+
+    <link rel="icon" href="img/common/favicon.ico" type="image/x-icon">
+    <!-- AOS 라이브러리 불러오기-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <!-- Link xe-icon -->
+    <link href="https://cdn.jsdelivr.net/xeicon/2/xeicon.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/my/exam_history.css">
+    <link rel="stylesheet" href="css/m/m-hspt.css" media="screen and (max-width: 599px)">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <!-- AOS 라이브러리 -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header id="header">
+            <div class="m-header">
+                <button type="button" class="btnMobile" aria-label="모바일 메뉴 열기" aria-controls="mNav"
+                    aria-expanded="false">
+                    <img src="img/common/btn_mobile.png" alt="">
+                </button>
+
+                <h1 class="logo">
+                    <a href="index.html"><span class="blind">logo</span></a>
+                </h1>
+
+                <a href="#" class="btnMypage">
+                    <img src="img/common/ico_mypage.png" alt="마이페이지">
+                </a>
+            </div>
+
+            <!-- 2) PC 헤더 -->
+            <div class="pc-header inner">
+                <h1 class="logo">
+                    <a href="index.html"><span class="blind">logo</span></a>
+                </h1>
+
+                <nav class="pc-nav">
+                    <ul class="gnb">
+                        <li><a href="sub_hspt.html">HSPT(영어&middot;중국어&middot;일본어)</a></li>
+                        <li><a href="sub_olt.html">OLT</a></li>
+                        <li><a href="sub_opic.html">OPIc</a></li>
+                        <li><a href="sub_toeic.html">TOEIC Speaking</a></li>
+                        <li><a href="sub_topik.html">TOPIK</a></li>
+
+                        <li class="mypage">
+                            <a href="#" class="btnMypage">
+                                <img src="img/common/ico_mypage.png" alt="마이페이지">
+                            </a>
+
+                            <ul class="sub-menu">
+                                <li><a href="mypage_modify.html">정보수정</a></li>
+                                <li><a href="billing-history.html">결제내역</a></li>
+                                <li><a href="exam_history.html">시험응시내역&결과확인</a></li>
+                                <li><a href="inquiry.html">상담게시판</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- 3) 모바일 메뉴 패널 -->
+            <nav class="m-nav" id="mNav" aria-hidden="true">
+                <ul class="m-gnb">
+                    <li><a href="sub_hspt.html">HSPT</a></li>
+                    <li><a href="sub_olt.html">OLT</a></li>
+                    <li><a href="sub_opic.html">OPIc</a></li>
+                    <li><a href="sub_toeic.html">TOEIC Speaking</a></li>
+                    <li><a href="sub_topik.html">TOPIK</a></li>
+                </ul>
+
+                <div class="m-mypage">
+                    <strong>마이페이지</strong>
+                    <ul class="sub-menu">
+                        <li><a href="mypage_modify.html">정보수정</a></li>
+                        <li><a href="billing-history.html">결제내역</a></li>
+                        <li><a href="exam_history.html">시험응시내역&결과확인</a></li>
+                        <li><a href="inquiry.html">상담게시판</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="dim" hidden></div>
+        </header>
+        <!-- //header -->
+
+        <section id="mainVisual">
+            <div class="inner">
+                <div class="mainTitle">
+                    <h1>디헤럴드플립언어교육</span></h1>
+                </div>
+            </div>
+        </section>
+        <!-- //메인비쥬얼 -->
+
+        <section id="container">
+            <h2 class="page-title">시험응시내역 &amp; 결과확인</h2>
+            <hr class="divider" />
+
+            <div class="table-box" role="region" aria-label="시험응시내역 테이블">
+                <table>
+                    <colgroup>
+                        <col class="no" />
+                        <col class="kind" />
+                        <col class="state" />
+                        <col class="date" />
+                        <col class="score" />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">번호</th>
+                            <th scope="col">구분</th>
+                            <th scope="col">결제일</th>
+                            <th scope="col">수강내용</th>
+                            <th scope="col">결제금액</th>
+                            <th scope="col">영수증</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+
+                <nav class="pager" aria-label="페이지네이션">
+                    <span class="page-btn" aria-disabled="true" title="이전">‹</span>
+                    <span class="page-num is-active" aria-current="page">1</span>
+                    <span class="page-btn" title="다음">›</span>
+                </nav>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="inner">
+                <div class="f_company">
+                    <h1 class="f_logo"><img src="img/common/foot_logo.png" alt="디헤럴드플립언어교육"></h1>
+                    <address class="f_address">
+                        <p class="com_add">(주)디헤럴드플립언어교육 | 서울특별시 중구 세종대로 72, 3층</p>
+                        <p class="com_ceo">대표이사 허혜진</p>
+                        <p class="com_info">통신판매업신고번호 |제 2020-서울중구-1786호 </p>
+                        <p class="com_info">사업자 등록번호 | 863-86-01364 </p>
+                        <p class="com_call"><span>대표전화: (+82)2-752-2200</span>|<span>FAX: 02-752-2022</span></p>
+                        <p class="com_admin">개인정보보호책임자 | 김보민</p>
+                    </address>
+
+                    <div class="f_bottom">
+                        <p class="copyright">
+                        <p>&copy; Copyright ©2019 Dherald Flip Language Assessment Center</p>
+                    </div>
+                </div>
+
+                <div class="f_contact">
+                    <h2 class="f_title">문의 및 SNS</h2>
+                    <p class="f_text">궁금한 점이 있으시면 언제든지 문의해주세요.</p>
+                    <button class="f_button">문의하기</button>
+                    <div class="f_sns">
+                        <a href="#"><i class="xi-instagram"></i><span class="blind">Instagram</span></a>
+                        <a href="#"><i class="xi-facebook-official"></i><span class="blind">Facebook</span></a>
+                        <a href="#"><img src="img/common/sns_blog.png" alt=""><span class="blind">Blog</span></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

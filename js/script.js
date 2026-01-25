@@ -219,4 +219,31 @@ document.addEventListener("DOMContentLoaded", () => {
         td.setAttribute('data-label', labels[i] || '');
       });
     });
+<<<<<<< HEAD
   })();
+=======
+  })();
+
+  var swiper = new Swiper(".notice-banner", {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 30,
+        },
+      },
+    });
+>>>>>>> 657034d (mypage/notice area 수정)

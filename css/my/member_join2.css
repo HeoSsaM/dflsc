@@ -1,0 +1,216 @@
+@charset "utf-8";
+@import url(../reset.css);
+@import url(../common.css);
+
+:root {
+    --line: #cfd6df;
+    --head: #f3f6fb;
+    --text: #1f2a37;
+    --muted: #6b7280;
+    --primary: #4c55b6;
+    --primary-dark: #3e46a5;
+    --radius: 6px;
+}
+
+/* mainVisual */
+#mainVisual .inner {
+    overflow: hidden;
+    height: 200px;
+    position: relative;
+    padding: 0 40px;
+    background: url(../../img/my/img_joinus.png) no-repeat center/cover;
+    display: var(--flex);
+    justify-content: center;
+    align-items: var(--align-center);
+    border-radius: 25px;
+    margin-bottom: clamp(32px, 6vw, 40px);
+}
+
+#mainVisual .mainTitle h1 {
+    font-family: initial;
+    font-size: var(--fz-title-xl);
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+#container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+#container h2 {
+    position: relative;
+    padding-left: 20px;
+}
+
+#container h2::before {
+    position: absolute;
+    top: 46%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 26px;
+    border-radius: 10px;
+    background: #583a8f;
+    content: '';
+}
+
+.sub-title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+/* form */
+.join {
+    border-top: 3px solid #2d6cdf;
+    background: #fff;
+    margin-bottom: 30px;
+}
+
+/* 한 줄(행) */
+.row {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    border-top: 1px solid var(--line);
+}
+
+.row:first-child {
+    border-top: 0
+}
+
+/* 왼쪽 라벨 칸 */
+.th {
+    padding: 10px 12px;
+    background: var(--head);
+    border-right: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* 오른쪽 입력/설명 칸 */
+.td {
+    padding: 10px 12px;
+}
+
+/* 오른쪽 칸 내부를 "입력+버튼+설명" 같은 형태로 구성 */
+.td .inline {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+input[type="text"],
+input[type="password"],
+select {
+    height: 30px;
+    padding: 0 10px;
+    border: 1px solid #b8c2cf;
+    border-radius: 3px;
+    font-size: 14px;
+    outline: none;
+    background: #fff;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+select:focus {
+    border-color: #6f7cff;
+    box-shadow: 0 0 0 3px rgba(111, 124, 255, .18);
+}
+
+.w-sm {
+    width: 110px
+}
+
+.w-md {
+    width: 160px
+}
+
+.w-lg {
+    width: 260px
+}
+
+.hint {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.35;
+}
+
+.hint b {
+    color: #374151
+}
+
+.btn {
+    height: 30px;
+    padding: 0 10px;
+    border: 1px solid #aab4c3;
+    border-radius: 3px;
+    background: var(--text);
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.btn:hover {
+    filter: brightness(.98)
+}
+
+.btn:active {
+    transform: translateY(1px)
+}
+
+.radios {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 14px;
+}
+
+.radios label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+/* 하단 버튼 영역 */
+.btn-area {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 18px 12px;
+    border-top: 1px solid var(--line);
+    background: #fff;
+}
+
+.btn-ok {
+    height: 36px;
+    padding: 0 18px;
+    border: 1px solid var(--primary-dark);
+    background: var(--primary);
+    color: #fff;
+    border-radius: 3px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn-ok:hover {
+    filter: brightness(.98)
+}
+
+.btn-cancel {
+    height: 36px;
+    padding: 0 18px;
+    border: 1px solid #aab4c3;
+    background: var(--muted);
+    border-radius: 3px;
+    font-weight: 700;
+    cursor: pointer;
+}
