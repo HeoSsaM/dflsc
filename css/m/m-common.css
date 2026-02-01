@@ -98,8 +98,8 @@ header .pc-nav {
 /* 모바일 헤더 버튼 공통(터치영역) */
 .m-header button,
 .m-header a {
-  width: 32px;
-  height: 32px;
+  width: 44px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -241,6 +241,7 @@ header .pc-nav {
 
 #mainVisual {
   height: auto;
+  margin-bottom: 70px;
 }
 
 #mainVisual .inner {
@@ -248,7 +249,6 @@ header .pc-nav {
   margin-top: 0;
   background-image: url(../../img/main/main_bg.png);
   background-size: cover;
-  display: block;
   border-radius: 25px;
 }
 
@@ -321,7 +321,7 @@ table .bg {
   background: #f1f1f1;
   text-align: center;
 }
-
+ 
 /* footer */
 .footer {
   background: #111;
