@@ -2,6 +2,13 @@
 @import url(m/m-common.css);
 
 /* ============== Main ========================================================= */
+#mainVisual.main {
+    margin-bottom: 70px;
+}
+#mainVisual {
+    height: auto;
+    margin-bottom: 25px;
+}
 section .inner {
     padding: 40px 0;
 }
@@ -59,9 +66,6 @@ section h2 {
 }
 
 /* ============== Topik ========================================================= */
-#mainVisual {
-    height: 320px;
-}
 #mainVisual .mainTitle h1{
     font-size: 34px;
 }
