@@ -39,6 +39,17 @@
      모바일 12px → PC 14px */
   --fz-caption: clamp(12px, 0.6vw + 0.2rem, 14px);
 }
+html, body { height: 100%; }
+
+body{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#wrapper {
+  flex: 1;
+}
 
 .btn {
   border-radius: 15px;

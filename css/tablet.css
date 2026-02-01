@@ -1,6 +1,18 @@
 @charset "Utf-8";
 @import url(m/m-common.css);
 
+html, body { height: 100%; }
+
+body{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#wrapper {
+  flex: 1;
+}
+
 /* ============== Main ========================================================= */
 #mainVisual.main {
     margin-bottom: 70px;
