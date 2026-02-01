@@ -39,9 +39,13 @@
      모바일 12px → PC 14px */
   --fz-caption: clamp(12px, 0.6vw + 0.2rem, 14px);
 }
-html, body { height: 100%; }
 
-body{
+html,
+body {
+  height: 100%;
+}
+
+body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -331,7 +335,7 @@ table .bg {
   background: #f1f1f1;
   text-align: center;
 }
- 
+
 /* footer */
 .footer {
   background: #111;
@@ -361,14 +365,26 @@ table .bg {
 
 /* 767px 이하 */
 @media screen and (max-width: 767px) {
+
+  .m-header button,
+  .m-header a {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .table-wrap {
     width: 100%;
     overflow-x: auto;
   }
+
   .m-nav .m-nav-head {
     justify-content: flex-start;
     padding-left: 4%;
   }
+
   .m-header .logo {
     position: static;
     transform: none;
@@ -387,6 +403,9 @@ table .bg {
     cursor: pointer;
   }
 
+  #mainVisual.main .inner {
+    display: block;
+  }
   .footer .inner {
     padding: 40px 0;
     display: block;
