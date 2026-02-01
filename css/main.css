@@ -151,6 +151,7 @@ header .btnMobile {
 .notice-group .notice-list li .list-text {
     position: relative;
     font-size: 18px;
+    font-weight: 500;
     margin-bottom: 15px;
     word-break: keep-all;
 }
@@ -335,17 +336,6 @@ header .btnMobile {
 .stats-list dt {
     font-size: 20px;
     color: #fff;
-    clip-path: polygon(0 0,
-            /* 왼쪽 위 */
-            95% 0,
-            /* 오른쪽 위에서 조금 안쪽 */
-            100% 20%,
-            /* 잘린 사선 부분 */
-            100% 100%,
-            /* 오른쪽 아래 */
-            0 100%
-            /* 왼쪽 아래 */
-        );
     background: linear-gradient(45deg, #5157a8, #292d63);
     width: 220px;
     height: 60px;

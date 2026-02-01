@@ -13,7 +13,8 @@
     <link href="https://cdn.jsdelivr.net/xeicon/2/xeicon.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="css/sub_olt.css">
-    <link rel="stylesheet" href="css/m/m-olt.css" media="screen and (max-width: 599px)">
+    <link rel="stylesheet" href="css/tablet.css" media="screen and (max-width: 1024px)">
+    <link rel="stylesheet" href="css/m/m-olt.css" media="screen and (max-width: 768px)">
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -62,17 +63,10 @@
                             </a>
 
                             <ul class="sub-menu">
-<<<<<<< HEAD
-                                <li><a href="#">정보수정</a></li>
-                                <li><a href="#">결제내역</a></li>
-                                <li><a href="#">시험응시내역&결과확인</a></li>
-                                <li><a href="#">상담게시판</a></li>
-=======
                                 <li><a href="mypage_modify.html">정보수정</a></li>
                                 <li><a href="billing-history.html">결제내역</a></li>
                                 <li><a href="exam_history.html">시험응시내역&결과확인</a></li>
                                 <li><a href="inquiry.html">상담게시판</a></li>
->>>>>>> 657034d (mypage/notice area 수정)
                             </ul>
                         </li>
                     </ul>
@@ -93,17 +87,10 @@
                 <div class="m-mypage">
                     <strong>마이페이지</strong>
                     <ul class="sub-menu">
-<<<<<<< HEAD
-                        <li><a href="#">정보수정</a></li>
-                        <li><a href="#">결제내역</a></li>
-                        <li><a href="#">시험응시내역&결과확인</a></li>
-                        <li><a href="#">상담게시판</a></li>
-=======
                         <li><a href="mypage_modify.html">정보수정</a></li>
                         <li><a href="billing-history.html">결제내역</a></li>
                         <li><a href="exam_history.html">시험응시내역&결과확인</a></li>
                         <li><a href="inquiry.html">상담게시판</a></li>
->>>>>>> 657034d (mypage/notice area 수정)
                     </ul>
                 </div>
             </nav>
@@ -182,106 +169,114 @@
                 </div>
 
                 <h3>OLT 기준표</h3>
-                <table class="olt-base">
-                    <caption class="blind">OLT 레벨별 점수와 레벨 설명</caption>
-                    <colgroup>
-                        <col style="width: 15%;">
-                        <col style="width: 20%;">
-                        <col style="width: auto">
-                    </colgroup>
-                    <thead>
-                        <tr>
-                            <th>OLT Level</th>
-                            <th>OLT Score</th>
-                            <th>Level Description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="bg">
-                            <td class="bg">10</td>
-                            <td class="bg">9.5-10</td>
-                            <td rowspan="3" class="tl bg">
-                                High degree of language competence. Capable of precise and fluent communication.
-                                <br>Easily comprehends written or verbal communication.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="bg">9</td>
-                            <td class="bg">8.5 - 9.4</td>
-                        </tr>
-                        <tr>
-                            <td class="bg">8</td>
-                            <td class="bg">7.5 - 8.4</td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td>6.5 - 7.4</td>
-                            <td class="tl">
-                                Able to communicate successfully despite the possibility of occasional reservations or
-                                mistakes that do not obstruct communication
-                            </td>
-                        </tr>
-                        <tr class="bg">
-                            <td>6</td>
-                            <td>5.5 - 6.4</td>
-                            <td class="tl">
-                                Able to converse with ease and confidence when dealing with most routine and social
-                                situations though hesitation and errors may be evident.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>4.5 - 5.4</td>
-                            <td class="tl">
-                                Able to handle a variety of uncomplicated communicative tasks in straightforward social
-                                situations though conversation is generally limited to those predictable and concrete
-                                exchanges necessary for survival in the target culture.
-
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="bg">4</td>
-                            <td class="bg">3.5 - 4.4</td>
-                            <td rowspan="2" class="tl bg">
-                                Able to understand standard inpub but may require clarification often. Able to handle a
-                                limited number of uncomplicated communicative tasks and understand standard input, but
-                                conversation is restricted to some of the concrete exchagnes and 3 2.5 - 3.4 predictable
-                                topics necessary for survival in the target language culture.
-                            </td>
-                        </tr>
-                        <tr class="bg">
-                            <td>3</td>
-                            <td>2.5 - 3.4</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>1.5-2.4</td>
-                            <td rowspan="2" class="tl">
-                                Able to understand common and simple phrases and sentences. Difficult to handle simple
-                                tasks due to frequent errors occurring regularly, putting communication under strain
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>1.0-1.4</td>
-                        </tr>
-                        <tr class="bg">
-                            <td>NFS</td>
-                            <td></td>
-                            <td class="tl">
-                                Can only communicate if the other person is willing to clarify simple words or phrases
-                                repeatedly.
-                            </td>
-                        </tr>
-                    </tbody>
-
-                </table>
+                <div class="tabele-wrap">
+                    <table class="olt-base table-card-mobile">
+                        <caption class="blind">OLT 레벨별 점수와 레벨 설명</caption>
+                        <colgroup>
+                            <col style="width: 15%;">
+                            <col style="width: 20%;">
+                            <col style="width: auto">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>OLT Level</th>
+                                <th>OLT Score</th>
+                                <th>Level Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg">
+                                <td class="bg">10</td>
+                                <td class="bg">9.5-10</td>
+                                <td rowspan="3" class="tl bg">
+                                    High degree of language competence. Capable of precise and fluent communication.
+                                    <br>Easily comprehends written or verbal communication.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="bg">9</td>
+                                <td class="bg">8.5 - 9.4</td>
+                            </tr>
+                            <tr>
+                                <td class="bg">8</td>
+                                <td class="bg">7.5 - 8.4</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>6.5 - 7.4</td>
+                                <td class="tl">
+                                    Able to communicate successfully despite the possibility of occasional reservations
+                                    or
+                                    mistakes that do not obstruct communication
+                                </td>
+                            </tr>
+                            <tr class="bg">
+                                <td>6</td>
+                                <td>5.5 - 6.4</td>
+                                <td class="tl">
+                                    Able to converse with ease and confidence when dealing with most routine and social
+                                    situations though hesitation and errors may be evident.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>4.5 - 5.4</td>
+                                <td class="tl">
+                                    Able to handle a variety of uncomplicated communicative tasks in straightforward
+                                    social
+                                    situations though conversation is generally limited to those predictable and
+                                    concrete
+                                    exchanges necessary for survival in the target culture.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="bg">4</td>
+                                <td class="bg">3.5 - 4.4</td>
+                                <td rowspan="2" class="tl bg">
+                                    Able to understand standard inpub but may require clarification often. Able to
+                                    handle a
+                                    limited number of uncomplicated communicative tasks and understand standard input,
+                                    but
+                                    conversation is restricted to some of the concrete exchagnes and 3 2.5 - 3.4
+                                    predictable
+                                    topics necessary for survival in the target language culture.
+                                </td>
+                            </tr>
+                            <tr class="bg">
+                                <td>3</td>
+                                <td>2.5 - 3.4</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>1.5-2.4</td>
+                                <td rowspan="2" class="tl">
+                                    Able to understand common and simple phrases and sentences. Difficult to handle
+                                    simple
+                                    tasks due to frequent errors occurring regularly, putting communication under strain
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>1.0-1.4</td>
+                            </tr>
+                            <tr class="bg">
+                                <td>NFS</td>
+                                <td></td>
+                                <td class="tl">
+                                    Can only communicate if the other person is willing to clarify simple words or
+                                    phrases
+                                    repeatedly.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
             </div>
         </section>
         <!-- //overview -->
 
-        <sectino id="sec-sample">
+        <section id="sec-sample">
             <div class="inner">
                 <h2>OLT Dialogue 응시자 지시사항 <strong>Sample</strong></h2>
                 <dl class="sample-text">
@@ -304,76 +299,64 @@
                                 환자의 물음이 필요한 질문이 아니라면, 나중에 다시 돌아갈 필요 없이 각 과제를 다음 단계로 넘어가기 전에 완전히 마무리하세요.
                             </p>
                         </dd>
-<<<<<<< HEAD
-                    </div>                    
-=======
                     </div>
->>>>>>> 657034d (mypage/notice area 수정)
                 </dl>
 
                 <div class="role-play">
                     <h3>Doctor Role-play 예시</h3>
-                    <table class="doc-sample">
+                    <table class="doc-sample table-card-mobile">
                         <caption class="blind">Doctor Role-play 예시</caption>
                         <colgroup>
                             <col style="width: 15%;">
                             <col style="width: 20%;">
                             <col style="width: auto;">
                         </colgroup>
-                        <tr>
-                            <td>00:03:51.76</td>
-                            <td>Doctor</td>
-<<<<<<< HEAD
-                            <td>"Okay, because exercise will help decrease the lower cholesterol level and also lose your weight and strenthen your heart. So it's very positive for your condition. Is that clear for you?"</td>
-=======
-                            <td>"Okay, because exercise will help decrease the lower cholesterol level and also lose
-                                your weight and strenthen your heart. So it's very positive for your condition. Is that
-                                clear for you?"</td>
->>>>>>> 657034d (mypage/notice area 수정)
-                        </tr>
-                        <tr>
-                            <td>00:03:12.32</td>
-                            <td>Interlocutor</td>
-                            <td>"Yeah, that's very clear. Thank you."</td>
-                        </tr>
-                        <tr>
-                            <td>00:03:14.78</td>
-                            <td>Doctor</td>
-                            <td>"Do you have any questions?"</td>
-                        </tr>
-                        <tr>
-                            <td>00:03:16.77</td>
-                            <td>Interlocutor</td>
-<<<<<<< HEAD
-                            <td>"I do actually. I'm I'm really hoping that I can return to work. And I was wondering, um you know, whether the whether I can do that or you know if I have to be off work for a long time."</td>
-                        </tr>
-                    </table>
-                    
-                    <dl class="checkbox">
-                        <dt>→ 이 예에서는 의사가 환자에게 운동에 관한 방금 제공한 정보가 잘 이해되었는지 확인합니다</dt>
-                        <dd>그러나 대화를 환자에게 궁금한 점이 있는지 묻는 것으로 마무리하기보다는 <br>다음 단계로 넘어가 향후 발작을 예방하기 위한 권장 사항을 제시하는 것이 더 적절합니다.</dd>
-=======
-                            <td>"I do actually. I'm I'm really hoping that I can return to work. And I was wondering, um
-                                you know, whether the whether I can do that or you know if I have to be off work for a
-                                long time."</td>
-                        </tr>
+                        <tbody>
+                            <tr class="is-doctor">
+                                <td>00:03:51.76</td>
+                                <td>Doctor</td>
+                                <td>"Okay, because exercise will help decrease the lower cholesterol level and also lose
+                                    your weight and strenthen your heart. So it's very positive for your condition. Is
+                                    that
+                                    clear for you?"</td>
+                            </tr>
+                            <tr class="is-doctor">
+                                <td>00:03:12.32</td>
+                                <td>Interlocutor</td>
+                                <td>"Yeah, that's very clear. Thank you."</td>
+                            </tr>
+                            <tr class="is-doctor">
+                                <td>00:03:14.78</td>
+                                <td>Doctor</td>
+                                <td>"Do you have any questions?"</td>
+                            </tr>
+                            <tr class="is-doctor">
+                                <td>00:03:16.77</td>
+                                <td>Interlocutor</td>
+                                <td>"I do actually. I'm I'm really hoping that I can return to work. And I was
+                                    wondering, um you know, whether the whether I can do that or you know if I have to
+                                    be off work for a
+                                    long time."</td>
+                            </tr>
+                        </tbody>
                     </table>
 
                     <dl class="checkbox">
                         <dt>→ 이 예에서는 의사가 환자에게 운동에 관한 방금 제공한 정보가 잘 이해되었는지 확인합니다</dt>
                         <dd>그러나 대화를 환자에게 궁금한 점이 있는지 묻는 것으로 마무리하기보다는 <br>다음 단계로 넘어가 향후 발작을 예방하기 위한 권장 사항을 제시하는 것이 더
                             적절합니다.</dd>
->>>>>>> 657034d (mypage/notice area 수정)
                     </dl>
 
                     <figure>
                         <figcaption>OLT 대화문 Card Sample</figcaption>
-                        <img src="img/olt/olt-dialog-1.png" alt="olt대화문 카드예시">
-                        <img src="img/olt/olt-dialog-2.png" alt="olt대화문 카드예시">
+                        <div class="pic-group">
+                            <img src="img/olt/olt-dialog-1.png" alt="olt대화문 카드예시">
+                            <img src="img/olt/olt-dialog-2.png" alt="olt대화문 카드예시">
+                        </div>
                     </figure>
                 </div>
             </div>
-        </sectino>
+        </section>
 
         <footer class="footer">
             <div class="inner">

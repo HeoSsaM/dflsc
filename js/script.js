@@ -180,17 +180,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.key === "Escape" && mNav.classList.contains("open")) closeNav();
   });
 
-  // 2) 모바일 nav 내부 "마이페이지" 서브메뉴 토글
-  // (현재 HTML에서 m-nav 안의 .m-mypage > .sub-menu 를 토글)
-  /* const mypageTitle = mNav.querySelector(".m-mypage strong");
-  const mypageSub = mNav.querySelector(".m-mypage .sub-menu");
-
-  if (mypageTitle && mypageSub) {
-    mypageTitle.style.cursor = "pointer"; // CSS 수정 없이 클릭 가능하게
-    mypageTitle.addEventListener("click", () => {
-      mypageSub.classList.toggle("active"); // ✅ CSS: .sub-menu.active
-    });
-  } */
 });
 // thead의 th 텍스트를 읽어서 각 td에 data-label 붙이기
   (function () {
@@ -221,25 +210,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });    
   })();
   
-  var swiper = new Swiper(".notice-banner", {
-      slidesPerView: 1,
-      spaceBetween: 10,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      breakpoints: {
-        640: {
-          slidesPerView: 1,
-          spaceBetween: 20,
-        },
-        768: {
-          slidesPerView: 3,
-          spaceBetween: 20,
-        },
-        1024: {
-          slidesPerView: 4,
-          spaceBetween: 30,
-        },
-      },
-    });

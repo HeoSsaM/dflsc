@@ -56,43 +56,22 @@ section h2 {
 /* main-visual */
 #mainVisual {
     width: 96%;
-    margin: 70px auto 0;
+    margin: 70px auto 30px;
 }
 
 #mainVisual .inner {
-    height: 36vh;
     position: relative;
     padding: 0 4%;
+    height: auto;
 }
 
-#mainVisual video {
-    object-fit: cover;
-    height: 100%;
-    z-index: -1;
-}
 
-#mainVisual .mainTitle h1 {
-    font-family: initial;
-    font-size: var(--fz-title-xl);
-    margin-bottom: 15px;
+#sec-topik-overview h2 {
+    margin-bottom: 20px;
 }
-
-#mainVisual .mainTitle h1 span {
-    display: block;
-    font-size: var(--fz-title-lg);
-}
-
-#mainVisual .mainTitle p {
-    font-size: 16px;
-    word-break: keep-all;
-    text-align: left;
-}
-
-/* #mainVisual .mainTitle p br {
-    display: none;
-} */
 
 /* tabs.css */
+
 .tab-wrap {
     max-width: 100%;
     margin: 40px auto;
@@ -133,48 +112,70 @@ section h2 {
     font-size: 18px;
     color: #403c98
 }
+
 .tab-contents .topik-test h2 {
     margin-bottom: 20px;
 }
+
 .tab-contents .topik-test .text {
     padding-left: 0;
     font-size: 16px;
 }
 
 /* 탭3 */
-.tab-content#tab3 > div {
-    margin-bottom: 50px;
+.topik-test-level h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 
-.tab-content#tab3 > div table {
-    text-align: center;
-    margin-bottom: 15px;
+.topik-test-level table {
+    min-width: 800px;
 }
-.tab-content#tab3 > div table + strong {
-    font-weight: 600;
-    color: var(--color-primary)
+
+.topik-test-level th,
+.topik-test-level td {
+    padding: 8px 6px;
 }
+
+/* 첫 번째 컬럼 강조 */
+.topik-test-level tbody td:first-child {
+    background: #fafafa;
+    font-weight: 500;
+}
+
 .tab-content.active {
     display: block;
 }
+
 .topik-guide {
-  width: 100%;
-  min-width: 900px;      /* 이 값보다 좁은 화면에서는 스크롤 생김 */
-  table-layout: fixed;   /* 칼럼 폭 균등하게 */
+    width: 100%;
+    min-width: 900px;
+    /* 이 값보다 좁은 화면에서는 스크롤 생김 */
+    table-layout: fixed;
+    /* 칼럼 폭 균등하게 */
 }
+
 .topik-guide th,
 .topik-guide td {
     font-size: 16px;
     padding: 8px;
 }
 
+.speaking-table table td {
+    word-break: keep-all;
+    padding: 10px;
+}
+
+
 /* topik 출제기준 */
 .topik-display {
     padding-top: 40px;
 }
+
 .topik-level {
     margin-bottom: 40px;
 }
+
 .tab-content .topik-level h3 {
     margin-bottom: 0
 }
@@ -188,6 +189,7 @@ section h2 {
     padding: 10px 12px;
     font-weight: 600;
 }
+
 .level {
     background: #fafafa;
     padding: 14px 16px;
@@ -205,13 +207,70 @@ section h2 {
     border-left: 1px solid #ccc;
     line-height: 1.6;
 }
+
 .btn-area {
     text-align: center;
 }
-.btn {
-    padding: 15px 30px;
+
+.tab-content#tab3 .btn-area button {
+    width: 250px;
+    height: 44px;
+    /* padding: 15px 30px; */
+    margin-top: 10px;
+    padding: 0
 }
+
 .btn:hover {
-    padding: 15px 30px;
     background: #403c98;
+}
+
+.topik-test-level thead th {
+    background: #6f6d91
+}
+
+.topik-test-level tbody td {
+    font-size: 16px;
+}
+
+.level-skills tbody td {
+    text-align: left;
+}
+
+/* ============================= 430 ============================= */
+@media screen and (max-width: 430px) {
+    #mainVisual .mainTitle .mainText p {
+        font-size: 16px;
+    }
+
+    /* 테스트 화면 이미지 사이즈 */
+    .test-display figure {
+        max-width: 100%;
+    }
+
+    .table-wrap {
+        max-width: 100%;
+        overflow-x: auto;
+    }
+    .level-skills table thead th:first-child {
+        font-size: 16px;
+        width: 80px;
+    }
+    .level-skills table tbody td:first-child {
+        text-align: center;
+        padding: 10px
+    }
+    .level-skills table tbody td:last-child {
+        padding: 10px;
+    }
+    .level-skills table colgroup {
+        display: none;
+    }
+    .level-skills ul li {
+        font-size: 15px;
+        word-break: keep-all;
+    }
+    .tab-contents {
+        padding: 0;
+    }
+
 }

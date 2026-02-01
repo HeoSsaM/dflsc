@@ -1,23 +1,63 @@
 @charset "utf-8";
 
+:root {
+  /* layout */
+  --flex: flex;
+  --just-sb: space-between;
+  --align-center: center;
+  --sec-space-pc: 80px;
+  --sec-space-mo: 60px;
+
+  /* 컬러 */
+  --h2Font: 'NanumSquareNeo';
+  --color-bg: #f1f2f6;
+  --color-surface: #ffffff;
+  --color-primary: #1b3c98;
+  --color-primary-soft: #7d79c9;
+  --color-accent: #403c98;
+  --color-text-main: #111322;
+  --color-text-sub: #5e6488;
+  --color-line: #dde1f3;
+
+  /* 메인 타이틀 (히어로)  
+     모바일 22px → PC 40px 사이 자동 반응 */
+  --fz-title-xl: clamp(22px, 4vw + 1rem, 42px);
+
+  /* 섹션 타이틀  
+     모바일 20px → PC 32px */
+  --fz-title-lg: clamp(20px, 2.5vw + 0.5rem, 32px);
+
+  /* 중간 제목 (h3 같은 레벨)  
+     모바일 17px → PC 22px */
+  --fz-title-md: clamp(17px, 1.4vw + 0.5rem, 22px);
+
+  /* 본문 글자  
+     모바일 14px → PC 16px */
+  --fz-body: clamp(14px, 1vw + 0.2rem, 16px);
+
+  /* 캡션(작은 글씨)
+     모바일 12px → PC 14px */
+  --fz-caption: clamp(12px, 0.6vw + 0.2rem, 14px);
+}
+
 .btn {
-    border-radius: 15px;
-    cursor: pointer;
-    padding: 12px 30px;
-    font-size: 16px;
+  border-radius: 15px;
+  cursor: pointer;
+  padding: 12px 30px;
+  font-size: 16px;
 }
 
 .mainText,
 .mainText p {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 h2 {
-    margin-bottom: 3px;
+  margin-bottom: 3px;
 }
 
 h3 {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 /* ====================================== HEADER ===============================================*/
@@ -40,7 +80,8 @@ header .pc-nav {
    ========================================================= */
 .m-header {
   position: fixed;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 56px;
   padding: 0 14px;
@@ -89,7 +130,7 @@ header .pc-nav {
 .dim {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.4);
   z-index: 1050;
 }
 
@@ -98,8 +139,9 @@ header .pc-nav {
    ========================================================= */
 .m-nav {
   position: fixed;
-  top: 0; left: 0;
-  width: 85%;
+  top: 0;
+  left: 0;
+  width: 70%;
   height: 100vh;
   background: #fff;
 
@@ -123,318 +165,25 @@ header .pc-nav {
    ========================================================= */
 .m-nav .m-nav-head {
   position: fixed;
-  top: 0; left: 0;
-  width: 85%;                 /* ✅ 드로어 폭(85%)과 동일하게 맞춤 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* ✅ 드로어 폭(85%)과 동일하게 맞춤 */
   height: 56px;
-  background: #fff;
-  border-bottom: 1px solid #e9e9ee;
+  background: #ffffff;
+  border-bottom: 3px solid #604985;
   z-index: 1200;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;     /* ✅ 로고를 진짜 가운데로 */
-}
-
-/* 닫기 버튼(오른쪽) */
-.m-nav .btnClose {
-  position: absolute;
-  right: -40px;
-  top: 6px;
-  width: 44px;
-  height: 44px;
-  border: 0;
-  background: transparent;
-  font-size: 22px;
-  cursor: pointer;
-}
-
-/* 로고(가운데) */
-.m-nav .m-nav-logo {
-  width: 200px;
-  height: 32px;
-  background: url(../../img/common/logo.png) no-repeat center/contain;
-}
-
-/* =========================================================
-   6) 메뉴 리스트 (가로 배치 방지 포함)
-   ========================================================= */
-.m-nav .m-gnb,
-.m-nav .gnb {
-  display: block !important;   /* PC에서 flex가 있어도 무력화 */
-  width: 100%;
-  list-style: none;
-  padding: 0;
-  margin: 0 0 32px;
-}
-
-.m-nav .m-gnb > li,
-.m-nav .gnb > li {
-  width: 100%;
-}
-
-.m-nav .m-gnb > li > a,
-.m-nav .gnb > li > a {
-  display: flex;
-  align-items: center;
-  height: 48px;
-  width: 100%;
-  font-size: 16px;
-  font-weight: 500;
-  color: #111;
-  border-bottom: 1px solid #f0f0f4;
-}
-
-/* =========================================================
-   7) 마이페이지 섹션
-   ========================================================= */
-.m-mypage {
-  margin-top: 24px;
-}
-
-.m-mypage strong {
-  display: inline-block;
-  margin-bottom: 12px;
-  font-size: 14px;
-  font-weight: 600;
-  color: #fff;
-  background: #28255e;
-  padding: 8px 15px;
-  border-radius: 5px;
-}
-.m-mypage .sub-menu a {
-  margin: 10px 0 0;
-  font-size: 16px;
-}
-
-/* footer */
-.footer {
-    background: #111;
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 15px;
-}
-
-.footer .inner {
-    padding: 40px 0;
-    display: block;
-    text-align: center;
-}
-
-.footer .f_company {
-    width: 100%;
-    font-size: 14px;
-    font-weight: 300;
-    margin-bottom: 20px;
-}
-
-.footer .f_company .copyright {
-    margin-top: 10px;
-}
-
-.footer .f_title {
-    color: #eee;
-    margin-bottom: 25px;
-}
-
-.footer .f_nav li:hover {
-    color: #fff;
-    text-decoration: underline;
-}
-
-.footer .f_contact .f_text {
-    font-size: 16px;
-    font-size: 500;
-    color: #fff;
-}
-
-.footer .f_contact i {
-    font-size: 24px;
-    color: rgba(255, 255, 255, 0.6);
-    margin-right: 12px;
-    vertical-align: 5px;
-}
-
-.footer .f_contact img {
-    width: 34px;
-}
-
-/* table */
-table {
-    width: 100%;
-    border: 1px solid #a6a5b9;
-    margin: 0 auto;
-}
-
-table th,
-table td {
-    padding: 15px;
-    border: 1px solid #a6a5b9;
-}
-
-table thead {
-    background: #6f6d91;
-}
-
-table thead th {
-    font-size: 17px;
-    font-weight: 500;
-    color: #fff
-}
-
-table .tc {
-    text-align: center;
-}
-
-table .bg {
-    background: #f1f1f1;
-    text-align: center;
-}
-
-/* 테스트 화면 이미지 사이즈 */
-.test-display figure {
-    max-width: 80%;
-    margin: 0 auto 40px;
-}
-@charset "utf-8";
-
-.btn {
-    border-radius: 15px;
-    cursor: pointer;
-    padding: 12px 30px;
-    font-size: 16px;
-}
-
-.mainText,
-.mainText p {
-    font-size: 16px;
-}
-
-h2 {
-    margin-bottom: 3px;
-}
-
-h3 {
-    margin-bottom: 20px;
-}
-
-/* ====================================== HEADER ===============================================*/
-
-/* 0) PC 영역 숨김 (모바일 전제) */
-header .pc-header,
-header .pc-nav {
-  display: none;
-}
-
-/* 1) 모바일 요소는 보임 */
-.m-header,
-.m-nav,
-.dim {
-  display: block;
-}
-
-/* =========================================================
-   2) 모바일 헤더 바
-   ========================================================= */
-.m-header {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%;
-  height: 56px;
-  padding: 0 14px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  background: #fff;
-  border-bottom: 1px solid #e9e9ee;
-  z-index: 1000;
-}
-
-/* 모바일 헤더 버튼 공통(터치영역) */
-.m-header button,
-.m-header a {
-  width: 34px;
-  height: 34px;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-/* 가운데 로고 */
-.m-header .logo {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  margin: 0;
-}
-
-.m-header .logo a {
-  display: block;
-  width: 200px;
-  height: 32px;
-  background: url(../../img/common/logo.png) no-repeat center/contain;
-}
-
-/* =========================================================
-   3) 딤
-   ========================================================= */
-.dim[hidden] {
-  display: none !important;
-}
-
-.dim {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.4);
-  z-index: 1050;
-}
-
-/* =========================================================
-   4) 모바일 네비 드로어
-   ========================================================= */
-.m-nav {
-  position: fixed;
-  top: 0; left: 0;
-  width: 85%;
-  height: 100vh;
-  background: #fff;
-
-  /* 상단바(56px) + 여백 고려 */
-  padding: 72px 20px 24px;
-
-  /* 닫힌 상태 */
-  transform: translateX(-100%);
-  transition: transform 0.3s ease;
-
-  z-index: 1100;
-  overflow-y: auto;
-}
-
-.m-nav.open {
-  transform: translateX(0);
-}
-
-/* =========================================================
-   5) 모바일 네비 상단바 (로고 + 닫기)
-   ========================================================= */
-.m-nav .m-nav-head {
-  position: fixed;
-  top: 0; left: 0;
-  width: 85%;                 /* ✅ 드로어 폭(85%)과 동일하게 맞춤 */
-  height: 56px;
-  background: #fff;
-  border-bottom: 1px solid #e9e9ee;
-  z-index: 1200;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;     /* ✅ 로고를 진짜 가운데로 */
+  /* ✅ 로고를 진짜 가운데로 */
 }
 
 /* 닫기 버튼(오른쪽) */
 .m-nav .btnClose {
   position: absolute;
-  right: -40px;
+  right: 10px;
   top: 6px;
   width: 44px;
   height: 44px;
@@ -456,20 +205,21 @@ header .pc-nav {
    ========================================================= */
 .m-nav .m-gnb,
 .m-nav .gnb {
-  display: block !important;   /* PC에서 flex가 있어도 무력화 */
+  display: block !important;
+  /* PC에서 flex가 있어도 무력화 */
   width: 100%;
   list-style: none;
   padding: 0;
   margin: 0 0 32px;
 }
 
-.m-nav .m-gnb > li,
-.m-nav .gnb > li {
+.m-nav .m-gnb>li,
+.m-nav .gnb>li {
   width: 100%;
 }
 
-.m-nav .m-gnb > li > a,
-.m-nav .gnb > li > a {
+.m-nav .m-gnb>li>a,
+.m-nav .gnb>li>a {
   display: flex;
   align-items: center;
   height: 48px;
@@ -479,6 +229,49 @@ header .pc-nav {
   color: #111;
   border-bottom: 1px solid #f0f0f4;
 }
+
+::selection {
+  background: #51388d;
+  color: #fff;
+}
+
+/* =========================================================
+   MainVisual 영역
+   ========================================================= */
+
+#mainVisual {
+  height: auto;
+}
+
+#mainVisual .inner {
+  padding: 40px 5%;
+  margin-top: 0;
+  background-image: url(../../img/main/main_bg.png);
+  background-size: cover;
+  display: block;
+  border-radius: 25px;
+}
+
+#mainVisual .mainTitle {
+  text-align: center;
+  padding: 25px 0;
+}
+
+#mainVisual .mainTitle h1 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+#mainVisual .mainTitle h1 span {
+  display: none;
+}
+
+#mainVisual .mainTitle .mainText p {
+  color: #fff;
+}
+
+/* #mainVisual .mainTitle .mainText p br {display: none;} */
+
 
 /* =========================================================
    7) 마이페이지 섹션
@@ -497,96 +290,134 @@ header .pc-nav {
   padding: 8px 15px;
   border-radius: 5px;
 }
+
 .m-mypage .sub-menu a {
   margin: 10px 0 0;
   font-size: 16px;
 }
 
-/* footer */
-.footer {
-    background: #111;
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 15px;
+/* table */
+table {
+  width: 100%;
+  border: 1px solid #a6a5b9;
+  margin: 0 auto;
 }
 
-.footer .inner {
+table thead {
+  background: #6f6d91;
+}
+
+table thead th {
+  font-size: 17px;
+  font-weight: 500;
+  color: #fff
+}
+
+table .tc {
+  text-align: center;
+}
+
+table .bg {
+  background: #f1f1f1;
+  text-align: center;
+}
+
+/* footer */
+.footer {
+  background: #111;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 15px;
+}
+
+.footer .f_contact .f_text {
+  font-size: 16px;
+}
+
+/* 768~1024px */
+@media screen and (max-width: 1024px) {
+  section .inner {
+    padding-bottom: 40px;
+  }
+
+  section .inner,
+  footer .inner {
+    max-width: 95%
+  }
+
+  #mainVisual {
+    margin-top: 80px;
+  }
+}
+
+/* 767px 이하 */
+@media screen and (max-width: 767px) {
+  .table-wrap {
+    width: 100%;
+    overflow-x: auto;
+  }
+  .m-nav .m-nav-head {
+    justify-content: flex-start;
+    padding-left: 4%;
+  }
+  .m-header .logo {
+    position: static;
+    transform: none;
+  }
+
+  /* 닫기 버튼(오른쪽) */
+  .m-nav .btnClose {
+    position: absolute;
+    right: 0;
+    top: 6px;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    background: transparent;
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  .footer .inner {
     padding: 40px 0;
     display: block;
     text-align: center;
-}
+  }
 
-.footer .f_company {
+  .footer .f_company {
     width: 100%;
     font-size: 14px;
     font-weight: 300;
     margin-bottom: 20px;
-}
+  }
 
-.footer .f_company .copyright {
+  .footer .f_company .copyright {
     margin-top: 10px;
-}
+  }
 
-.footer .f_title {
+  .footer .f_title {
     color: #eee;
     margin-bottom: 25px;
-}
+  }
 
-.footer .f_nav li:hover {
+  .footer .f_nav li:hover {
     color: #fff;
     text-decoration: underline;
-}
+  }
 
-.footer .f_contact .f_text {
+  .footer .f_contact .f_text {
     font-size: 16px;
     font-size: 500;
     color: #fff;
-}
+  }
 
-.footer .f_contact i {
+  .footer .f_contact i {
     font-size: 24px;
     color: rgba(255, 255, 255, 0.6);
     margin-right: 12px;
     vertical-align: 5px;
-}
+  }
 
-.footer .f_contact img {
+  .footer .f_contact img {
     width: 34px;
-}
-
-/* table */
-table {
-    width: 100%;
-    border: 1px solid #a6a5b9;
-    margin: 0 auto;
-}
-
-table th,
-table td {
-    padding: 15px;
-    border: 1px solid #a6a5b9;
-}
-
-table thead {
-    background: #6f6d91;
-}
-
-table thead th {
-    font-size: 17px;
-    font-weight: 500;
-    color: #fff
-}
-
-table .tc {
-    text-align: center;
-}
-
-table .bg {
-    background: #f1f1f1;
-    text-align: center;
-}
-
-/* 테스트 화면 이미지 사이즈 */
-.test-display figure {
-    max-width: 80%;
-    margin: 0 auto 40px;
+  }
 }

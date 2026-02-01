@@ -10,7 +10,7 @@
     --sec-space-mo: 60px;
 
     /* 컬러 */
-    --gmarket: 'GMarketSans';
+    --h2Font: 'NanumSquareNeo';
     --color-bg: #f1f2f6;
     --color-surface: #ffffff;
     --color-primary: #1b3c98;
@@ -41,26 +41,7 @@
     --fz-caption: clamp(12px, 0.6vw + 0.2rem, 14px);
 }
 
-@font-face {
-    font-family: 'GMarketSans';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
-    font-weight: 300;
-    font-display: swap;
-}
 
-@font-face {
-    font-family: 'GMarketSans';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
-    font-weight: 500;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'GMarketSans';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
-    font-weight: 700;
-    font-display: swap;
-}
 
 /* 공통 body 스타일 */
 body {
@@ -108,7 +89,7 @@ img {
     letter-spacing: -1px;
 }
 h2 {
-    font-family: var(--gmarket);
+    font-family: var(--h2Font);
     font-size: var(--fz-title-lg);
     font-weight: 500;
     color: var(--color-text-main);
@@ -279,7 +260,7 @@ header .btnMobile {
 
 .footer .f_contact .f_text {
     font-size: 18px;
-    font-size: 500;
+    font-weight: 500;
     color: #fff;
 }
 

@@ -16,7 +16,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
 
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/m/m-main.css" media="screen and (max-width: 599px)">
+    <link rel="stylesheet" href="css/tablet.css" media="screen and (max-width: 1024px)">
+    <link rel="stylesheet" href="css/m/m-main.css" media="screen and (max-width: 768px)">
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -127,7 +128,8 @@
                     <label for="userPwd"><input type="password" placeholder="비밀번호" required></label>
                     <div class="btnArea">
                         <button class="btn style1">시험응시하기</button>
-                        <button class="btn style2">로그인/회원가입</button>
+                        <button class="btn style2" type="button"
+                            onclick="window.location.href='member_join.html'">로그인/회원가입</button>
                     </div>
                 </div>
             </div>
@@ -187,7 +189,7 @@
                                         </p>
                                         <span class="date">2025-11-06</span>
                                     </a>
-                                </li>                                
+                                </li>
                             </ul>
                             <div class="swiper-pagination"></div>
                         </div>
@@ -198,7 +200,7 @@
         <!-- //notice Area -->
 
         <section id="sec-features" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-out-cubic"
-            data-aos-duration="2000">
+            data-aos-duration="1000">
             <div class="inner">
                 <h2>국내 유일의 <br> OPIc·TOEIC Speaking <br>TOPIK· TSC 모의시험 사이트</h2>
                 <p class="mainText">
@@ -249,7 +251,7 @@
         <!-- //features -->
 
         <section id="partners" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-out-cubic"
-            data-aos-duration="2000">
+            data-aos-duration="1000">
             <div class="inner">
                 <h2>
                     모의 테스트 응시 인원 및 고객사 현황
@@ -269,7 +271,7 @@
         <!-- //파트너사 -->
 
         <section id="sec-stats" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-out-cubic"
-            data-aos-duration="2000">
+            data-aos-duration="1000">
             <div class="inner">
                 <h2>플립 모의테스트 응시인원 및 문제세트 POOL</h2>
                 <dl class="stats-list">
@@ -315,7 +317,7 @@
         </section>
         <!-- //문제 풀 -->
         <section id="sec-points" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-out-cubic"
-            data-aos-duration="2000">
+            data-aos-duration="1000">
             <div class="inner">
                 <h2><span>디헤럴드플립</span><br>모의테스트<br>특장점</h2>
                 <ol class="points-list">
@@ -345,7 +347,7 @@
         <!-- // 특장점 -->
 
         <section id="sec-inquiry" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-out-cubic"
-            data-aos-duration="2000">
+            data-aos-duration="1000">
             <div class="inner">
                 <h2>언어 평가,언어 교육에 관련한 모든것을 물어보세요!</h2>
                 <div class="download">
@@ -406,6 +408,31 @@
 
     <script>
         AOS.init(); // 자바스크립트로 init()을 해야 동작한다.
+
+        //swiper
+        var swiper = new Swiper(".notice-banner", {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 30,
+                },
+            },
+        });
+
     </script>
 </body>
 

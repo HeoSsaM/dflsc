@@ -1,0 +1,78 @@
+@charset "Utf-8";
+@import url(m/m-common.css);
+
+/* ============== Main ========================================================= */
+section .inner {
+    padding: 40px 0;
+}
+section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+/* notice */
+.notice-group .notice-list li>a {
+    padding: 40px;
+}
+
+/* feature area */
+.feature-list li {
+    width: 100%
+}
+
+/* ============== Hspt ========================================================= */
+#sec-overview li {
+    padding: 20px;
+}
+#sec-overview li .text {
+    font-size: 16px;
+    font-weight: 400;
+}
+.test-group {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+.test-group li {
+    width: 100%;
+}
+
+/* ============== Toeic ========================================================= */
+#sec-toeic-test dl {
+    margin-bottom: 0;
+}
+#sec-toeic-test dl div {
+    gap: 0;
+    height: auto;
+    padding: 15px 0;
+    margin-bottom: 0;
+}
+#sec-toeic-test dt  {
+    height: 100%;
+    border-radius: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#sec-toeic-test dd {
+    height: 100%;
+    word-break: keep-all;
+}
+
+/* ============== Topik ========================================================= */
+#mainVisual {
+    height: 320px;
+}
+#mainVisual .mainTitle h1{
+    font-size: 34px;
+}
+#mainVisual .mainTitle p {
+    font-size: 18px;
+    word-break: keep-all;
+    text-align: left;
+}
+.tab-contents .title-area .sub-title {
+    margin-bottom: 50px;
+}
+#sec-topik-overview .inner {
+    padding-bottom: 0;
+}

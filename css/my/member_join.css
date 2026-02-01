@@ -29,10 +29,13 @@
     max-width: 960px;
     margin: 0 auto;
 }
-
+#container .inner {
+    padding: 0 0 50px;
+}
 #container h2 {
     position: relative;
     padding-left: 20px;
+    margin-bottom: 20px;
 }
 
 #container h2::before {

@@ -257,6 +257,7 @@ section h2 {
     border-bottom: 1px solid #ccc;
 }
 
+/* 탭 내용 안 등급 */
 .level {
     background: #fafafa;
     padding: 14px 16px;
@@ -266,6 +267,44 @@ section h2 {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.topik-test-level table {
+  width: 100%;
+}
+
+.topik-test-level th,
+.topik-test-level td {
+  border: 1px solid #ddd;
+  padding: 12px 10px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.topik-test-level thead th {
+  background: #6f6d91;
+  font-weight: 600;
+}
+
+.topik-test-level strong {
+  display: block;
+  margin-top: 12px;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+.level-skills ul li {
+    position: relative;
+    margin-bottom: 5px;
+    text-align: left;
+    padding-left: 15px;
+}
+.level-skills ul li::before {
+    content: '';
+    width: 5px; height: 0.5px;
+    background: #695e7e;
+    position: absolute;
+    top: 50%; left: 0;
+    transform: translateY(-50%);
 }
 
 .desc {

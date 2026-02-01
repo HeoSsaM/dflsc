@@ -13,7 +13,8 @@
     <link href="https://cdn.jsdelivr.net/xeicon/2/xeicon.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="css/my/exam_history.css">
-    <link rel="stylesheet" href="css/m/m-hspt.css" media="screen and (max-width: 599px)">
+    <link rel="stylesheet" href="css/my/tablet.css" media="screen and (max-width: 1024px)">
+    <link rel="stylesheet" href="css/my/m-member.css" media="screen and (max-width: 768px)">
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -106,38 +107,74 @@
         <!-- //메인비쥬얼 -->
 
         <section id="container">
-            <h2 class="page-title">시험응시내역 &amp; 결과확인</h2>
-            <hr class="divider" />
+            <div class="inner">
+                <h2 class="page-title">시험응시내역 &amp; 결과확인</h2>
+                <hr class="divider" />
 
-            <div class="table-box" role="region" aria-label="시험응시내역 테이블">
-                <table>
-                    <colgroup>
-                        <col class="no" />
-                        <col class="kind" />
-                        <col class="state" />
-                        <col class="date" />
-                        <col class="score" />
-                    </colgroup>
-                    <thead>
-                        <tr>
-                            <th scope="col">번호</th>
-                            <th scope="col">구분</th>
-                            <th scope="col">결제일</th>
-                            <th scope="col">수강내용</th>
-                            <th scope="col">결제금액</th>
-                            <th scope="col">영수증</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        
-                    </tbody>
-                </table>
+                <div class="table-box" role="region" aria-label="시험응시내역 테이블">
+                    <table class="exam-table">
+                        <colgroup>
+                            <col class="no" />
+                            <col class="kind" />
+                            <col class="date" />
+                            <col class="content" />
+                            <col class="price" />
+                            <col class="receipt" />
+                        </colgroup>
 
-                <nav class="pager" aria-label="페이지네이션">
-                    <span class="page-btn" aria-disabled="true" title="이전">‹</span>
-                    <span class="page-num is-active" aria-current="page">1</span>
-                    <span class="page-btn" title="다음">›</span>
-                </nav>
+                        <thead>
+                            <tr>
+                                <th scope="col">번호</th>
+                                <th scope="col">구분</th>
+                                <th scope="col">결제일</th>
+                                <th scope="col">수강내용</th>
+                                <th scope="col">결제금액</th>
+                                <th scope="col">영수증</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td data-label="번호">1</td>
+                                <td data-label="구분">HSPT</td>
+                                <td data-label="결제일">2026-01-26</td>
+                                <td data-label="수강내용">HSPT 모의고사 1회</td>
+                                <td data-label="결제금액">50,000원</td>
+                                <td data-label="영수증">
+                                    <a href="#" class="btn-receipt" target="_blank" rel="noopener noreferrer">보기</a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td data-label="번호">2</td>
+                                <td data-label="구분">TOEIC Speaking</td>
+                                <td data-label="결제일">2026-01-12</td>
+                                <td data-label="수강내용">TOEIC Speaking 실전반</td>
+                                <td data-label="결제금액">120,000원</td>
+                                <td data-label="영수증">
+                                    <a href="#" class="btn-receipt" target="_blank" rel="noopener noreferrer">보기</a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td data-label="번호">3</td>
+                                <td data-label="구분">TOPIK</td>
+                                <td data-label="결제일">2026-01-05</td>
+                                <td data-label="수강내용">TOPIK II 대비 특강</td>
+                                <td data-label="결제금액">80,000원</td>
+                                <td data-label="영수증">
+                                    <span class="badge-muted">없음</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <nav class="pager" aria-label="페이지네이션">
+                        <button type="button" class="page-btn" aria-disabled="true" disabled title="이전">‹</button>
+                        <span class="page-num is-active" aria-current="page">1</span>
+                        <button type="button" class="page-btn" title="다음">›</button>
+                    </nav>
+                </div>
             </div>
         </section>
 

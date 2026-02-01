@@ -13,7 +13,8 @@
     <link href="https://cdn.jsdelivr.net/xeicon/2/xeicon.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="css/my/member_join2.css">
-    <link rel="stylesheet" href="css/m/m-hspt.css" media="screen and (max-width: 599px)">
+    <link rel="stylesheet" href="css/my/tablet.css" media="screen and (max-width: 1024px)">
+    <link rel="stylesheet" href="css/my/m-member.css" media="screen and (max-width: 768px)">
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -106,178 +107,167 @@
         <!-- //메인비쥬얼 -->
 
         <section id="container">
-            <h2>가입 기본 정보</h2>
-            <form class="join" action="#" method="post">
-                <!-- 이름 -->
-                <div class="row">
-                    <div class="th"><label for="name">이름</label></div>
-                    <div class="td">
-                        <div class="inline">
-                            <input id="name" class="w-md" type="text" autocomplete="name" />
+            <div class="inner">
+                <h2>가입 기본 정보</h2>
+                <form class="join join-basic" action="#" method="post">
+                    <!-- 이름 -->
+                    <div class="row">
+                        <div class="th"><label for="name">이름</label></div>
+                        <div class="td">
+                            <div class="inline">
+                                <input id="name" class="w-md" type="text" autocomplete="name" />
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- 회원아이디 -->
-                <div class="row">
-                    <div class="th"><label for="userId">회원아이디</label></div>
-                    <div class="td">
-                        <div class="inline">
-                            <input id="userId" class="w-md" type="text" autocomplete="username" />
-                            <button type="button" class="btn">중복확인</button>
-                            <span class="hint">아이디는 <b>4자 이상 50자 이하</b>의 영문자, 숫자, 조합</span>
+                    <!-- 회원아이디 -->
+                    <div class="row">
+                        <div class="th"><label for="userId">회원아이디</label></div>
+                        <div class="td">
+                            <div class="inline">
+                                <input id="userId" class="w-md" type="text" autocomplete="username" />
+                                <button type="button" class="btn">중복확인</button>
+                                <span class="hint">아이디는 <b>4자 이상 50자 이하</b>의 영문자, 숫자, 조합</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- 비밀번호 -->
-                <div class="row">
-                    <div class="th"><label for="pw">비밀번호</label></div>
-                    <div class="td">
-                        <div class="inline">
-                            <input id="pw" class="w-md" type="password" autocomplete="new-password" />
-                            <span class="hint"><b>4~50자 미만</b>의 영문/숫자</span>
+                    <!-- 비밀번호 -->
+                    <div class="row">
+                        <div class="th"><label for="pw">비밀번호</label></div>
+                        <div class="td">
+                            <div class="inline">
+                                <input id="pw" class="w-md" type="password" autocomplete="new-password" />
+                                <span class="hint"><b>4~50자 미만</b>의 영문/숫자</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- 비밀번호 확인 -->
-                <div class="row">
-                    <div class="th"><label for="pw2">비밀번호 확인</label></div>
-                    <div class="td">
-                        <div class="inline">
-                            <input id="pw2" class="w-md" type="password" autocomplete="new-password" />
-                            <span class="hint">입력하신 비밀번호를 한번 더 입력해주세요.</span>
+                    <!-- 비밀번호 확인 -->
+                    <div class="row">
+                        <div class="th"><label for="pw2">비밀번호 확인</label></div>
+                        <div class="td">
+                            <div class="inline">
+                                <input id="pw2" class="w-md" type="password" autocomplete="new-password" />
+                                <span class="hint">입력하신 비밀번호를 한번 더 입력해주세요.</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- 생년월일 -->
-                <div class="row">
-                    <div class="th">생년월일</div>
-                    <div class="td">
-                        <div class="inline">
-                            <select class="w-sm" aria-label="년도">
-                                <option>년도</option>
-                                <option>1990</option>
-                                <option>1995</option>
-                                <option>2000</option>
-                            </select>
-                            <select class="w-sm" aria-label="월">
-                                <option>월</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                            </select>
-                            <select class="w-sm" aria-label="일">
-                                <option>일</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                            </select>
+                    <!-- 생년월일 -->
+                    <div class="row">
+                        <div class="th">생년월일</div>
+                        <div class="td">
+                            <div class="inline">
+                                <select class="w-sm" aria-label="년도">
+                                    <option>년도</option>
+                                    <option>1990</option>
+                                    <option>1995</option>
+                                    <option>2000</option>
+                                </select>
+                                <select class="w-sm" aria-label="월">
+                                    <option>월</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                </select>
+                                <select class="w-sm" aria-label="일">
+                                    <option>일</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- 성별 -->
-                <div class="row">
-                    <div class="th">성별</div>
-                    <div class="td">
-                        <div class="radios" role="radiogroup" aria-label="성별">
-                            <label><input type="radio" name="gender" value="M" checked /> 남성</label>
-                            <label><input type="radio" name="gender" value="F" /> 여성</label>
+                    <!-- 성별 -->
+                    <div class="row">
+                        <div class="th">성별</div>
+                        <div class="td">
+                            <div class="radios" role="radiogroup" aria-label="성별">
+                                <label><input type="radio" name="gender" value="M" checked /> 남성</label>
+                                <label><input type="radio" name="gender" value="F" /> 여성</label>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- 내국인/외국인 -->
-                <div class="row">
-                    <div class="th">내국인/외국인</div>
-                    <div class="td">
-                        <div class="radios" role="radiogroup" aria-label="국적">
-                            <label><input type="radio" name="nation" value="local" checked /> 내국인</label>
-                            <label><input type="radio" name="nation" value="foreigner" /> 외국인</label>
+                    <!-- 내국인/외국인 -->
+                    <div class="row">
+                        <div class="th">내국인/외국인</div>
+                        <div class="td">
+                            <div class="radios" role="radiogroup" aria-label="국적">
+                                <label><input type="radio" name="nation" value="local" checked /> 내국인</label>
+                                <label><input type="radio" name="nation" value="foreigner" /> 외국인</label>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- 연락처 -->
-                <div class="row">
-                    <div class="th"><label for="tel">연락처</label></div>
-                    <div class="td">
-                        <div class="inline">
-                            <input id="tel" class="w-lg" type="text" inputmode="tel" placeholder="02-245-1234" />
-                            <span class="hint">형식에 맞게 등록하여 주십시오. ex)02-245-1234</span>
+                    <!-- 연락처 -->
+                    <div class="row">
+                        <div class="th"><label for="tel">연락처</label></div>
+                        <div class="td">
+                            <div class="inline">
+                                <input id="tel" class="w-lg" type="text" inputmode="tel" placeholder="02-245-1234" />
+                                <span class="hint">형식에 맞게 등록하여 주십시오. ex)02-245-1234</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- 휴대폰 -->
-                <div class="row">
-                    <div class="th"><label for="mobile">휴대폰</label></div>
-                    <div class="td">
-                        <div class="inline">
-                            <input id="mobile" class="w-lg" type="text" inputmode="tel" placeholder="010-1245-1234" />
-                            <span class="hint">형식에 맞게 등록하여 주십시오. ex)010-1245-1234</span>
+                    <!-- 휴대폰 -->
+                    <div class="row">
+                        <div class="th"><label for="mobile">휴대폰</label></div>
+                        <div class="td">
+                            <div class="inline">
+                                <input id="mobile" class="w-lg" type="text" inputmode="tel" placeholder="010-1245-1234" />
+                                <span class="hint">형식에 맞게 등록하여 주십시오. ex)010-1245-1234</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- 이메일 -->
-                <div class="row">
-                    <div class="th"><label for="email">이메일</label></div>
-                    <div class="td">
-                        <div class="inline">
-                            <input id="email" class="w-lg" type="text" autocomplete="email"
-                                placeholder="example@email.com" />
+                    <!-- 이메일 -->
+                    <div class="row">
+                        <div class="th"><label for="email">이메일</label></div>
+                        <div class="td">
+                            <div class="inline">
+                                <input id="email" class="w-lg" type="text" autocomplete="email"
+                                    placeholder="example@email.com" />
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- 이메일 수신여부 -->
-                <div class="row">
-                    <div class="th">이메일 수신여부</div>
-                    <div class="td">
-                        <div class="radios" role="radiogroup" aria-label="이메일 수신여부">
-                            <label><input type="radio" name="mailAgree" value="Y" checked /> 수신동의</label>
-                            <label><input type="radio" name="mailAgree" value="N" /> 수신하지 않음</label>
-                        </div>
-                        <div class="hint" style="margin-top:6px;">
-                            이메일 수신동의 하시면 각종 이벤트 및 관련정보를 우선적으로 받아 보실 수 있습니다.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- SMS 수신여부 -->
-                <div class="row">
-                    <div class="th">SMS 수신여부</div>
-                    <div class="td">
-                        <div class="radios" role="radiogroup" aria-label="SMS 수신여부">
-                            <label><input type="radio" name="smsAgree" value="Y" checked /> 수신동의</label>
-                            <label><input type="radio" name="smsAgree" value="N" /> 수신하지 않음</label>
-                        </div>
-                        <div class="hint" style="margin-top:6px;">
-                            SMS 수신동의 하시면 각종 이벤트 및 관련정보를 우선적으로 받아 보실 수 있습니다.
+                    <!-- 이메일 수신여부 -->
+                    <div class="row">
+                        <div class="th">이메일 수신여부</div>
+                        <div class="td">
+                            <div class="radios" role="radiogroup" aria-label="이메일 수신여부">
+                                <label><input type="radio" name="mailAgree" value="Y" checked /> 수신동의</label>
+                                <label><input type="radio" name="mailAgree" value="N" /> 수신하지 않음</label>
+                            </div>
+                            <div class="hint" style="margin-top:6px;">
+                                이메일 수신동의 하시면 각종 이벤트 및 관련정보를 우선적으로 받아 보실 수 있습니다.
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- 부서/직위 -->
-                <div class="row">
-                    <div class="th">부서/직위</div>
-                    <div class="td">
-                        <div class="inline">
-                            <input class="w-lg" type="text" aria-label="부서" />
-                            <input class="w-md" type="text" aria-label="직위" />
+                    <!-- SMS 수신여부 -->
+                    <div class="row">
+                        <div class="th">SMS 수신여부</div>
+                        <div class="td">
+                            <div class="radios" role="radiogroup" aria-label="SMS 수신여부">
+                                <label><input type="radio" name="smsAgree" value="Y" checked /> 수신동의</label>
+                                <label><input type="radio" name="smsAgree" value="N" /> 수신하지 않음</label>
+                            </div>
+                            <div class="hint" style="margin-top:6px;">
+                                SMS 수신동의 하시면 각종 이벤트 및 관련정보를 우선적으로 받아 보실 수 있습니다.
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="btn-area">
-                    <button class="btn btn-ok" type="submit">확인</button>
-                    <button class="btn btn-cancel" type="reset">취소</button>
-                </div>
-            </form>
+                    <!-- 부서/직위 -->
+                    <div class="row">
+                        <div class="th">부서/직위</div>
+                        <div class="td">
+                            <div class="inline">
+                                <input class="w-lg" type="text" aria-label="부서" />
+                                <input class="w-md" type="text" aria-label="직위" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-area">
+                        <button class="btn btn-ok" type="submit">확인</button>
+                        <button class="btn btn-cancel" type="reset">취소</button>
+                    </div>
+                </form>
+            </div>
         </section>
 
         <footer class="footer">

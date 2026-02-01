@@ -13,7 +13,8 @@
     <link href="https://cdn.jsdelivr.net/xeicon/2/xeicon.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="css/my/inquiry.css">
-    <link rel="stylesheet" href="css/m/m-hspt.css" media="screen and (max-width: 599px)">
+    <link rel="stylesheet" href="css/my/tablet.css" media="screen and (max-width: 1024px)">
+    <link rel="stylesheet" href="css/my/m-member.css" media="screen and (max-width: 768px)">
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -106,40 +107,56 @@
         <!-- //메인비쥬얼 -->
 
         <section id="container">
-            <h2 class="page-title">나의 상담게시판</h2>
-            <div class="board-top">
-                <div class="search">
-                    <input type="text" placeholder="검색어를 입력하세요">
-                    <button type="button" class="btn-search" aria-label="검색"><i class="xi-search xi-x"></i></button>
+            <div class="inner">
+                <h2 class="page-title">나의 상담게시판</h2>
+                <div class="board-top">
+                    <div class="search">
+                        <input type="text" placeholder="검색어를 입력하세요">
+                        <button type="button" class="btn-search" aria-label="검색"><i class="xi-search xi-x"></i></button>
+                    </div>
                 </div>
-            </div>
+                <!-- 게시판 -->
+                <table class="board">
+                    <colgroup>
+                        <col style="width: 100px;">
+                        <col>
+                        <col style="width: 140px;">
+                        <col style="width: 140px;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>글번호</th>
+                            <th>제목</th>
+                            <th>등록일</th>
+                            <th>답변일</th>
+                        </tr>
+                    </thead>
+                    <!-- <tbody>
+                        <tr class="empty">
+                            <td colspan="4">등록된 공지사항이 없습니다.</td>
+                        </tr>
+                    </tbody> -->
 
-            <!-- 게시판 -->
-            <table class="board">
-                <colgroup>
-                    <col style="width: 100px;">
-                    <col>
-                    <col style="width: 140px;">
-                    <col style="width: 140px;">
-                </colgroup>
-                <thead>
-                    <tr>
-                        <th>글번호</th>
-                        <th>제목</th>
-                        <th>등록일</th>
-                        <th>답변일</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="empty">
-                        <td colspan="4">등록된 공지사항이 없습니다.</td>
-                    </tr>
-                </tbody>
-            </table>
+                    <tbody>
+                        <tr>
+                            <td data-label="글번호">12</td>
+                            <td data-label="제목">상담 일정 문의드립니다.</td>
+                            <td data-label="등록일">2026-01-10</td>
+                            <td data-label="답변일">2026-01-11</td>
+                        </tr>
 
-            <!-- 하단 버튼 -->
-            <div class="board-bottom">
-                <button type="button" class="btn-write">등록</button>
+                        <tr>
+                            <td data-label="글번호">11</td>
+                            <td data-label="제목">시험 접수 관련 질문</td>
+                            <td data-label="등록일">2026-01-08</td>
+                            <td data-label="답변일">-</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- 하단 버튼 -->
+                <div class="board-bottom">
+                    <button type="button" class="btn-write">등록</button>
+                </div>
             </div>
 
         </section>

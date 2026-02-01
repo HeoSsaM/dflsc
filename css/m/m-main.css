@@ -1,42 +1,21 @@
 @charset "utf-8";
 @import url(m-common.css);
 
-::selection {
-    background: #51388d;
-    color: #fff;
-}
-/* mainVisual */
-#mainVisual {
-    padding: 0 4%;
-    height: 70vh;
-}
+/* mainVisusal  */
 #mainVisual .inner {
-    height: 100%;
-    padding: 0 25px;
-    margin-top: 70px;
-    background-image: url(../../img/main/main_bg.png);
-    background-size: cover;
-    display: block;
-    border-radius: 25px;
-}
-#mainVisual .mainTitle {
-    text-align: center;
-    padding: 25px 0;
+    height: auto;
 }
 #mainVisual .mainTitle h1 {
-    font-size: 26px;
-    margin-bottom: 20px;
-}
-#mainVisual .mainTitle h1 span {
-    display: none;
+    font-weight: 700;
 }
 #mainVisual .mainTitle .mainText p {
-    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 25px;
 }
-#mainVisual .mainTitle .mainText p br {display: none;}
-
 /* loginArea */
 .loginArea {
+    display: block;
     width: 100%;
     height: 220px;
 }
@@ -65,7 +44,9 @@
 .notice-group .notice-list li>a {
     position: relative;
     display: block;
-    color: rgba(0, 0, 0, 0.7)
+    padding: 40px 20px 20px;
+    color: rgba(0, 0, 0, 0.7);
+    border-color: #8b8b8b
 }
 
 .notice-group .notice-list li>a:hover {
@@ -210,7 +191,7 @@
     display: block
 }
 #partners .logos {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 10px;
 }
 #partners .company_logo li {
@@ -281,7 +262,8 @@
 }
 
 .stats-chart ul {
-    grid-template-columns: repeat(1, 1fr);
+    margin-top: 25px;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .stats-chart ul>li {
@@ -337,8 +319,8 @@
 }
 #sec-points .points-list {
     height: auto;
-    display: block;
     background: none;
+    gap: 15px;
 }
 #sec-points .points-list li {
     height: auto;    
@@ -390,7 +372,6 @@
     font-weight: 500;
     word-break: keep-all;
     line-height: 1.6;
-    text-decoration: underline dotted #28293f;
 }
 #sec-points .points-list .text br {display: none;}
 #sec-points .points-list .text span {
@@ -417,11 +398,11 @@
 #sec-inquiry h2 {
     text-align: center;
     margin-bottom: 40px;
+    font-size: 24px;
 }
 
 .download {
     display: flex;
-    flex-direction: column;
     gap: 10px;
     margin-bottom: 40px;
     width: 100%;
@@ -484,3 +465,50 @@
 #sec-inquiry .btn {
     width: auto;
 }
+
+/* ================== 430px ================== */
+@media screen and (max-width: 430px) {
+    section h2 {
+        font-size: 25px;
+        word-break: keep-all;
+        letter-spacing: -1px;
+    }
+    section p {
+        word-break: keep-all;
+        letter-spacing: -1px;
+    }
+    #mainVisual .mainTitle {
+        padding: 0;
+    }
+    .mainText p br {
+        display: none;
+    }
+    .mainText, .mainText p {
+        margin-top: 15px;
+        word-break: keep-all;
+        letter-spacing: -1px;
+    }
+    .loginArea {
+        margin-top: 30px;
+    }
+    .feature-list {
+        grid-template-columns: 1fr;
+    }
+    .stats-chart ul {
+        gap: 15px;
+    }
+    .stats-chart ul>li>span {
+        width: 120px;
+    }
+    #sec-points .points-list {
+        grid-template-columns: 1fr;
+    }
+    #partners .logos {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .download {
+        flex-direction: column;
+    }
+}
+
+

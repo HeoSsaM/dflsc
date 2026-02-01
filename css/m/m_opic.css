@@ -1,46 +1,7 @@
 @charset "utf-8";
 @import url(m-common.css);
 
-:root {
-    /* layout */
-    --flex: flex;
-    --just-sb: space-between;
-    --align-center: center;
-    --sec-space-pc: 80px;
-    --sec-space-mo: 60px;
-
-    /* 컬러 */
-    --gmarket: 'GMarketSans';
-    --color-bg: #f1f2f6;
-    --color-surface: #ffffff;
-    --color-primary: #1b3c98;
-    --color-primary-soft: #7d79c9;
-    --color-accent: #403c98;
-    --color-text-main: #111322;
-    --color-text-sub: #5e6488;
-    --color-line: #dde1f3;
-
-    /* 메인 타이틀 (히어로)  
-     모바일 22px → PC 40px 사이 자동 반응 */
-    --fz-title-xl: clamp(22px, 4vw + 1rem, 42px);
-
-    /* 섹션 타이틀  
-     모바일 20px → PC 32px */
-    --fz-title-lg: clamp(20px, 2.5vw + 0.5rem, 32px);
-
-    /* 중간 제목 (h3 같은 레벨)  
-     모바일 17px → PC 22px */
-    --fz-title-md: clamp(17px, 1.4vw + 0.5rem, 22px);
-
-    /* 본문 글자  
-     모바일 14px → PC 16px */
-    --fz-body: clamp(14px, 1vw + 0.2rem, 16px);
-
-    /* 캡션(작은 글씨)
-     모바일 12px → PC 14px */
-    --fz-caption: clamp(12px, 0.6vw + 0.2rem, 14px);
-}
-
+/* main-visual */
 /* main-visual */
 #mainVisual {
     width: 96%;
@@ -48,9 +9,8 @@
 }
 
 #mainVisual .inner {
-    height: 30vh;
     position: relative;
-    padding: 0 4%;
+    padding: 0 4% 40px;
 }
 
 #mainVisual video {
@@ -68,20 +28,16 @@
 #mainVisual .mainTitle h1 span {
     display: block;
     font-size: var(--fz-title-lg);
-    letter-spacing: -1px;
 }
 
 #mainVisual .mainTitle p {
     font-size: var(--fz-title-md);
     word-break: keep-all;
+    text-align: center;
 }
 
 #mainVisual .mainTitle p br {
     display: none;
-}
-
-section+section .inner {
-    padding: 40px 4%;
 }
 
 section h2 {
@@ -134,6 +90,7 @@ section h2 {
     font-size: 18px;
     margin-bottom: 0;
     width: 100%;
+    background: #7e6997;
 }
 
 #sec-opic-test dt::after {
@@ -147,6 +104,22 @@ section h2 {
     background: #fff no-repeat right 10px center/120px;
 }
 
+#sec-opic-test dl div:nth-child(1) dt {
+    background:#a479cc
+}
+#sec-opic-test dl div:nth-child(2) dt {
+    background:#75588f
+}
+#sec-opic-test dl div:nth-child(3) dt {
+    background:#573c70
+}
+#sec-opic-test dl div:nth-child(2) dd {
+    background-image: url(../../img/opic/img_exm02.png);
+}
+
+#sec-opic-test dl div:nth-child(3) dd {
+    background-image: url(../../img/opic/img_exam03.png);
+}
 #sec-opic-test dl div:nth-child(1) dd {
     background-image: url(../../img/opic/img_exam01.png);
 }
@@ -304,4 +277,29 @@ section h2 {
 }
 .test-refer ol li table td {
     background: #fff;
+}
+
+/* ===========================430px =========================== */
+@media screen and (max-width: 430px) {
+    #mainVisual .mainTitle h1 span {
+        font-size: 16px;
+    }
+    #sec-opic-overview h2 span {
+        margin-top:10px;
+        font-size: 15px;
+    }
+    #sec-opic-test dt {
+        font-size: 16px;
+        font-weight: 600;
+        word-break: keep-all;
+        line-height: 1.5;
+    }
+    #sec-opic-test dl div:nth-child(1) dd, 
+    #sec-opic-test dl div:nth-child(2) dd, 
+    #sec-opic-test dl div:nth-child(3) dd {
+        background: #fff
+    }
+    #sec-opic-test dl dd p {
+        width: 100%;
+    }
 }

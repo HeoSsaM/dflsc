@@ -13,7 +13,8 @@
     <link href="https://cdn.jsdelivr.net/xeicon/2/xeicon.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="css/my/exam_history.css">
-    <link rel="stylesheet" href="css/m/m-hspt.css" media="screen and (max-width: 599px)">
+    <link rel="stylesheet" href="css/my/tablet.css" media="screen and (max-width: 1024px)">
+    <link rel="stylesheet" href="css/my/m-member.css" media="screen and (max-width: 768px)">
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -106,73 +107,71 @@
         <!-- //메인비쥬얼 -->
 
         <section id="container">
-            <h2 class="page-title">시험응시내역 &amp; 결과확인</h2>
-            <hr class="divider" />
-
-            <div class="table-box" role="region" aria-label="시험응시내역 테이블">
-                <table>
-                    <colgroup>
-                        <col class="no" />
-                        <col class="kind" />
-                        <col class="state" />
-                        <col class="date" />
-                        <col class="score" />
-                    </colgroup>
-                    <thead>
-                        <tr>
-                            <th scope="col">번호</th>
-                            <th scope="col">구분</th>
-                            <th scope="col">상태</th>
-                            <th scope="col">응시종료일</th>
-                            <th scope="col">성적확인</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>3</td>
-                            <td>TOPIK 모의테스트</td>
-                            <td class="state-done">응시완료</td>
-                            <td>2025-12-31 23:59:59</td>
-                            <td>
-                                <div class="score-area">
-                                    <span class="score-chip">-25테스트 중</span>
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>2</td>
-                            <td>OPIC 모의테스트</td>
-                            <td class="state-done">응시완료</td>
-                            <td>2025-11-30 23:59:59</td>
-                            <td>
-                                <div class="score-area">
-                                    <span class="score-chip">-56테스트 중</span>
-                                    <button class="score-btn" type="button">채점중</button>
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>1</td>
-                            <td>TOEIC Speaking</td>
-                            <td class="state-done">응시완료</td>
-                            <td>2025-11-30 23:59:59</td>
-                            <td>
-                                <div class="score-area">
-                                    <span class="score-chip">-56테스트 중</span>
-                                    <button class="score-btn" type="button">채점중</button>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <nav class="pager" aria-label="페이지네이션">
-                    <span class="page-btn" aria-disabled="true" title="이전">‹</span>
-                    <span class="page-num is-active" aria-current="page">1</span>
-                    <span class="page-btn" title="다음">›</span>
-                </nav>
+            <div class="inner">
+                <h2 class="page-title">시험응시내역 &amp; 결과확인</h2>
+                <hr class="divider" />
+                <div class="table-box" role="region" aria-label="시험응시내역 테이블">
+                    <table class="exam-table">
+                        <colgroup>
+                            <col class="no" />
+                            <col class="kind" />
+                            <col class="state" />
+                            <col class="date" />
+                            <col class="score" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">번호</th>
+                                <th scope="col">구분</th>
+                                <th scope="col">상태</th>
+                                <th scope="col">응시종료일</th>
+                                <th scope="col">성적확인</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="번호">3</td>
+                                <td data-label="구분">TOPIK 모의테스트</td>
+                                <td data-label="상태" class="state-done">응시완료</td>
+                                <td data-label="응시종료일">2025-12-31 23:59:59</td>
+                                <td data-label="성적확인">
+                                    <div class="score-area">
+                                        <span class="score-chip">-25테스트 중</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="번호">2</td>
+                                <td data-label="구분">OPIC 모의테스트</td>
+                                <td data-label="상태" class="state-done">응시완료</td>
+                                <td data-label="응시종료일">2025-11-30 23:59:59</td>
+                                <td data-label="성적확인">
+                                    <div class="score-area">
+                                        <span class="score-chip">-56테스트 중</span>
+                                        <button class="score-btn" type="button">채점중</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="번호">1</td>
+                                <td data-label="구분">TOEIC Speaking</td>
+                                <td data-label="상태" class="state-done">응시완료</td>
+                                <td data-label="응시종료일">2025-11-30 23:59:59</td>
+                                <td data-label="성적확인">
+                                    <div class="score-area">
+                                        <span class="score-chip">-56테스트 중</span>
+                                        <button class="score-btn" type="button">채점중</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <nav class="pager" aria-label="페이지네이션">
+                        <span class="page-btn" aria-disabled="true" title="이전">‹</span>
+                        <span class="page-num is-active" aria-current="page">1</span>
+                        <span class="page-btn" title="다음">›</span>
+                    </nav>
+                </div>
             </div>
         </section>
 
