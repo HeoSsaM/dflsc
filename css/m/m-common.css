@@ -123,7 +123,9 @@ header .pc-nav {
   align-items: center;
   justify-content: center;
 }
-
+.m-header button img {
+  width: 100%;
+}
 /* 가운데 로고 */
 .m-header .logo {
   position: absolute;
@@ -372,13 +374,16 @@ table .bg {
 
   .m-header button,
   .m-header a {
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-
+  .m-header button img,
+  .m-header a img {
+    width: 100%;
+  }
   .table-wrap {
     width: 100%;
     overflow-x: auto;
@@ -406,7 +411,9 @@ table .bg {
     font-size: 22px;
     cursor: pointer;
   }
-
+  .m-nav .btnClose img {
+    width: 100%;
+  }
   #mainVisual.main .inner {
     display: block;
   }

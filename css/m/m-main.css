@@ -6,20 +6,24 @@
 #mainVisual .inner {
     height: auto;
 }
+
 #mainVisual .mainTitle h1 {
     font-weight: 700;
 }
+
 #mainVisual .mainTitle .mainText p {
     text-align: center;
     font-size: 18px;
     margin-bottom: 25px;
 }
+
 /* loginArea */
 .loginArea {
     display: block;
     width: 100%;
     height: auto;
 }
+
 .loginArea .btnArea {
     justify-content: center;
     gap: 20px;
@@ -34,20 +38,17 @@
     position: relative;
     width: 100%
 }
-.notice-group .notice-list {
-    position: relative;
-}
 
 .notice-group .notice-list h3 {
     font-size: 24px;
 }
 
+.notice-group .notice-list li {
+    padding: 10px 0 0 10px;
+}
+
 .notice-group .notice-list li>a {
-    position: relative;
-    display: block;
-    padding: 40px 20px 20px;
-    color: rgba(0, 0, 0, 0.7);
-    border-color: #8b8b8b
+    padding: 15px 15px 15px 25px;
 }
 
 .notice-group .notice-list li>a:hover {
@@ -56,34 +57,46 @@
 
 .notice-group .notice-list li .list-text {
     position: relative;
-    width: 90%;
-    white-space: nowrap; 
-    overflow: hidden;   
-    text-overflow: ellipsis; 
-    padding: 10px 0;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    word-break: keep-all;
 }
 
-.notice-group .notice-list li .ico-new {
+.notice-group .notice-list .ico-new {
     position: absolute;
-    top: 15px;
-    right: 10px;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 32px;
+    height: 32px;
 }
+
+.notice-group .notice-list .ico-new img {
+    width: 100%;
+}
+
 .notice-group .notice-list li .date {
     font-size: 14px;
 }
+
 .notice-group .notice-area .btn-notice-more {
     position: absolute;
-    top: -0; right: 10px;
+    top: -0;
+    right: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 5px;
     border: 1px solid #111;
-    width: 32px; height: 32px;
+    width: 32px;
+    height: 32px;
 }
+
 .notice-group .notice-area .btn-notice-more i {
     font-size: 22px;
 }
+
 /* 특징영역 */
 #sec-features .inner {
     padding: 50px 4%;
@@ -92,16 +105,30 @@
 #sec-features h2 {
     text-align: center;
     font-weight: 500;
-    font-size: 25px;
+    font-size: 22px;
     line-height: 1.4;
     margin-bottom: 25px;
+}
+
+#sec-features h2 br {
+    display: none;
+}
+
+#sec-features h2 span {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 23px;
 }
 
 #sec-features .mainText {
     word-break: keep-all;
     margin-bottom: 30px;
 }
-#sec-features .mainText br {display: none;}
+
+#sec-features .mainText br {
+    display: none;
+}
+
 .feature-list {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
@@ -110,46 +137,26 @@
 }
 
 .feature-list li {
-    position: relative;
-    width: auto;
     height: 200px;
-    border-radius: 10px;
     padding: 15px;
     justify-content: start;
     margin-bottom: 10px;
 }
 
-.feature-list li * {
-    display: block;
-    text-align: center;
-    margin-bottom: 5px;
-    letter-spacing: -1px;
-}
-.feature-list li + li {
-    padding-top: 50px;
-}
-.feature-list .big {
-    font-size: 16px;
-    margin-bottom: 0;
-}
-.feature-list .big span {
-    color: #000;
-}
-
-.feature-list .text {
-    font-size: 16px;
+.feature-list li+li {
+    padding-top: 30px;
 }
 
 .feature-list em {
-    position: absolute;
-    bottom: 14px; left: 50%;
-    transform: translateX(-50%);
     width: 85%;
+    height: 60px;
     font-size: 15px;
 }
+
 .feature-list em span {
     display: block;
 }
+
 .feature-list li:first-child em {
     margin-top: 0
 }
@@ -159,7 +166,7 @@
     height: auto;
     padding: 20px;
     background: url(../../img/main/img_feautures.png) no-repeat left center/cover;
-    border-radius: 5px 5px 5px 5px;
+    border-radius: 10px;
 }
 
 .info-pick::before {
@@ -180,6 +187,7 @@
 #partners .inner {
     padding: 50px 4%;
 }
+
 #partners h2 {
     font-size: 22px;
     margin-bottom: 40px;
@@ -188,13 +196,16 @@
 #partners h2 span {
     font-size: 18px;
 }
+
 #partners h2 span em {
     display: block
 }
+
 #partners .logos {
     grid-template-columns: repeat(5, 1fr);
     gap: 10px;
 }
+
 #partners .company_logo li {
     border-radius: 10px;
 }
@@ -224,11 +235,11 @@
 
 .stats-list div {
     flex-direction: column;
-    align-items: center;    
+    align-items: center;
 }
 
 .stats-list dt {
-    font-size: 16px;   
+    font-size: 16px;
     width: 100%;
     height: 40px;
 }
@@ -288,6 +299,7 @@
     display: flex;
     gap: 25px;
 }
+
 #sec-stats .info-pick {
     background-image: url(../../img/main/img_pool.png);
 }
@@ -296,7 +308,11 @@
     background: none;
     padding-left: 0;
 }
-#sec-stats .info-pick p br {display: none;}
+
+#sec-stats .info-pick p br {
+    display: none;
+}
+
 #sec-stats .info-pick::before {
     top: -12px
 }
@@ -312,34 +328,41 @@
     transform: none;
     margin-bottom: 30px;
 }
+
 #sec-points .inner h2 br {
     display: none;
 }
+
 #sec-points .inner h2 span {
     display: block
 }
+
 #sec-points .points-list {
     height: auto;
     background: none;
     gap: 15px;
 }
+
 #sec-points .points-list li {
-    height: auto;    
+    height: auto;
     width: 100%;
     margin-bottom: 20px;
     padding: 25px;
     border-radius: 15px;
     background: #ebe4f8 no-repeat right 20px bottom 20px / 100px;
 }
+
 #sec-points .points-list li:nth-child(1) {
     background-image: url(../../img/main/img_pointer01.png);
 }
+
 #sec-points .points-list li .title {
     display: inline-block;
     font-weight: 600;
-    color:#000;
+    color: #000;
     padding-bottom: 10px;
 }
+
 #sec-points .points-list li:nth-child(odd) {
     padding-left: 25px
 }
@@ -348,15 +371,19 @@
     text-align: left;
     background-color: #f0f0f0;
 }
+
 #sec-points .points-list li:nth-child(2) {
     background-image: url(../../img/main/img_point02.png);
 }
+
 #sec-points .points-list li:nth-child(3) {
     background-image: url(../../img/main/img_point03.png);
 }
+
 #sec-points .points-list li:nth-child(4) {
     background-image: url(../../img/main/img_point04.png);
 }
+
 .points-list .points {
     color: #000;
     margin-bottom: 10px;
@@ -374,7 +401,11 @@
     word-break: keep-all;
     line-height: 1.6;
 }
-#sec-points .points-list .text br {display: none;}
+
+#sec-points .points-list .text br {
+    display: none;
+}
+
 #sec-points .points-list .text span {
     color: #292d63
 }
@@ -425,12 +456,12 @@
 }
 
 .download a:nth-child(2) {
-     background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(10px);
 }
 
 .download a:nth-child(3) {
-     background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(10px);
 }
 
@@ -438,6 +469,7 @@
     width: 100%;
     margin-bottom: 30px;
 }
+
 .inquiry-form li {
     padding: 10px;
 }
@@ -459,10 +491,12 @@
     padding-left: 10px;
     outline: none;
 }
+
 .inquiry-form li textarea {
     height: 150px;
     resize: none;
 }
+
 #sec-inquiry .btn {
     width: auto;
 }
@@ -474,42 +508,69 @@
         word-break: keep-all;
         letter-spacing: -1px;
     }
+
     section p {
         word-break: keep-all;
         letter-spacing: -1px;
     }
+
     #mainVisual .mainTitle {
         padding: 0;
     }
+
     .mainText p br {
         display: none;
     }
-    .mainText, .mainText p {
+
+    .mainText,
+    .mainText p {
         margin-top: 15px;
         word-break: keep-all;
         letter-spacing: -1px;
     }
+
     .loginArea {
         margin-top: 30px;
     }
+
     .feature-list {
         grid-template-columns: 1fr;
     }
-    .stats-chart ul {
+
+    #sec-features h2 {
+        font-size: 18px;
+    }
+
+    #sec-features h2 br {
+        display: none;
+    }
+
+    #sec-features h2 span {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 20px;
+        letter-spacing: -1px;
+    }
+    #sec-features .mainText {
+        font-size: 16px;
+    }
+    #sec-features .mainText .stats-chart ul {
         gap: 15px;
     }
+
     .stats-chart ul>li>span {
         width: 120px;
     }
+
     #sec-points .points-list {
         grid-template-columns: 1fr;
     }
+
     #partners .logos {
         grid-template-columns: repeat(4, 1fr);
     }
+
     .download {
         flex-direction: column;
     }
 }
-
-

@@ -50,11 +50,11 @@
 
 #sec-overview li {
     width: 100%;
-    padding: 40px 30px;
+    padding: 25px;
+    letter-spacing: -1px;
 }
 #sec-overview li:nth-child(3) {
-    height: 240px;
-    background: url(../../img/hspt/img_evalution02.png) no-repeat right 15px bottom 15px/110px;
+    height: 240px;    
 }
 
 /* 평가프로세스 */
