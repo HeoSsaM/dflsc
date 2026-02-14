@@ -98,11 +98,25 @@ header .btnMobile {
     color: rgba(0,0,0,0.6);
     font-weight: 300;
 }
+#sec-olt-overview .mainTitle {
+    font-size: 20px;
+    line-height: 1.7;
+    word-break: keep-all;
+    margin-bottom: 40px;
+}
 #sec-olt-overview .overview {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 55% 45%;
     column-gap: 100px;
     margin-bottom: 50px;
+}
+#sec-olt-overview .overview strong {
+    margin-bottom: 10px;
+    display: block;
+}
+#sec-olt-overview .overview span {
+    display: block;
+    margin-bottom: 10px;
 }
 .overview div {
     margin-bottom: 35px;

@@ -333,6 +333,7 @@ header .btnMobile {
 #sec-custom h2 {
     font-size: var(--fz-title-lg);
 }
+#sec-custom h2 span {color: var(--color-primary)}
 #sec-custom .mainText {
     font-size: 20px;
     line-height: 1.5;

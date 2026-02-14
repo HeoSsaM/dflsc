@@ -9,7 +9,6 @@
 .inner {
     max-width: 1100px;
     margin: 0 auto;
-    padding: var(--sec-space-pc) 0;
 }
 
 header .btnMobile {
@@ -29,13 +28,13 @@ header .btnMobile {
     align-items: var(--align-center);
     border-radius: 25px;
 }
-/* #mainVisual video {
+#mainVisual video {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     z-index: -1;
-} */
+}
 
 #mainVisual .mainTitle h1 {
     font-family: var(--gmarket);
@@ -64,7 +63,6 @@ header .btnMobile {
 /* loginArea */
 .loginArea {
     width: 280px;
-    height: 230px;
     padding: 20px;
     background: #f0f3fa;
     border-radius: 20px;
@@ -94,23 +92,56 @@ header .btnMobile {
 
 .loginArea .btnArea {
     display: var(--flex);
-    justify-content: var(--just-sb);
+    flex-direction: column;
     margin-top: 15px;
+    justify-content: center;
+    align-items: center;
 }
+.loginArea .btnArea > .btn {
+    position: relative;
+    width: 100%;
+    padding: 12px;
+    height: auto;
+    background: linear-gradient(-45deg, #2e3266, #1c2057);
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #fff;
+    border: none;
+}
+.loginArea .btnArea > .btn::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 15px;
+    transform: translateY(-50%);
+    width: 26px; height: 26px;
+    background: url(../img/common/test-user-w.png) no-repeat center/contain;
 
+}
+.loginArea .btnArea .btn-login-set {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+}
 .loginArea .btnArea button {
     padding: 0;
     width: 115px;
     height: 38px;
     font-size: 14px;
     font-weight: 500;
-    color: #fff;
     border-radius: 10px;
+    background: #f7f4f7;
+    color: #2b2b2b;
+    border: 1px solid #777777;
+    margin: 0 5px;
 }
-
+.loginArea .btnArea button+button {
+    background: #587ef3;
+    color: #fff;
+    border: none;
+}
 /* 공지사항 */
 #sec-notice .inner {
-    padding-top: 80px;
+    padding-block: 50px;
 }
 .notice-group .notice-area {
     position: relative;
@@ -130,15 +161,29 @@ header .btnMobile {
     padding-bottom: 30px;
 }
 .notice-group .notice-list {
+    width: 100%;
     position: relative;
 }
-
+.notice-group .notice-list li {
+    width: 100%;
+}
+.notice-banner .swiper-slide {
+    height: calc((100% - 40px) / 2) !important; /* rows가 2일 때 간격 제외 계산 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .notice-group h3 {
     font-size: 28px;
     margin-bottom: 25px;
 }
+.notice-group .notice-list li {
+    position: relative;
+    padding: 10px;
+}
 .notice-group .notice-list li>a {
     display: block;
+    width: 100%;
     padding: 25px;
     border-radius: 10px;
     border: 1px solid #cdcdcd;
@@ -158,8 +203,13 @@ header .btnMobile {
 
 .notice-group .notice-list .ico-new {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 32px; height: 32px;
+}
+.notice-group .notice-list .ico-new img {
+    width: 100%;
 }
 /* 특징영역 */
 #sec-features {
@@ -168,14 +218,21 @@ header .btnMobile {
 
 #sec-features h2 {
     text-align: center;
-    font-weight: 700;
-    font-size: 38px;
+    font-weight: 400;
+    font-size: 26px;
+    color: #000;
+}
+#sec-features h2 span {
+    color: var(--color-primary);
+    font-weight: 500;
+    font-size: 28px;
 }
 
 #sec-features .mainText {
-    font-size: var(--fz-title-md);
     text-align: center;
     margin-bottom: 60px;
+    color: rgba(0, 0, 0, .6);
+    font-size: 22px;
 }
 
 .feature-list {
@@ -187,15 +244,13 @@ header .btnMobile {
 }
 
 .feature-list li {
-    width: 260px;
+    position: relative;
+    width: auto;
     height: 240px;
+    padding: 30px;
     background: #fff;
     border: 1px solid #d7d7d7;
     border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
 }
 
@@ -203,19 +258,18 @@ header .btnMobile {
     display: block;
     text-align: center;
 }
-
-.feature-list .big {
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 15px;
-}
-
 .feature-list .big strong {
     color: var(--color-primary);
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 600;
 }
-
+.feature-list .big strong > span {
+    display: block;
+}
 .feature-list .big span {
     color: #000;
+    word-break: keep-all;
 }
 
 .feature-list .text {
@@ -225,11 +279,19 @@ header .btnMobile {
 }
 
 .feature-list em {
-    padding: 10px;
+    position: absolute;
+    bottom: 20px; left: 50%;
+    transform: translateX(-50%);
+    height: 85px;
+    padding: 15px;
     border-radius: 8px;
     background: var(--color-primary);
     color: #fff;
-    margin-top: 30px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .feature-list li:first-child em {
@@ -582,7 +644,6 @@ header .btnMobile {
     background: rgba(255, 255, 255, 0.6);
 }
 #sec-inquiry .btn {
-    width: 280px;
     background: #000;
     color: #fff;
 }

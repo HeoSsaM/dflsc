@@ -39,7 +39,11 @@
      모바일 12px → PC 14px */
   --fz-caption: clamp(12px, 0.6vw + 0.2rem, 14px);
 }
-
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 html,
 body {
   height: 100%;
@@ -105,7 +109,7 @@ header .pc-nav {
   align-items: center;
   justify-content: space-between;
 
-  background: #fff;
+  background: #ffffff;
   border-bottom: 1px solid #e9e9ee;
   z-index: 1000;
 }

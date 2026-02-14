@@ -109,13 +109,10 @@
 
         <section id="mainVisual" class="main">
             <div class="inner">
-                <!-- <video muted autoplay loop>
-                    <source src="img/main/main_mov_2.mp4" type="video/mp4">
-                </video> -->
                 <div class="mainTitle">
                     <h1>디헤럴드플립 언어평가센터 <span>Dherald Flip Language Assessment Center</span></h1>
                     <div class="mainText">
-                        <p>언어별 말하기 평가 전문기업에 의한, <br>목적에 맞는 정확하고 객관적인 언어별 스피킹테스트 <br>
+                        <p>언어평가 전문기업에 의한, <br>목적에 맞는 정확하고 객관적인 언어별 스피킹테스트 <br>
                             국내 유일의 IBT기반 OPIc, TOEIC Speaking, TOPIK(한국어)</p>
                         <p>임직원 채용 및 언어역량평가에는 고정밀 HSPT 영&middot;중&middot;일 테스트 <br>
                             산업&middot;직군 맞춤형 OLT(업무 언어 능력) 테스트 모의시험</p>
@@ -127,9 +124,12 @@
                     <label for="userId"><input type="text" placeholder="아이디" required></label>
                     <label for="userPwd"><input type="password" placeholder="비밀번호" required></label>
                     <div class="btnArea">
-                        <button class="btn style1">시험응시하기</button>
-                        <button class="btn style2" type="button"
-                            onclick="window.location.href='member_join.html'">로그인/회원가입</button>
+                        <button class="btn">시험응시하기</button>
+                        <div class="btn-login-set">
+                            <button class="btn btn-login">로그인</button>
+                            <button class="btn btn-join" type="button"
+                                onclick="window.location.href='member_join.html'">회원가입</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -154,8 +154,40 @@
                                         <p class="list-text">
                                             유한킴벌리 시즌 3 사후테스트(민병철) 테스트 일정 안내
                                         </p>
+                                        <span class="date">2025-11-06</span>                                        
+                                    </a>
+                                    <span class="ico-new"><img src="img/common/ico_new.png" alt="new"></span>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="">
+                                        <p class="list-text">
+                                            유한킴벌리 시즌 3 사후테스트(민병철) 테스트 일정 안내
+                                        </p>
                                         <span class="date">2025-11-06</span>
-                                        <span class="ico-new"><img src="img/common/ico_new.png" alt="new"></span>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="">
+                                        <p class="list-text">
+                                            유한킴벌리 시즌 3 사후테스트(민병철) 테스트 일정 안내
+                                        </p>
+                                        <span class="date">2025-11-06</span>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="">
+                                        <p class="list-text">
+                                            유한킴벌리 시즌 3 사후테스트(민병철) 테스트 일정 안내
+                                        </p>
+                                        <span class="date">2025-11-06</span>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="">
+                                        <p class="list-text">
+                                            유한킴벌리 시즌 3 사후테스트(민병철) 테스트 일정 안내
+                                        </p>
+                                        <span class="date">2025-11-06</span>
                                     </a>
                                 </li>
                                 <li class="swiper-slide">
@@ -202,10 +234,15 @@
         <section id="sec-features" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-out-cubic"
             data-aos-duration="1000">
             <div class="inner">
-                <h2>국내 유일의 <br> OPIc·TOEIC Speaking <br>TOPIK· TSC 모의시험 사이트</h2>
+                <h2>
+                    국내 50여개 대학에서 활용하는 <span>OPIc &middot; TOEIC Speaking &middot; TOPIK 테스트</span><br>
+                    신입사원 채용 및 사내교육성취도 평가 <span>HSPT (Herald Speaking Proficiency Test)</span><br>
+                    산업별 직군별 맞춤형 업무의사소통능력 평가 OLT <span>(Occupational Language Test)</span>
+                </h2>
                 <p class="mainText">
-                    평가 전문기업으로 쌓아 온 노하우와 전문 평가인력, 방대한 데이터를 토대로 <br>공인 OPIc, TOEIC 스피킹, TOPIK, TSC 시험과 오차범위가 거의 없는
-                    <br>정확하고 신뢰할 수 있는 평가를 제공합니다.
+                    평가 전문기업으로 쌓아 온 노하우와 전문 평가인력, 방대한 데이터를 토대로 <br>공인 OPIc, TOEIC스피킹, TOPIK 시험과 오차범위가 거의 없는<br> 모의시험 및
+                    기업전용 레벨과 점수로 세밀하고 정확한 결과를 제공하는<br> 기업맞춤형 말하기평가를 제공합니다.
+
                 </p>
                 <ul class="feature-list">
                     <li>
@@ -223,28 +260,31 @@
                             <strong>실전과 100% 동일한</strong>
                             <span>시험환경과 점수</span>
                         </p>
-                        <em>국내 유일 <span>IBT 시험환경</span></em>
+                        <em>국내 유일 IBT 시험환경 <br>졸업인증.교육성취도.교환학생 선발용</em>
                     </li>
                     <li>
                         <p class="big">
                             <strong>실제 시험점수 대비</strong>
-                            <span>오차범위가 미미</span>
+                            <span>오차범위가 적은 신뢰도 높은 모의시험 </span>
                         </p>
                         <em>응시자 시험결과 분석</em>
                     </li>
                     <li>
                         <p class="big">
-                            <strong>졸업인증 및 취업준비</strong>
-                            <span>채용.승진.인사고과 반영</span>
+                            <strong>
+                                <span>산업과 직군 맞춤형 평가 /</span>
+                                <span>실무 말하기수준 평가 / </span>
+                                <span>직군별 실제 업무상 말하기 실력 진단</span>
+                            </strong>
                         </p>
                         <em>3일 후 시험결과 확인 </em>
                     </li>
                 </ul>
 
                 <div class="info-pick">
-                    <p>OPIc 및 TOEIC Speaking 모의테스트를 대학 채용 시험 및 졸업 인증 시험 등으로 제공</p>
-                    <p>대기업 임직원들에게 사전/사후 테스트로 활용</p>
-                    <p>국내 50여개 대학에서 모의시험으로 활용</p>
+                    <p>OPIc 및 TOEIC Speaking 모의테스트로 대학 내 어학교육 사전/사후 및 졸업인증시험으로 활용</p>
+                    <p>유수 국내 및 외국계 기업 임직원 교육 사전/사후 테스트, 신입사원 채용평가로 활용 </p>
+                    <p>면세점, 호텔, 바이오 제약, IT, 은행의 임직원 사내어학교육 성취도 평가 및 내부 어학능력 평가로 </p>
                 </div>
             </div>
         </section>
@@ -412,23 +452,27 @@
         //swiper
         var swiper = new Swiper(".notice-banner", {
             slidesPerView: 1,
-            spaceBetween: 10,
+            grid: {
+                rows: 2,
+                fill: 'row', // 왼쪽에서 오른쪽으로 순서대로 배치
+            },
+            spaceBetween: 20, // 기본 간격 설정
             pagination: {
-                el: ".swiper-pagination",
+                el: ".notice-banner .swiper-pagination",
                 clickable: true,
             },
             breakpoints: {
                 640: {
-                    slidesPerView: 1,
-                    spaceBetween: 20,
+                    slidesPerView: 2,
+                    grid: { rows: 2 }
                 },
                 768: {
                     slidesPerView: 3,
-                    spaceBetween: 20,
+                    grid: { rows: 2 }
                 },
                 1024: {
-                    slidesPerView: 4,
-                    spaceBetween: 30,
+                    slidesPerView: 4, // 스크린샷 기준 3열인 것 같아 3으로 조정했습니다.
+                    grid: { rows: 2 } // 세로로 3줄을 원하시면 3으로 설정
                 },
             },
         });
