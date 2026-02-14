@@ -370,19 +370,21 @@ table .bg {
 }
 
 /* 767px 이하 */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 
   .m-header button,
   .m-header a {
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .m-header button img,
-  .m-header a img {
+  .m-header button img {
     width: 100%;
+  }
+  .m-header .btnMypage img {
+    width: 26px;
   }
   .table-wrap {
     width: 100%;
@@ -408,11 +410,8 @@ table .bg {
     height: 44px;
     border: 0;
     background: transparent;
-    font-size: 22px;
+    font-size: 30px;
     cursor: pointer;
-  }
-  .m-nav .btnClose img {
-    width: 100%;
   }
   #mainVisual.main .inner {
     display: block;
