@@ -355,23 +355,6 @@ table .bg {
 
 /* 768~1024px */
 @media screen and (max-width: 1024px) {
-  section .inner {
-    padding-bottom: 40px;
-  }
-
-  section .inner,
-  footer .inner {
-    max-width: 95%
-  }
-
-  #mainVisual {
-    margin-top: 80px;
-  }
-}
-
-/* 767px 이하 */
-@media screen and (max-width: 767px) {
-
   .m-header button,
   .m-header a {
     width: 44px;
@@ -384,8 +367,31 @@ table .bg {
     width: 100%;
   }
   .m-header .btnMypage img {
-    width: 26px;
+    width: 30px;
   }
+  section .inner {
+    padding-bottom: 40px;
+  }
+
+  section .inner,
+  footer .inner {
+    max-width: 95%
+  }
+
+  #mainVisual.main {
+    margin-top: 80px;
+  }
+  #mainVisual.main .inner {
+    display: block;
+  }
+}
+
+/* 767px 이하 */
+@media screen and (max-width: 767px) {
+    .m-header .btnMypage img {
+    width: 30px;
+  }
+  
   .table-wrap {
     width: 100%;
     overflow-x: auto;
